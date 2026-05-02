@@ -1,0 +1,5526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roman Fajar · HR & Finance Executive</title>
+  <meta name="description" content="Roman Fajar - Strategic Human Capital Architect bridging Human Psychology and Organizational Finances.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23101A31'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' fill='%23FF8308' font-family='Raleway, sans-serif' font-weight='700' font-size='55'%3ERF%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js">
+  </script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Raleway', sans-serif;
+      background: #FFFFFF;
+      color: #101A31;
+      line-height: 1.6;
+      font-weight: 400;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    #globalNav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.8rem 2rem;
+      background: rgba(16, 26, 49, 0.9);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      height: 64px;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      gap: 0.5rem;
+    }
+    .nav-logo-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: #FF8308;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.8rem;
+      color: #FFFFFF;
+    }
+    .nav-logo-text {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #FFFFFF;
+      letter-spacing: -0.02em;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.2rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.7rem;
+      color: rgba(255, 255, 255, 0.7);
+      letter-spacing: 0.5px;
+      transition: color 0.3s;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #FF8308;
+    }
+    #whatsappFloat {
+      position: fixed;
+      bottom: 5rem;
+      right: 1.8rem;
+      z-index: 998;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: #FF8308;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 25px rgba(255, 131, 8, 0.4);
+      transition: all 0.3s;
+      text-decoration: none;
+      animation: floatPulse 2.5s ease-in-out infinite;
+    }
+    #whatsappFloat:hover {
+      transform: scale(1.1);
+    }
+    #whatsappFloat svg {
+      width: 22px;
+      height: 22px;
+      fill: #FFFFFF;
+    }
+    @keyframes floatPulse {
+      0%, 100% {
+        box-shadow: 0 6px 25px rgba(255, 131, 8, 0.4);
+      }
+      50% {
+        box-shadow: 0 10px 40px rgba(255, 131, 8, 0.7);
+      }
+    }
+        @media (max-width: 768px) {
+      #globalNav {
+        padding: 0.7rem 1rem;
+        height: 56px;
+      }
+      .nav-links {
+        gap: 0.6rem;
+      }
+      .nav-links a {
+        font-size: 0.6rem;
+      }
+      .nav-logo-text {
+        font-size: 0.8rem;
+      }
+      #whatsappFloat {
+        bottom: 4.5rem;
+        right: 1rem;
+        width: 44px;
+        height: 44px;
+      }
+          }
+  </style>
+</head>
+<body>
+  <nav id="globalNav">
+    <a href="#hero" class="nav-logo">
+      <div class="nav-logo-icon">RF</div>
+      <span class="nav-logo-text">Roman Fajar</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#hero" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#academic">Education</a></li>
+      <li><a href="#recognitions">Recs</a></li>
+      <li><a href="#accreditations">Certs</a></li>
+      <li><a href="#funfacts">Fun</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <a href="https://wa.me/923000530137" target="_blank" rel="noopener" id="whatsappFloat">
+    <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.91-9.91-9.91zM8.66 16.5l-.33.2c-.87.52-1.85.8-2.87.8-2.97 0-5.38-2.41-5.38-5.38 0-1.02.28-2 .8-2.87l.2-.33-1.02-3.72 3.72.98.33-.2c.87-.52 1.85-.8 2.87-.8 2.97 0 5.38 2.41 5.38 5.38 0 1.02-.28 2-.8 2.87l-.2.33 1.02 3.72-3.72-.98z"/></svg>
+  </a>
+  <div id="scrollTopBtn">
+    <svg viewBox="0 0 24 24">
+      <path d="M18 15l-6-6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- HERO SECTION -->
+  <!-- ============================================ -->
+  <style>
+    #globalHeader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2.5rem;
+      background: rgba(244, 246, 249, 0.6);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(16, 26, 49, 0.05);
+      height: 70px;
+    }
+    .header-logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+    .header-favicon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: block;
+    }
+    .header-favicon-svg {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: block;
+    }
+    .header-nav {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .header-nav a {
+      text-decoration: none;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: #101A31;
+      letter-spacing: 0.5px;
+      transition: color 0.3s ease;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .header-nav a:hover,
+    .header-nav a.active {
+      color: #FF8308;
+    }
+    #preloader {
+      position: fixed;
+      inset: 0;
+      background: #FFFFFF;
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      clip-path: circle(100% at 50% 50%);
+    }
+    #preloaderLogo {
+      width: 80px;
+      height: 80px;
+      opacity: 0;
+      border-radius: 50%;
+      display: block;
+    }
+    #hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #F4F6F9;
+      position: relative;
+      overflow: hidden;
+      padding: 90px 2rem 2rem;
+    }
+    .hero-text-container {
+      position: relative;
+      z-index: 3;
+      text-align: center;
+      perspective: 1200px;
+    }
+    .name-row {
+      display: block;
+      text-align: center;
+    }
+    .name-letter {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(-30px);
+      font-family: 'Raleway', sans-serif;
+      font-size: clamp(4rem, 10vw, 7rem);
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+    #romanLine .name-letter {
+      color: #FF8308;
+    }
+    #fajarLine {
+      padding-left: 3.2ch;
+      margin-top: 0;
+    }
+    #fajarLine .name-letter {
+      color: #101A31;
+    }
+    #heroDesignation {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: #101A31;
+      margin-top: 1.2rem;
+      opacity: 0;
+      letter-spacing: 0.02em;
+    }
+    #heroTagline {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1rem;
+      max-width: 600px;
+      margin: 0.6rem auto 1.8rem;
+      color: #2c3a5c;
+      opacity: 0;
+      line-height: 1.7;
+      transform: scale(0.95);
+    }
+    #heroCTAs {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      opacity: 0;
+      transform: translateY(10px);
+      margin-bottom: 2.5rem;
+    }
+    .hero-cta-primary {
+      display: inline-block;
+      padding: 0.9rem 2.2rem;
+      background: #FF8308;
+      color: #FFFFFF;
+      font-weight: 700;
+      border-radius: 50px;
+      text-decoration: none;
+      font-family: 'Raleway', sans-serif;
+      letter-spacing: 0.3px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      font-size: 0.95rem;
+    }
+    .hero-cta-primary span {
+      position: relative;
+      z-index: 2;
+    }
+    .hero-cta-primary::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.6s ease, height 0.6s ease;
+    }
+    .hero-cta-primary:hover::before {
+      width: 400px;
+      height: 400px;
+    }
+    .hero-cta-secondary {
+      display: inline-block;
+      padding: 0.9rem 2.2rem;
+      border: 2px solid #FF8308;
+      color: #FF8308;
+      font-weight: 700;
+      border-radius: 50px;
+      text-decoration: none;
+      font-family: 'Raleway', sans-serif;
+      letter-spacing: 0.3px;
+      background: transparent;
+      transition: all 0.3s ease;
+      font-size: 0.95rem;
+    }
+    .hero-cta-secondary:hover {
+      background: #FF8308;
+      color: #FFFFFF;
+    }
+    .glass-text {
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(244, 246, 249, 0.3);
+      border-radius: 12px;
+      padding: 0.15em 0.4em;
+      display: inline-block;
+    }
+    @keyframes glassGlint {
+      0% {
+        background-position: -200% center;
+      }
+      100% {
+        background-position: 200% center;
+      }
+    }
+    .glint-overlay {
+      position: relative;
+      overflow: hidden;
+    }
+    .glint-overlay::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(105deg, transparent 40%, rgba(255, 255, 255, 0.5) 45%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.5) 55%, transparent 60%);
+      background-size: 200% 100%;
+      animation: glassGlint 5s ease-in-out infinite;
+      pointer-events: none;
+      border-radius: inherit;
+      z-index: 5;
+    }
+    #impactMetrics,
+    #impactMetricsRow2 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      z-index: 3;
+      opacity: 0;
+      width: 100%;
+      max-width: 1000px;
+    }
+    #impactMetricsRow2 {
+      margin-top: 1.5rem;
+    }
+    .metric-card {
+      background: #FFFFFF;
+      border-radius: 20px;
+      padding: 1.5rem 1rem;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(16, 26, 49, 0.04);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .metric-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(16, 26, 49, 0.08);
+    }
+    .metric-number {
+      font-family: 'Raleway', sans-serif;
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: #FF8308;
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+    .metric-label {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #101A31;
+      margin-top: 0.5rem;
+      letter-spacing: 0.5px;
+    }
+    @media (max-width: 768px) {
+      #globalHeader {
+        padding: 0.8rem 1.2rem;
+        height: 60px;
+      }
+      .header-nav {
+        gap: 1rem;
+      }
+      .header-nav a {
+        font-size: 0.7rem;
+      }
+      .header-favicon,
+      .header-favicon-svg {
+        width: 28px;
+        height: 28px;
+      }
+      #hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 80px 1.5rem 2rem;
+        justify-content: flex-start;
+        padding-top: 80px;
+      }
+      .name-letter {
+        font-size: clamp(2.8rem, 14vw, 4.5rem);
+      }
+      #fajarLine {
+        padding-left: 2.5ch;
+      }
+      #heroDesignation {
+        font-size: 1rem;
+      }
+      #heroTagline {
+        font-size: 0.9rem;
+        max-width: 90%;
+      }
+      #heroCTAs {
+        flex-direction: column;
+        align-items: center;
+      }
+      .hero-cta-primary,
+      .hero-cta-secondary {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+      }
+      #impactMetrics,
+      #impactMetricsRow2 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+      }
+      .metric-card {
+        padding: 1.2rem 0.8rem;
+      }
+      .metric-number {
+        font-size: 1.8rem;
+      }
+      .metric-label {
+        font-size: 0.65rem;
+      }
+      .glass-text {
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+      }
+    }
+    @media (max-width: 480px) {
+      .header-nav {
+        gap: 0.5rem;
+      }
+      .header-nav a {
+        font-size: 0.6rem;
+      }
+      .header-favicon,
+      .header-favicon-svg {
+        width: 24px;
+        height: 24px;
+      }
+      .name-letter {
+        font-size: clamp(2.2rem, 11vw, 3.2rem);
+      }
+      #fajarLine {
+        padding-left: 2ch;
+      }
+      #impactMetrics,
+      #impactMetricsRow2 {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.6rem;
+      }
+      .metric-card {
+        padding: 0.9rem 0.5rem;
+      }
+      .metric-number {
+        font-size: 1.5rem;
+      }
+      .metric-label {
+        font-size: 0.6rem;
+      }
+    }
+  </style>
+  <header id="globalHeader">
+    <a href="#hero" class="header-logo">
+      <img src="/assets/images/favicon.png" alt="RF" class="header-favicon" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <svg class="header-favicon-svg" viewBox="0 0 100 100" style="display:none;">
+        <rect width="100" height="100" rx="20" fill="#101A31" />
+        <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="#FF8308" font-family="Raleway, sans-serif" font-weight="700" font-size="55">RF</text>
+      </svg>
+    </a>
+    <nav>
+      <ul class="header-nav">
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div id="preloader">
+    <img src="/assets/images/favicon.png" alt="RF Logo" id="preloaderLogo" onerror="this.style.display='none'; document.getElementById('preloader').style.display='none'; document.getElementById('hero').style.visibility='visible'; if(typeof startHeroAnimation==='function') startHeroAnimation();">
+  </div>
+  <section id="hero" data-section="hero">
+    <div class="hero-text-container">
+      <div class="name-row" id="romanLine">
+        <span class="name-letter">R</span>
+        <span class="name-letter">o</span>
+        <span class="name-letter">m</span>
+        <span class="name-letter">a</span>
+        <span class="name-letter">n</span>
+      </div>
+      <div class="name-row" id="fajarLine">
+        <span class="name-letter">F</span>
+        <span class="name-letter">a</span>
+        <span class="name-letter">j</span>
+        <span class="name-letter">a</span>
+        <span class="name-letter">r</span>
+      </div>
+      <p id="heroDesignation">People & Operations Strategist | Talent Acquisition Specialist</p>
+      <p id="heroTagline">A Strategic Human Capital Architect Bridging Psychological Insights with Organizational Finance through Precision Recruitment and Resource Optimization.</p>
+      <div id="heroCTAs">
+        <a href="#services" class="hero-cta-primary">
+          <span>Explore My Impact</span>
+        </a>
+        <a href="/assets/docs/resume-roman-fajar.pdf" class="hero-cta-secondary">
+          <span>Download Resume</span>
+        </a>
+      </div>
+    </div>
+    <div id="impactMetrics">
+      <div class="metric-card">
+        <div class="metric-number" data-target="85">0</div>
+        <div class="metric-label">Headcount managed</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-number" data-target="35">0</div>
+        <div class="metric-label">Strategic hires</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-number" data-target="3">0</div>
+        <div class="metric-label">Years excellence</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-number" data-target="80">0</div>
+        <div class="metric-label">Talent retention</div>
+      </div>
+    </div>
+    <div id="impactMetricsRow2">
+      <div class="metric-card">
+        <div class="metric-number" data-target="20">0</div>
+        <div class="metric-label">Cost-per-hire reduction</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-number" data-target="10">0</div>
+        <div class="metric-label">Technical departments</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-number" data-target="1000">0</div>
+        <div class="metric-label">Active talent pool</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-number" data-target="10">0</div>
+        <div class="metric-label">Average time-to-hire</div>
+      </div>
+    </div>
+  </section>
+  <script>
+    (function() {
+      window.addEventListener('load', function() {
+        const preloader = document.getElementById('preloader');
+        const preloaderLogo = document.getElementById('preloaderLogo');
+        const heroSection = document.getElementById('hero');
+        if (!preloader || !heroSection) {
+          return;
+        }
+        const preloaderTL = gsap.timeline({
+          onComplete: function() {
+            gsap.to(preloader, {
+              clipPath: 'circle(0% at 50% 50%)',
+              duration: 0.25,
+              ease: 'power3.inOut',
+              onComplete: function() {
+                preloader.style.display = 'none';
+                startHeroAnimation();
+              }
+            });
+          }
+        });
+        preloaderTL.to(preloaderLogo, {
+          opacity: 1,
+          duration: 0.1,
+          ease: 'power2.out'
+        }).to(preloaderLogo, {
+          scale: 1.3,
+          duration: 0.2,
+          ease: 'sine.inOut',
+          yoyo: true,
+          repeat: 1
+        }).to(preloaderLogo, {
+          scale: 0.95,
+          duration: 0.1,
+          ease: 'power2.in'
+        });
+        function startHeroAnimation() {
+          const romanLetters = document.querySelectorAll('#romanLine .name-letter');
+          const fajarLetters = document.querySelectorAll('#fajarLine .name-letter');
+          const heroDesignation = document.getElementById('heroDesignation');
+          const heroTagline = document.getElementById('heroTagline');
+          const heroCTAs = document.getElementById('heroCTAs');
+          const impactMetrics = document.getElementById('impactMetrics');
+          const impactMetricsRow2 = document.getElementById('impactMetricsRow2');
+          if (romanLetters.length === 0 || fajarLetters.length === 0) return;
+          const masterTL = gsap.timeline({
+            defaults: {
+              ease: 'power3.out'
+            }
+          });
+          masterTL.to(romanLetters, {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            stagger: 0.08,
+            ease: 'elastic.out(1, 0.4)'
+          }).to(fajarLetters, {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            stagger: 0.08,
+            ease: 'elastic.out(1, 0.4)'
+          }, '-=1.0').to({}, {
+            duration: 0.3
+          }).call(function() {
+            document.getElementById('romanLine').classList.add('glass-text', 'glint-overlay');
+            document.getElementById('fajarLine').classList.add('glass-text', 'glint-overlay');
+          }).to(['#romanLine', '#fajarLine'], {
+            transform: 'perspective(1000px) rotateX(8deg) rotateY(-4deg)',
+            duration: 0.8,
+            ease: 'power2.inOut'
+          }).to(heroDesignation, {
+            opacity: 1,
+            duration: 0.6
+          }, '-=0.3').to(heroTagline, {
+            opacity: 1,
+            scale: 1,
+            duration: 0.7,
+            ease: 'back.out(1.4)'
+          }, '-=0.3').to(heroCTAs, {
+            opacity: 1,
+            y: 0,
+            duration: 0.6
+          }, '-=0.2').to([impactMetrics, impactMetricsRow2], {
+            opacity: 1,
+            duration: 0.5,
+            stagger: 0.15
+          }, '-=0.1').call(function() {
+            const allCounters = document.querySelectorAll('.metric-number');
+            allCounters.forEach(function(el) {
+              const target = parseInt(el.getAttribute('data-target'), 10);
+              const label = el.parentElement.querySelector('.metric-label').textContent.toLowerCase();
+              const isDays = label.includes('time-to-hire');
+              const isCost = label.includes('cost-per-hire');
+              const isPool = label.includes('talent pool') || target >= 100;
+              const counterObj = {
+                value: 0
+              };
+              gsap.to(counterObj, {
+                value: target,
+                duration: 1,
+                ease: 'power2.out',
+                onUpdate: function() {
+                  const current = Math.round(counterObj.value);
+                  if (isDays) {
+                    el.textContent = current + ' Days';
+                  } else if (isCost) {
+                    el.textContent = current + '%';
+                  } else if (isPool) {
+                    el.textContent = current + '+';
+                  } else if (target === 3) {
+                    el.textContent = current + '+';
+                  } else if (target === 80) {
+                    el.textContent = current + '%';
+                  } else {
+                    el.textContent = current + '+';
+                  }
+                },
+                onComplete: function() {
+                  if (isDays) {
+                    el.textContent = target + ' Days';
+                  } else if (isCost) {
+                    el.textContent = target + '%';
+                  } else if (isPool) {
+                    el.textContent = target + '+';
+                  } else if (target === 3) {
+                    el.textContent = target + '+';
+                  } else if (target === 80) {
+                    el.textContent = target + '%';
+                  } else {
+                    el.textContent = target + '+';
+                  }
+                }
+              });
+            });
+          });
+          const navLinks = document.querySelectorAll('.header-nav a');
+          navLinks.forEach(function(link) {
+            link.addEventListener('click', function(e) {
+              navLinks.forEach(function(l) {
+                l.classList.remove('active');
+              });
+              link.classList.add('active');
+            });
+          });
+        }
+        preloaderLogo.addEventListener('error', function() {
+          gsap.killTweensOf(preloader);
+          preloader.style.display = 'none';
+          startHeroAnimation();
+        });
+      });
+    })();
+  </script>
+
+  <!-- ============================================ -->
+  <!-- ABOUT SECTION -->
+  <!-- ============================================ -->
+  <style>
+    #about {
+      background: #E5E7EB;
+      min-height: 100vh;
+      padding: 110px 0 110px;
+      position: relative;
+      overflow: hidden;
+    }
+    .about-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2.5rem;
+    }
+    .about-label {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      color: #101A31;
+      opacity: 0.6;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    .about-title {
+      font-family: 'Raleway', sans-serif;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 3.5rem;
+      line-height: 1.2;
+    }
+    .about-title .navy {
+      color: #101A31;
+    }
+    .about-title .orange {
+      color: #FF8308;
+    }
+    .about-content-row {
+      display: flex;
+      gap: 3rem;
+      align-items: flex-start;
+      margin-bottom: 4rem;
+    }
+    .about-portrait-col {
+      flex-shrink: 0;
+      width: clamp(180px, 28%, 320px);
+      position: relative;
+    }
+    .about-portrait-wrapper {
+      position: relative;
+      width: 100%;
+    }
+    .about-portrait {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 20px;
+      position: relative;
+      z-index: 2;
+      box-shadow: 0 20px 45px rgba(16, 26, 49, 0.08);
+    }
+    .about-portrait-frame {
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      width: 100%;
+      height: 100%;
+      border: 2.5px solid #FF8308;
+      border-radius: 20px;
+      z-index: 1;
+      opacity: 0.5;
+    }
+    .about-portrait-dot {
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      background: #FF8308;
+      border-radius: 50%;
+      z-index: 3;
+      bottom: -7px;
+      right: -7px;
+      opacity: 0.8;
+    }
+    .about-text-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+      min-width: 0;
+    }
+    .about-text-col p {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: #101A31;
+      font-weight: 400;
+    }
+    .perspective-cards {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    .perspective-card {
+      background: #F4F6F9;
+      border-radius: 24px;
+      padding: 2.2rem 1.8rem;
+      cursor: pointer;
+      transition: all 0.45s cubic-bezier(0.25, 0.8, 0.25, 1.2);
+      flex: 1;
+      border: 2px solid transparent;
+      position: relative;
+      overflow: hidden;
+    }
+    .perspective-card h3 {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #101A31;
+      margin-bottom: 0.8rem;
+      letter-spacing: -0.02em;
+      transition: color 0.3s ease;
+    }
+    .perspective-card p {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: #2c3a5c;
+      transition: opacity 0.3s ease;
+    }
+    .perspective-card:hover {
+      flex: 2.2;
+      border-color: #FF8308;
+      background: #FFFFFF;
+    }
+    .perspective-card:hover h3 {
+      color: #FF8308;
+    }
+    .perspective-cards:hover .perspective-card:not(:hover) {
+      flex: 0.7;
+    }
+    .perspective-cards:hover .perspective-card:not(:hover) p {
+      opacity: 0.55;
+    }
+    @media (max-width: 768px) {
+      #about {
+        padding: 80px 0 80px;
+      }
+      .about-container {
+        padding: 0 1.5rem;
+      }
+      .about-content-row {
+        gap: 1.8rem;
+      }
+      .about-portrait-col {
+        width: clamp(140px, 32%, 220px);
+      }
+      .about-text-col p {
+        font-size: 0.85rem;
+      }
+      .about-bridge {
+        font-size: 0.9rem !important;
+      }
+      .perspective-cards {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .perspective-card:hover {
+        flex: 1 !important;
+        transform: scale(1.02);
+      }
+      .perspective-cards:hover .perspective-card:not(:hover) {
+        flex: 1 !important;
+        transform: scale(0.98);
+      }
+      .perspective-card {
+        padding: 1.6rem 1.3rem;
+      }
+    }
+    @media (max-width: 480px) {
+      .about-content-row {
+        gap: 1.2rem;
+      }
+      .about-portrait-col {
+        width: clamp(110px, 30%, 160px);
+      }
+      .about-portrait-frame {
+        top: -6px;
+        left: -6px;
+      }
+      .about-portrait-dot {
+        width: 10px;
+        height: 10px;
+        bottom: -5px;
+        right: -5px;
+      }
+      .about-text-col p {
+        font-size: 0.78rem;
+        line-height: 1.65;
+      }
+      .about-title {
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+      }
+      .about-bridge {
+        font-size: 0.82rem !important;
+      }
+    }
+  </style>
+  <section id="about" data-section="about">
+    <div class="about-container">
+      <div class="about-label">About Me</div>
+      <h2 class="about-title">
+        <span class="navy">Creating a</span> <span class="orange">Better World at Work</span>
+      </h2>
+      <p style="font-family:'Raleway',sans-serif; font-size:1.05rem; color:#2c3a5c; max-width:700px; margin-top:-2rem; margin-bottom:3rem; line-height:1.6;">Bridging the gap between human behavior and organizational excellence through psychological insight and financial rigor.</p>
+      <div class="about-content-row">
+        <div class="about-portrait-col">
+          <div class="about-portrait-wrapper" id="portraitWrapper">
+            <div class="about-portrait-frame"></div>
+            <img src="/assets/images/roman-fajar.png" alt="Roman Fajar" class="about-portrait" id="aboutPortrait" onerror="this.style.display='none';">
+            <div class="about-portrait-dot"></div>
+          </div>
+        </div>
+        <div class="about-text-col">
+          <p>I've always been curious about people—what drives them, how they make decisions, and the way they connect with each other. That curiosity led me to study Psychology, where I discovered just how much human behavior shapes both personal growth and workplace success.</p>
+          <p>During my internships, I worked with people from all walks of life—children, teens, and adults—and saw how early experiences influence future behavior. It showed me the power of empathy, patience, and thoughtful support. That's when it clicked: I wanted to create environments where people feel understood, valued, and able to thrive.</p>
+          <p>My journey began not with a career plan, but with a question about why we connect... and this realization drew me to Human Resources. It felt like the perfect space to bring everything I'd learned to life—supporting people, fostering growth, and helping organizations build stronger, more human workplaces.</p>
+          <p>What excites me most about HR is the chance to make a real impact on people's lives. I'm driven by the belief that when people feel seen and supported, they do their best work. For me, HR isn't just a career; it's a way to make work more human.</p>
+          <p>With a background in public speaking and debate, I've learned how to connect with different perspectives and have thoughtful, honest conversations—skills I now use every day in HR.</p>
+          <p>This human-centric philosophy isn't just my personal belief, it is the strategic framework I apply to every organization, every team, and every employee I lead.</p>
+        </div>
+      </div>
+      <div class="perspective-cards" id="perspectiveCards">
+        <div class="perspective-card">
+          <h3>Leadership Vision</h3>
+          <p>Predicting future workforce challenges through psychological trend analysis and proactive policy design. I help leaders see around corners, preparing their teams for tomorrow's demands today.</p>
+        </div>
+        <div class="perspective-card">
+          <h3>Strategic Goals</h3>
+          <p>Improving deployment precision by matching talent architecture with financial efficiency. Every hire is a strategic move—I ensure the right people are in the right seats at the right time.</p>
+        </div>
+        <div class="perspective-card">
+          <h3>Employee Autonomy</h3>
+          <p>Supporting autonomy and career options, turning individual potential into organizational success. When employees own their growth, the entire company rises with them.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    (function() {
+      window.addEventListener('load', function() {
+        const aboutSection = document.getElementById('about');
+        if (!aboutSection) return;
+        gsap.fromTo(aboutSection, {
+          opacity: 0,
+          y: 50
+        }, {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: aboutSection,
+            start: 'top 88%',
+            toggleActions: 'play none none none'
+          }
+        });
+        const portraitWrapper = document.getElementById('portraitWrapper');
+        if (portraitWrapper) {
+          gsap.fromTo(portraitWrapper, {
+            opacity: 0,
+            scale: 0.92,
+            y: 15
+          }, {
+            opacity: 1,
+            scale: 1,
+            y: 0,
+            duration: 0.7,
+            ease: 'power2.out',
+            scrollTrigger: {
+              trigger: portraitWrapper,
+              start: 'top 90%',
+              toggleActions: 'play none none none'
+            }
+          });
+          gsap.to(portraitWrapper, {
+            y: -6,
+            duration: 2.8,
+            ease: 'sine.inOut',
+            yoyo: true,
+            repeat: -1,
+            delay: 0.4
+          });
+        }
+        const cards = document.querySelectorAll('.perspective-card');
+        gsap.fromTo(cards, {
+          opacity: 0,
+          y: 35
+        }, {
+          opacity: 1,
+          y: 0,
+          duration: 0.65,
+          stagger: 0.15,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: '#perspectiveCards',
+            start: 'top 92%',
+            toggleActions: 'play none none none'
+          }
+        });
+      });
+    })();
+  </script>
+
+  <!-- ============================================ -->
+  <!-- SERVICES SECTION -->
+  <!-- ============================================ -->
+  <style>
+    #services {
+      background: #FFFFFF;
+      padding: 110px 0;
+      position: relative;
+      overflow: hidden;
+      min-height: 100vh;
+    }
+    .services-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      position: relative;
+    }
+    .services-label {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      color: #101A31;
+      opacity: 0.6;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      text-align: left;
+    }
+    .services-title {
+      font-family: 'Raleway', sans-serif;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      text-align: left;
+      margin-bottom: 0.8rem;
+      line-height: 1.2;
+    }
+    .services-title .navy {
+      color: #101A31;
+    }
+    .services-title .orange {
+      color: #FF8308;
+    }
+    .services-subhead {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1rem;
+      color: #2c3a5c;
+      text-align: left;
+      max-width: 650px;
+      margin: 0 0 4rem 0;
+      line-height: 1.7;
+    }
+    .spine-wrapper {
+      position: relative;
+    }
+    .spine-line {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 2px;
+      height: 0;
+      background: #101A31;
+      transform: translateX(-50%);
+      z-index: 1;
+      opacity: 0.3;
+    }
+    .spine-dot {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 16px;
+      height: 16px;
+      background: #FF8308;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 3;
+      box-shadow: 0 0 20px rgba(255, 131, 8, 0.5);
+    }
+    .service-node {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 3.5rem;
+      position: relative;
+      z-index: 2;
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    .service-node.odd {
+      flex-direction: row;
+    }
+    .service-node.odd .service-content {
+      text-align: right;
+      padding-right: 3rem;
+    }
+    .service-node.even {
+      flex-direction: row;
+    }
+    .service-node.even .service-spacer {
+      width: 50%;
+    }
+    .service-node.odd .service-spacer {
+      width: 50%;
+    }
+    .service-node.even .service-content {
+      text-align: left;
+      padding-left: 3rem;
+    }
+    .service-content {
+      width: 50%;
+      background: #F4F6F9;
+      border-radius: 20px;
+      padding: 2rem;
+      border: 2px solid transparent;
+      transition: all 0.35s ease;
+      position: relative;
+    }
+    .service-content:hover {
+      border-color: #FF8308;
+      box-shadow: 0 0 30px rgba(255, 131, 8, 0.08);
+      background: #FFFFFF;
+    }
+    .service-number {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #FF8308;
+      margin-bottom: 0.3rem;
+    }
+    .service-content h3 {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #101A31;
+      margin-bottom: 0;
+      letter-spacing: -0.02em;
+      transition: margin-bottom 0.35s ease;
+    }
+    .service-content p {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: #2c3a5c;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease, opacity 0.4s ease, margin-top 0.35s ease;
+      margin-top: 0;
+    }
+    .service-content:hover p {
+      max-height: 200px;
+      opacity: 1;
+      margin-top: 0.6rem;
+    }
+    @media (max-width: 768px) {
+      #services {
+        padding: 80px 0;
+      }
+      .spine-line,
+      .spine-dot {
+        display: none;
+      }
+      .service-node {
+        flex-direction: column !important;
+        margin-bottom: 1.5rem;
+      }
+      .service-node .service-content {
+        width: 100%;
+        text-align: left !important;
+        padding: 1.5rem !important;
+      }
+      .service-node .service-spacer {
+        display: none;
+      }
+      .services-subhead {
+        margin-bottom: 2.5rem;
+      }
+      .service-content p {
+        max-height: 200px;
+        opacity: 1;
+        margin-top: 0.6rem;
+      }
+    }
+  </style>
+  <section id="services" data-section="services">
+    <div class="services-container">
+      <div class="services-label">Services</div>
+      <h2 class="services-title">
+        <span class="navy">Fastest Way to Match</span> <span class="orange">People With Purpose</span>
+      </h2>
+      <p class="services-subhead">Strategic Human Capital solutions designed to align individual purpose with corporate profitability.</p>
+      <div class="spine-wrapper" id="spineWrapper">
+        <div class="spine-line" id="spineLine"></div>
+        <div class="spine-dot" id="spineDot"></div>
+        <div class="service-node odd">
+          <div class="service-content">
+            <div class="service-number">01</div>
+            <h3>Talent Acquisition</h3>
+            <p>Moving beyond resumes, I use Boolean search and behavioral profiling to source, screen, and secure "A-Player" talent that fits your culture and your bottom line.</p>
+          </div>
+          <div class="service-spacer"></div>
+        </div>
+        <div class="service-node even">
+          <div class="service-spacer"></div>
+          <div class="service-content">
+            <div class="service-number">02</div>
+            <h3>Strategic Onboarding Architect</h3>
+            <p>First impressions are permanent. I design seamless integration journeys that reduce "time-to-productivity" and maximize new-hire retention.</p>
+          </div>
+        </div>
+        <div class="service-node odd">
+          <div class="service-content">
+            <div class="service-number">03</div>
+            <h3>Financial & Payroll Integrity</h3>
+            <p>Combining HR expertise with financial rigor, I manage end-to-end payroll processing and compensation benchmarking with zero-margin error.</p>
+          </div>
+          <div class="service-spacer"></div>
+        </div>
+        <div class="service-node even">
+          <div class="service-spacer"></div>
+          <div class="service-content">
+            <div class="service-number">04</div>
+            <h3>High-Performance Frameworks</h3>
+            <p>I build data-driven performance management systems and "Improvement Roadmaps" that actually drive results.</p>
+          </div>
+        </div>
+        <div class="service-node odd">
+          <div class="service-content">
+            <div class="service-number">05</div>
+            <h3>Behavioral Policy Design</h3>
+            <p>I craft employee handbooks and workplace policies that protect the organization while empowering the individual.</p>
+          </div>
+          <div class="service-spacer"></div>
+        </div>
+        <div class="service-node even">
+          <div class="service-spacer"></div>
+          <div class="service-content">
+            <div class="service-number">06</div>
+            <h3>Organizational Architecture</h3>
+            <p>From change management to fractional HR leadership, I provide the structural strategy needed for sustainable growth by building transparent, result-oriented evaluation frameworks that drive high performance.</p>
+          </div>
+        </div>
+        <div class="service-node odd">
+          <div class="service-content">
+            <div class="service-number">07</div>
+            <h3>Performance Improvement Plans (PIPs)</h3>
+            <p>Upskilling your greatest asset. I develop targeted training modules by crafting supportive, data-driven pathways for employee growth and operational excellence.</p>
+          </div>
+          <div class="service-spacer"></div>
+        </div>
+        <div class="service-node even">
+          <div class="service-spacer"></div>
+          <div class="service-content">
+            <div class="service-number">08</div>
+            <h3>Lifecycle & Exit Strategy</h3>
+            <p>Managing transitions with dignity and data. I handle offboarding and exit procedures to protect brand reputation and capture vital organizational feedback.</p>
+          </div>
+        </div>
+        <div class="service-node odd">
+          <div class="service-content">
+            <div class="service-number">09</div>
+            <h3>Compensation & Benefit Optimization</h3>
+            <p>Strategic rewards management. I audit and design benefit packages that remain competitive in the market while respecting fiscal constraints.</p>
+          </div>
+          <div class="service-spacer"></div>
+        </div>
+        <div class="service-node even">
+          <div class="service-spacer"></div>
+          <div class="service-content">
+            <div class="service-number">10</div>
+            <h3>HR Audit & Compliance</h3>
+            <p>Mitigating risk through meticulous record-keeping and policy audits to ensure your organization is future-proof and legally sound.</p>
+          </div>
+        </div>
+        <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-top:4rem; position:relative; z-index:2;">
+          <a href="#contact" style="display:inline-block; padding:0.9rem 2.2rem; background:#FF8308; color:#FFFFFF; font-weight:700; border-radius:50px; text-decoration:none; font-family:'Raleway',sans-serif; letter-spacing:0.3px; font-size:0.95rem; transition:all 0.3s ease;">Inquire About Services</a>
+          <a href="/assets/docs/resume-roman-fajar.pdf" style="display:inline-block; padding:0.9rem 2.2rem; border:2px solid #FF8308; color:#FF8308; font-weight:700; border-radius:50px; text-decoration:none; font-family:'Raleway',sans-serif; letter-spacing:0.3px; font-size:0.95rem; background:transparent; transition:all 0.3s ease;">Download Resume</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    (function() {
+      window.addEventListener('load', function() {
+        const spineLine = document.getElementById('spineLine');
+        const spineDot = document.getElementById('spineDot');
+        const spineWrapper = document.getElementById('spineWrapper');
+        const serviceNodes = document.querySelectorAll('.service-node');
+        if (!spineWrapper) return;
+        gsap.fromTo(spineLine, {
+          height: 0
+        }, {
+          height: '100%',
+          duration: 1,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: spineWrapper,
+            start: 'top 70%',
+            end: 'bottom 30%',
+            scrub: 0.5
+          }
+        });
+        gsap.fromTo(spineDot, {
+          top: '0%'
+        }, {
+          top: '100%',
+          ease: 'none',
+          scrollTrigger: {
+            trigger: spineWrapper,
+            start: 'top 70%',
+            end: 'bottom 30%',
+            scrub: 0.5
+          }
+        });
+        serviceNodes.forEach(function(node) {
+          gsap.fromTo(node, {
+            opacity: 0,
+            y: 40
+          }, {
+            opacity: 1,
+            y: 0,
+            duration: 0.7,
+            ease: 'power2.out',
+            scrollTrigger: {
+              trigger: node,
+              start: 'top 85%',
+              toggleActions: 'play none none none'
+            }
+          });
+        });
+      });
+    })();
+  </script>
+
+  <!-- ============================================ -->
+  <!-- PROJECTS SECTION -->
+  <!-- ============================================ -->
+  <style>
+    #projects {
+      background: #F4F6F9;
+      padding: 110px 0;
+      position: relative;
+      overflow: hidden;
+      min-height: 100vh;
+    }
+    .projects-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      position: relative;
+    }
+    .projects-label {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      color: #101A31;
+      opacity: 0.6;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    .projects-title {
+      font-family: 'Raleway', sans-serif;
+      font-size: clamp(2rem, 4vw, 2.6rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.6rem;
+      line-height: 1.2;
+    }
+    .projects-title .navy {
+      color: #101A31;
+    }
+    .projects-title .orange {
+      color: #FF8308;
+    }
+    .projects-subhead {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1rem;
+      color: #2c3a5c;
+      max-width: 600px;
+      margin-bottom: 4rem;
+      line-height: 1.7;
+    }
+    .project-node {
+      background: #FFFFFF;
+      border-radius: 20px;
+      padding: 2.5rem;
+      margin-bottom: 2.5rem;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s ease;
+      border: 2px solid transparent;
+      z-index: 2;
+    }
+    .project-node:hover {
+      border-color: #FF8308;
+      box-shadow: 0 0 40px rgba(255, 131, 8, 0.06);
+    }
+    .project-node::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(rgba(255, 131, 8, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 131, 8, 0.03) 1px, transparent 1px);
+      background-size: 20px 20px;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .project-node:hover::before {
+      opacity: 1;
+    }
+    .project-number {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #FF8308;
+      margin-bottom: 0.3rem;
+      position: relative;
+      z-index: 1;
+    }
+    .project-node h3 {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #101A31;
+      letter-spacing: -0.02em;
+      position: relative;
+      z-index: 1;
+      opacity: 0;
+    }
+    .project-node h3.revealed {
+      opacity: 1;
+    }
+    .project-brief {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.9rem;
+      color: #2c3a5c;
+      margin-top: 0.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    #projectOverlay {
+      position: fixed;
+      inset: 0;
+      background: #101A31;
+      z-index: 9999;
+      display: none;
+      overflow-y: auto;
+      padding: 3rem 2rem;
+    }
+    #projectOverlay.active {
+      display: block;
+    }
+    .overlay-close {
+      position: fixed;
+      top: 1.5rem;
+      right: 2rem;
+      z-index: 10001;
+      background: transparent;
+      border: 2px solid #FF8308;
+      color: #FF8308;
+      font-size: 1.2rem;
+      font-weight: 700;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: 'Raleway', sans-serif;
+    }
+    .overlay-close:hover {
+      background: #FF8308;
+      color: #101A31;
+    }
+    .overlay-content {
+      max-width: 1000px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+    .overlay-hero-text {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Raleway', sans-serif;
+      font-size: clamp(3rem, 10vw, 8rem);
+      font-weight: 800;
+      color: rgba(255, 255, 255, 0.04);
+      pointer-events: none;
+      white-space: nowrap;
+      z-index: 1;
+      letter-spacing: 0.05em;
+    }
+    .overlay-title {
+      font-family: 'Raleway', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+    .overlay-philosophy {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1rem;
+      color: #FF8308;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+    .overlay-section {
+      margin-bottom: 2rem;
+    }
+    .overlay-section h4 {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #FF8308;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 0.6rem;
+    }
+    .overlay-section p {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.95rem;
+      color: #d0d4dd;
+      line-height: 1.8;
+    }
+    .overlay-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.8rem;
+      margin-top: 2rem;
+    }
+    .overlay-feature-item {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.85rem;
+      color: #bcc1cc;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .overlay-ctas {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 3rem;
+      padding-bottom: 2rem;
+    }
+    .overlay-cta-primary {
+      padding: 0.9rem 2.2rem;
+      background: #FF8308;
+      color: #FFFFFF;
+      font-weight: 700;
+      border-radius: 50px;
+      text-decoration: none;
+      font-family: 'Raleway', sans-serif;
+      letter-spacing: 0.3px;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+    }
+    .overlay-cta-secondary {
+      padding: 0.9rem 2.2rem;
+      border: 2px solid #FF8308;
+      color: #FF8308;
+      font-weight: 700;
+      border-radius: 50px;
+      text-decoration: none;
+      font-family: 'Raleway', sans-serif;
+      letter-spacing: 0.3px;
+      font-size: 0.95rem;
+      background: transparent;
+      transition: all 0.3s ease;
+    }
+    .overlay-cta-secondary:hover {
+      background: #FF8308;
+      color: #101A31;
+    }
+    @media (max-width: 768px) {
+      #projects {
+        padding: 80px 0;
+      }
+      .overlay-features {
+        grid-template-columns: 1fr;
+      }
+      .overlay-hero-text {
+        font-size: clamp(2rem, 8vw, 4rem);
+      }
+      .project-node {
+        padding: 1.8rem;
+      }
+    }
+  </style>
+  <section id="projects" data-section="projects">
+    <div class="projects-container">
+      <div class="projects-label">Projects</div>
+      <h2 class="projects-title">
+        <span class="navy">Architecting the Future of</span> <span class="orange">Work, Human & Organizational Capital</span>
+      </h2>
+      <p class="projects-subhead">Turning raw organizational data into human-centric momentum.</p>
+      <div class="project-node" data-project="1">
+        <div class="project-number">Project 01</div>
+        <h3>The Asset Depreciation Engine</h3>
+        <p class="project-brief">Precision in Every Decimal. Automated temporal logic eliminating 100% of depreciation errors.</p>
+      </div>
+      <div class="project-node" data-project="2">
+        <div class="project-number">Project 02</div>
+        <h3>Enterprise Asset Inventory Architecture</h3>
+        <p class="project-brief">Zero-Touch Operational Excellence. 5-minute automated audit replacing a full day of manual entry.</p>
+      </div>
+      <div class="project-node" data-project="3">
+        <div class="project-number">Project 03</div>
+        <h3>The Integrated Talent Lifecycle</h3>
+        <p class="project-brief">Matching People with Purpose. Data-driven hiring from first interview through offboarding.</p>
+      </div>
+      <div class="project-node" data-project="4">
+        <div class="project-number">Project 04</div>
+        <h3>The Living Organizational Constitution</h3>
+        <p class="project-brief">A Human-Centric Strategic Framework. 80-page handbook evolved through five revisions.</p>
+      </div>
+    </div>
+  </section>
+  <div id="projectOverlay">
+    <button class="overlay-close" id="overlayClose">X</button>
+    <div class="overlay-hero-text" id="overlayHeroText"></div>
+    <div class="overlay-content" id="overlayContent"></div>
+  </div>
+  <script>
+    (function() {
+      window.addEventListener('load', function() {
+        const projectNodes = document.querySelectorAll('.project-node');
+        const projectTitles = document.querySelectorAll('.project-node h3');
+        projectTitles.forEach(function(title) {
+          ScrollTrigger.create({
+            trigger: title.closest('.project-node'),
+            start: 'top 60%',
+            onEnter: function() {
+              title.classList.add('revealed');
+            }
+          });
+        });
+        const projectData = {
+          1: {
+            heroText: '0% CALCULATED ERROR',
+            title: 'Project 01: The Asset Depreciation Engine',
+            philosophy: 'The Core Philosophy: Precision in Every Decimal.',
+            challenge: 'Management was struggling with "paper losses" and assets depreciating into negative values, leading to skewed financial health reports and manual audit nightmares.',
+            action: 'I engineered a "Temporal Logic" system that treats assets as living entities, reconciling complex accounting math with real-world business cycles.',
+            impact: '100% elimination of depreciation errors and a "one-click" snapshot capability for any historical or future financial period.',
+            features: ['Automated Depreciation Ceiling: Prevents assets from depreciating below salvage value.', 'R1 Temporal Control: A single-cell "Time-Travel" trigger that updates the entire sheet for any month.', 'Dual-Track Loss Attribution: Distinguishes between expected retirement and accidental economic leakage.', 'Inaugural Date +1 Logic: Ensures the first month of ownership is captured immediately for tax accuracy.',
+              'Header-Level "Brain" Formulas: Utilizes Array & Map logic to eliminate "drag-down" formula errors.', 'Dynamic Projection Modeling: Allows leadership to forecast future asset value for five-year planning.', 'Auto-Updating Accumulation: Real-time tracking of total accumulated depreciation across thousands of rows.', 'Disposal Sensitivity Analysis: Calculates the exact paper loss versus physical loss upon asset exit.',
+              'Scalable Data Validation: Built-in triggers to flag duplicate serial numbers or inconsistent purchase dates.', 'Financial Health Dashboard: A visual summary of net book value vs. original cost for immediate reporting.'
+            ]
+          },
+          2: {
+            heroText: '100% ASSET TRACEABILITY',
+            title: 'Project 02: Enterprise Asset Inventory Architecture',
+            philosophy: 'The Core Philosophy: Zero-Touch Operational Excellence.',
+            challenge: 'A growing team relied on 15+ fragmented manual lists, causing data silos, "missing" hardware, and hours of wasted administrative labor.',
+            action: 'I architected a Relational Database ecosystem that bridges live user submissions directly to a master financial dictionary.',
+            impact: 'Transformed a full day of manual entry into a 5-minute automated audit, ensuring 100% asset visibility as the company scales.',
+            features: ['Relational Data Mapping: Connects live form responses to static asset identifiers automatically.', 'Multi-Clause QUERY Stacks: Instantly categorizes disparate hardware into a unified, vertical stream.',
+              'VLOOKUP Exception Handling: A proactive flagging system that isolates "unlabeled" or "uncoded" assets.', 'One-Click Label Readiness: Optimized data structure for immediate physical inventory sticker printing.', 'Rotten Data Filtering: Logic-based cleaning that removes typos and duplicate submissions.',
+              'Real-Time Audit Readiness: The system is always "audit-ready" with a live count of all company hardware.', 'Cross-Departmental Sync: Links procurement data with IT deployment and Finance records.', 'Automated Stacking Logic: Dynamically stacks 15+ hardware types into one master view without manual sorting.',
+              'User-End Simplicity: Front-facing Google Forms designed for high completion rates and clean data entry.', 'Systemic Scalability: Architecture remains stable whether managing 50 or 5,000 unique assets.'
+            ]
+          },
+          3: {
+            heroText: 'DATA-DRIVEN BEHAVIOR',
+            title: 'Project 03: The Integrated Talent Lifecycle',
+            philosophy: 'The Core Philosophy: Matching People with Purpose.',
+            challenge: 'Interviewers struggled to quantify "soft" behavioral traits, leading to inconsistent hiring and lack of data during the transition from probation to full-time roles.',
+            action: 'I developed a smooth, integrated forms system that captures behavioral and technical data from the first interview through to offboarding.',
+            impact: 'A data-driven hiring process that provides a clear trajectory for PIPs (Performance Improvement) and long-term human capital investment.',
+            features: ['Multi-Dimensional Scoring: Captures behavioral, technical, and emotional intelligence on unified scales.', 'Department-Specific Questionnaires: Customized logic that adapts the form based on the specific role being filled.',
+              'Interview Expression Bridge: Helps interviewers translate "gut feelings" into objective, actionable data points.', 'Automated Probation Workflows: Data from the hiring phase automatically populates the first 90-day review.',
+              'OPIP Pathway Logic: Identifies performance gaps early and suggests specific improvement plans.', 'Cultural Alignment Mapping: Measures how well a candidate fits the "human-centric" mission of the firm.',
+              'End-to-End Tracking: A single digital thread that follows an employee from screening to professional exit.', 'Executive Decision Dashboard: Gives leadership a high-level view of the talent pipeline health.'
+            ]
+          },
+          4: {
+            heroText: 'HAPPY GOVERNANCE',
+            title: 'Project 04: The Living Organizational Constitution',
+            philosophy: 'The Core Philosophy: A Human-Centric Strategic Framework.',
+            challenge: 'Inconsistent policy application and lack of clarity during organizational crises were creating friction and reducing employee morale.',
+            action: 'I authored a comprehensive, 80-page "Living Handbook" that evolved through five revisions to meet real-time management and employee needs.',
+            impact: 'Established a definitive professional standard that protected the company\'s legal interests while fostering a culture of autonomy and trust.',
+            features: ['Full-Lifecycle Governance: Covers every aspect of employee life from pre-boarding to post-exit.', 'Crisis-Response Agility: Rapidly updated modules to handle unprecedented organizational shifts.',
+              'Autonomy-First Policies: Built-in frameworks that encourage employee ownership of their career paths.', 'Strategic Benefit Alignment: Policies redesigned to serve as retention tools rather than just "rules."',
+              'Iterative Version Control: Five-stage refinement based on feedback from both leadership and staff.', 'Legal & Financial Compliance: Ensures every policy aligns with local labor laws and fiscal constraints.',
+              'Human-Centric Language: Written to be accessible and supportive, moving away from "cold" legal jargon.', 'Leadership Vision Integration: Translates high-level goals into daily actionable behaviors for the workforce.'
+            ]
+          }
+        };
+        const overlay = document.getElementById('projectOverlay');
+        const overlayHeroText = document.getElementById('overlayHeroText');
+        const overlayContent = document.getElementById('overlayContent');
+        const overlayClose = document.getElementById('overlayClose');
+        projectNodes.forEach(function(node) {
+          node.addEventListener('click', function() {
+            const projectId = this.getAttribute('data-project');
+            const data = projectData[projectId];
+            if (!data) return;
+            overlayHeroText.textContent = data.heroText;
+            overlayContent.innerHTML = '<div class="overlay-title">' + data.title +
+              '</div><div class="overlay-philosophy">' + data.philosophy +
+              '</div><div class="overlay-section"><h4>The Challenge</h4><p>' + data.challenge +
+              '</p></div><div class="overlay-section"><h4>The Strategic Action</h4><p>' + data.action +
+              '</p></div><div class="overlay-section"><h4>The Resulting Impact</h4><p>' + data.impact +
+              '</p></div><h4 style="color:#FF8308; text-transform:uppercase; letter-spacing:2px; font-size:1rem; margin-top:2rem;">Salient Features</h4><div class="overlay-features">' +
+              data.features.map(function(f) {
+                return '<div class="overlay-feature-item">' + f + '</div>';
+              }).join('') +
+              '</div><div class="overlay-ctas"><a href="#contact" class="overlay-cta-primary">Get in Touch</a><a href="#about" class="overlay-cta-secondary">Explore My Journey</a></div>';
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            gsap.fromTo(overlay, {
+              opacity: 0
+            }, {
+              opacity: 1,
+              duration: 0.4
+            });
+            gsap.fromTo(overlayContent.children, {
+              opacity: 0,
+              y: 30
+            }, {
+              opacity: 1,
+              y: 0,
+              duration: 0.5,
+              stagger: 0.08,
+              ease: 'power2.out'
+            });
+          });
+        });
+        overlayClose.addEventListener('click', function() {
+          gsap.to(overlay, {
+            opacity: 0,
+            duration: 0.3,
+            onComplete: function() {
+              overlay.classList.remove('active');
+              document.body.style.overflow = '';
+              overlayContent.innerHTML = '';
+            }
+          });
+        });
+      });
+    })();
+  </script>
+
+  <!-- ============================================ -->
+  <!-- SKILLS SECTION -->
+  <!-- ============================================ -->
+  <style>
+    #skills {
+      background: #F4F6F9;
+      padding: 110px 0;
+      position: relative;
+      overflow: hidden;
+      min-height: 100vh;
+    }
+    .skills-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      position: relative;
+      z-index: 2;
+    }
+    .skills-label {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      color: #101A31;
+      opacity: 0.6;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    .skills-title {
+      font-family: 'Raleway', sans-serif;
+      font-size: clamp(2rem, 4vw, 2.6rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.6rem;
+      line-height: 1.2;
+    }
+    .skills-title .navy {
+      color: #101A31;
+    }
+    .skills-title .orange {
+      color: #FF8308;
+    }
+    .skills-subhead {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1rem;
+      color: #2c3a5c;
+      max-width: 650px;
+      margin-bottom: 4rem;
+      line-height: 1.7;
+    }
+    #neuralCanvas {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+    }
+    .clusters-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      position: relative;
+      z-index: 2;
+    }
+    .skill-cluster {
+      background: #FFFFFF;
+      border-radius: 24px;
+      padding: 2rem;
+      position: relative;
+      box-shadow: 0 10px 30px rgba(16, 26, 49, 0.03);
+      transition: all 0.45s cubic-bezier(0.25, 0.8, 0.25, 1.2);
+      overflow: hidden;
+      max-height: 280px;
+      border: 2px solid transparent;
+      z-index: 2;
+    }
+    .skill-cluster:hover {
+      max-height: 750px;
+      z-index: 10;
+      box-shadow: 0 25px 50px rgba(16, 26, 49, 0.08);
+      border-color: #FF8308;
+    }
+    .cluster-title {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #FF8308;
+      margin-bottom: 1.2rem;
+      border-bottom: 1px solid rgba(16, 26, 49, 0.08);
+      padding-bottom: 0.8rem;
+    }
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .skill-tag {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: #101A31;
+      background: #F4F6F9;
+      padding: 0.35rem 0.8rem;
+      border-radius: 20px;
+      cursor: default;
+      transition: all 0.35s ease;
+      position: relative;
+      will-change: transform, color, background;
+    }
+    .skill-tag:hover {
+      transform: scale(1.15);
+      color: #FF8308;
+      background: #FFFFFF;
+      box-shadow: 0 4px 15px rgba(255, 131, 8, 0.15);
+      z-index: 5;
+    }
+    @media (max-width: 768px) {
+      .clusters-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      #skills {
+        padding: 80px 0;
+      }
+      .skill-tag {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.6rem;
+      }
+      .skill-cluster {
+        max-height: 240px;
+      }
+      .skill-cluster:hover {
+        max-height: 650px;
+      }
+    }
+  </style>
+  <section id="skills" data-section="skills">
+    <canvas id="neuralCanvas"></canvas>
+    <div class="skills-container">
+      <div class="skills-label">Skills</div>
+      <h2 class="skills-title">
+        <span class="navy">Discover How I</span> <span class="orange">Connect, Lead, and Inspire</span> <span class="navy">People</span>
+      </h2>
+      <p class="skills-subhead">A multi-disciplinary stack of behavioral intelligence, financial rigor, and AI-driven automation.</p>
+      <div class="clusters-grid" id="clustersGrid">
+        <div class="skill-cluster" data-cluster="1">
+          <div class="cluster-title">Talent Acquisition</div>
+          <div class="skill-tags" id="cluster1"></div>
+        </div>
+        <div class="skill-cluster" data-cluster="2">
+          <div class="cluster-title">HR & Organizational Management</div>
+          <div class="skill-tags" id="cluster2"></div>
+        </div>
+        <div class="skill-cluster" data-cluster="3">
+          <div class="cluster-title">Finance, Business & Operations</div>
+          <div class="skill-tags" id="cluster3"></div>
+        </div>
+        <div class="skill-cluster" data-cluster="4">
+          <div class="cluster-title">Technical & Power Skills</div>
+          <div class="skill-tags" id="cluster4"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    (function() {
+      window.addEventListener('load', function() {
+        const data = {
+          cluster1: ['Technical Recruitment', 'IT Recruitment', 'Full-Cycle Recruiting', 'Sourcing Strategies', 'Boolean Search Essentials', 'Social Recruiting', 'LinkedIn Sourcing', 'Digital Platform Hiring',
+            'Screening Resumes', 'Candidate Screening', 'Behavioral Interviewing', 'Telephone Interviewing', 'Interviewing Techniques', 'Developer Interviewing', 'Job Description Development', 'Hiring Practices',
+            'Data-Driven Hiring', 'Social Media Recruiting', 'New Hire Paperwork', 'Onboarding Processes', 'Candidate Experience Management', 'CRM', 'Applicant Tracking Systems Optimization',
+            'Job Search Strategy Consulting', 'Talent Mapping', 'Tech Career Coaching', 'Technical Sourcing', 'Recruitment Marketing', 'Talent Pipeline Building'
+          ],
+          cluster2: ['HR Strategy', 'HR Consulting', 'HR Administration', 'Human Capital Management', 'Personnel Management', 'Employee Relations', 'Employee Engagement', 'Performance Management',
+            'Performance Appraisal', 'Training and Development', 'Workforce Planning', 'Succession Planning', 'HR Policies Development', 'Policy Management', 'Compliance & Legal Standards', 'Compensation & Benefits',
+            'Leave Management', 'Attendance Management', 'Exit Interviews', 'HR Insights & Analytics', 'HR Solutions Delivery', 'Generative AI in HR', 'AI for HR Workflow Automation', 'Employee Lifecycle Management',
+            'Organizational Governance', 'Workforce Audit', 'Diversity & Inclusion Awareness', 'Conflict Resolution', 'Workplace Culture Development', 'Administrative Assistance'
+          ],
+          cluster3: ['Bookkeeping Foundations', 'Financial Mechanics', 'Payroll Management', 'Asset Depreciation Management', 'Project Management', 'Project Management Foundations', 'Negotiation', 'Sales Management',
+            'Customer Service Excellence', 'Artificial Intelligence for Business', 'Business Process Automation', 'Tour Management', 'Tour Planning', 'Facebook Marketing', 'Resource Acquisition', 'Resource Management',
+            'Operational Excellence'
+          ],
+          cluster4: ['Prompt Engineering', 'Generative AI Tools', 'Technical Documentation', 'Microsoft Office Suite', 'Google Workspace', 'Analytical Thinking', 'Problem Solving', 'Interpersonal Communication',
+            'Written Communication', 'Time Management'
+          ]
+        };
+        Object.keys(data).forEach(function(key, i) {
+          const container = document.getElementById('cluster' + (i + 1));
+          if (!container) return;
+          data[key].forEach(function(skill) {
+            const tag = document.createElement('span');
+            tag.className = 'skill-tag';
+            tag.textContent = skill;
+            container.appendChild(tag);
+          });
+        });
+        document.querySelectorAll('.skill-tag').forEach(function(tag) {
+          gsap.to(tag, {
+            y: gsap.utils.random(-4, 4),
+            duration: gsap.utils.random(2.5, 4.5),
+            ease: 'sine.inOut',
+            yoyo: true,
+            repeat: -1,
+            delay: gsap.utils.random(0, 2)
+          });
+        });
+        const canvas = document.getElementById('neuralCanvas');
+        if (canvas) {
+          const ctx = canvas.getContext('2d');
+          let w, h, offset = 0;
+
+          function resize() {
+            const sec = document.getElementById('skills');
+            w = sec.offsetWidth;
+            h = sec.offsetHeight;
+            canvas.width = w;
+            canvas.height = h;
+          }
+
+          function draw() {
+            ctx.clearRect(0, 0, w, h);
+            ctx.strokeStyle = 'rgba(16,26,49,0.03)';
+            ctx.lineWidth = 1;
+            const s = 70;
+            for (let x = s; x < w; x += s) {
+              ctx.beginPath();
+              ctx.moveTo(x, 0);
+              ctx.lineTo(x, h);
+              ctx.stroke();
+            }
+            for (let y = s; y < h; y += s) {
+              ctx.beginPath();
+              ctx.moveTo(0, y);
+              ctx.lineTo(w, y);
+              ctx.stroke();
+            }
+            for (let x = s; x < w; x += s) {
+              for (let y = s; y < h; y += s) {
+                const alpha = Math.abs(y - (offset % h)) < 80 ? 0.35 : 0.12;
+                ctx.fillStyle = 'rgba(255,131,8,' + alpha + ')';
+                ctx.beginPath();
+                ctx.arc(x, y, 2.5, 0, Math.PI * 2);
+                ctx.fill();
+              }
+            }
+            offset += 0.8;
+            requestAnimationFrame(draw);
+          }
+          resize();
+          draw();
+          window.addEventListener('resize', resize);
+        }
+        document.querySelectorAll('.skill-cluster').forEach(function(cluster) {
+          cluster.addEventListener('mousemove', function(e) {
+            const tags = cluster.querySelectorAll('.skill-tag');
+            const rect = cluster.getBoundingClientRect();
+            const mx = e.clientX - rect.left,
+              my = e.clientY - rect.top;
+            tags.forEach(function(tag) {
+              const tr = tag.getBoundingClientRect();
+              const cx = tr.left + tr.width / 2 - rect.left,
+                cy = tr.top + tr.height / 2 - rect.top;
+              const dx = mx - cx,
+                dy = my - cy,
+                dist = Math.sqrt(dx * dx + dy * dy);
+              if (dist < 120) {
+                const f = (120 - dist) / 120;
+                gsap.to(tag, {
+                  x: dx * f * 0.3,
+                  y: dy * f * 0.3,
+                  duration: 0.4,
+                  ease: 'power2.out',
+                  overwrite: 'auto'
+                });
+              } else {
+                gsap.to(tag, {
+                  x: 0,
+                  y: 0,
+                  duration: 0.6,
+                  ease: 'power2.out',
+                  overwrite: 'auto'
+                });
+              }
+            });
+          });
+          cluster.addEventListener('mouseleave', function() {
+            cluster.querySelectorAll('.skill-tag').forEach(function(tag) {
+              gsap.to(tag, {
+                x: 0,
+                y: 0,
+                duration: 0.8,
+                ease: 'elastic.out(1,0.3)',
+                overwrite: 'auto'
+              });
+            });
+          });
+        });
+        document.querySelectorAll('.skill-tag').forEach(function(tag) {
+          tag.addEventListener('mouseenter', function() {
+            const sibs = this.closest('.skill-cluster').querySelectorAll('.skill-tag:not(:hover)');
+            gsap.to(sibs, {
+              opacity: 0.5,
+              duration: 0.3,
+              overwrite: 'auto'
+            });
+          });
+          tag.addEventListener('mouseleave', function() {
+            const sibs = this.closest('.skill-cluster').querySelectorAll('.skill-tag');
+            gsap.to(sibs, {
+              opacity: 1,
+              duration: 0.3,
+              overwrite: 'auto'
+            });
+          });
+        });
+        const sec = document.getElementById('skills');
+        if (sec) {
+          gsap.fromTo(sec, {
+            opacity: 0,
+            y: 50
+          }, {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: sec,
+              start: 'top 85%',
+              toggleActions: 'play none none none'
+            }
+          });
+          gsap.fromTo('.skill-cluster', {
+            opacity: 0,
+            y: 40
+          }, {
+            opacity: 1,
+            y: 0,
+            duration: 0.7,
+            stagger: 0.2,
+            ease: 'power2.out',
+            scrollTrigger: {
+              trigger: sec,
+              start: 'top 80%',
+              toggleActions: 'play none none none'
+            }
+          });
+        }
+      });
+    })();
+  </script>
+
+  <!-- ============================================ -->
+  <!-- EXPERIENCE SECTION -->
+  <!-- ============================================ -->
+  <style>
+    #experience {
+      background: #FFFFFF;
+      padding: 110px 0;
+      position: relative;
+      overflow: hidden;
+      min-height: 100vh;
+    }
+    .exp-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      position: relative;
+      z-index: 2;
+    }
+    .exp-label {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      color: #101A31;
+      opacity: 0.6;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    .exp-title {
+      font-family: 'Raleway', sans-serif;
+      font-size: clamp(2rem, 4vw, 2.6rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.6rem;
+      line-height: 1.2;
+    }
+    .exp-title .navy {
+      color: #101A31;
+    }
+    .exp-title .orange {
+      color: #FF8308;
+    }
+    .exp-subhead {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1rem;
+      color: #2c3a5c;
+      max-width: 650px;
+      margin-bottom: 4rem;
+      line-height: 1.7;
+    }
+    .exp-layout {
+      display: flex;
+      gap: 1.5rem;
+      position: relative;
+      align-items: stretch;
+    }
+    .year-reel-wrapper {
+      flex-shrink: 0;
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+      height: 160px;
+      position: relative;
+    }
+    .year-static {
+      font-family: 'Raleway', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #101A31;
+      opacity: 0.25;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      padding-right: 0.2rem;
+      flex-shrink: 0;
+    }
+    .year-reel-window {
+      width: 55px;
+      height: 160px;
+      overflow: hidden;
+      background: transparent;
+      border-radius: 12px;
+      position: relative;
+      mask-image: linear-gradient(to bottom, transparent 0%, black 25%, black 75%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 25%, black 75%, transparent 100%);
+    }
+    .year-reel-drum {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1.2);
+    }
+    .year-digit {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #101A31;
+      opacity: 0.2;
+      text-align: center;
+      line-height: 1;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.35s ease;
+      width: 100%;
+      background: transparent;
+      border-radius: 8px;
+    }
+    .year-digit.active {
+      color: #FFFFFF;
+      background: #FF8308;
+      font-size: 1.8rem;
+      font-weight: 800;
+      opacity: 1;
+      text-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+      border-radius: 10px;
+    }
+    .year-digit:hover {
+      opacity: 0.6;
+    }
+    .connector-line {
+      width: 2px;
+      background: #101A31;
+      opacity: 0.15;
+      position: relative;
+      flex-shrink: 0;
+      transition: all 0.5s ease;
+    }
+    .connector-line.active-connection {
+      opacity: 0.6;
+      background: #FF8308;
+    }
+    .connector-dot {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 10px;
+      height: 10px;
+      background: #101A31;
+      border-radius: 50%;
+      opacity: 0.3;
+      top: 50%;
+      transition: all 0.5s ease;
+    }
+    .connector-dot.active-dot {
+      background: #FF8308;
+      opacity: 1;
+      box-shadow: 0 0 15px rgba(255, 131, 8, 0.5);
+    }
+    .ghost-stack {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .ghost-card {
+      background: #F4F6F9;
+      border-radius: 16px;
+      padding: 1.3rem 1.8rem;
+      cursor: pointer;
+      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1.2);
+      border: 2px solid transparent;
+      overflow: hidden;
+      max-height: 90px;
+    }
+    .ghost-card.expanded {
+      max-height: 550px;
+      border-color: #FF8308;
+      background: #FFFFFF;
+      box-shadow: 0 15px 40px rgba(16, 26, 49, 0.06);
+    }
+    .ghost-role {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #101A31;
+      letter-spacing: -0.02em;
+      display: block;
+    }
+    .ghost-meta {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #2c3a5c;
+      margin-top: 0.25rem;
+    }
+    .ghost-meta .company-name {
+      font-weight: 600;
+      color: #101A31;
+    }
+    .ghost-meta .pipe {
+      color: #ccc;
+      margin: 0 0.4rem;
+    }
+    .ghost-meta .dates {
+      color: #FF8308;
+      font-weight: 600;
+    }
+    .ghost-details {
+      margin-top: 1rem;
+      opacity: 0;
+      transition: opacity 0.4s ease 0.2s;
+    }
+    .ghost-card.expanded .ghost-details {
+      opacity: 1;
+    }
+    .ghost-detail-item {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.9rem;
+      color: #2c3a5c;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(16, 26, 49, 0.05);
+      line-height: 1.6;
+    }
+    .ghost-detail-item:last-child {
+      border-bottom: none;
+    }
+    .ghost-detail-label {
+      font-weight: 700;
+      color: #FF8308;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .exp-ctas {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 3rem;
+      flex-wrap: wrap;
+    }
+    .exp-cta-primary {
+      padding: 0.9rem 2.2rem;
+      background: #FF8308;
+      color: #FFFFFF;
+      font-weight: 700;
+      border-radius: 50px;
+      text-decoration: none;
+      font-family: 'Raleway', sans-serif;
+      letter-spacing: 0.3px;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+    }
+    .exp-cta-secondary {
+      padding: 0.9rem 2.2rem;
+      border: 2px solid #FF8308;
+      color: #FF8308;
+      font-weight: 700;
+      border-radius: 50px;
+      text-decoration: none;
+      font-family: 'Raleway', sans-serif;
+      letter-spacing: 0.3px;
+      font-size: 0.95rem;
+      background: transparent;
+      transition: all 0.3s ease;
+    }
+    .exp-cta-secondary:hover {
+      background: #FF8308;
+      color: #FFFFFF;
+    }
+    @media (max-width: 768px) {
+      #experience {
+        padding: 70px 0;
+      }
+      .exp-subhead {
+        margin-bottom: 1.8rem;
+      }
+      .exp-layout {
+        flex-direction: column;
+        gap: 1.2rem;
+      }
+      .year-reel-wrapper {
+        height: 120px;
+        justify-content: center;
+      }
+      .year-reel-window {
+        height: 120px;
+        width: 44px;
+      }
+      .year-static {
+        font-size: 1.5rem;
+      }
+      .year-digit {
+        font-size: 1.1rem;
+        height: 32px;
+      }
+      .year-digit.active {
+        font-size: 1.3rem;
+      }
+      .connector-line {
+        display: none;
+      }
+      .ghost-card {
+        max-height: 75px;
+        padding: 0.9rem 1rem;
+      }
+      .ghost-card.expanded {
+        max-height: 600px;
+      }
+      .ghost-role {
+        font-size: 0.95rem;
+      }
+      .ghost-meta {
+        font-size: 0.7rem;
+      }
+      .exp-ctas {
+        margin-top: 2rem;
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+    }
+  </style>
+  <section id="experience" data-section="experience">
+    <div class="exp-container">
+      <div class="exp-label">Experience</div>
+      <h2 class="exp-title">
+        <span class="navy">The Path of Professional</span> <span class="orange">Growth & Value Creation</span>
+      </h2>
+      <p class="exp-subhead">A strategic documentation of high-impact roles, organizational transformations, and evolution from behavioral insight to architectural HR leadership.</p>
+      <div class="exp-layout">
+        <div class="year-reel-wrapper">
+          <div class="year-static">20</div>
+          <div class="year-reel-window">
+            <div class="year-reel-drum" id="yearReelDrum"></div>
+          </div>
+        </div>
+        <div class="connector-line" id="connectorLine">
+          <div class="connector-dot" id="connectorDot"></div>
+        </div>
+        <div class="ghost-stack" id="ghostStack"></div>
+      </div>
+      <div class="exp-ctas">
+        <a href="#projects" class="exp-cta-primary">Explore My Systems</a>
+        <a href="#contact" class="exp-cta-secondary">Initiate a Partnership</a>
+      </div>
+    </div>
+  </section>
+  <script>
+    (function() {
+      window.addEventListener('load', function() {
+        const experienceData = [{
+          year: 2024,
+          company: 'Fantech Labs',
+          role: 'HR & Finance Executive',
+          dates: 'Nov 2024 – Present',
+          details: [{
+            label: 'System Architecture',
+            text: 'Engineered the Asset Depreciation Engine and Enterprise Inventory Architecture, converting manual days of labor into a 5-minute automated precision audit.'
+          }, {
+            label: 'Strategic Governance',
+            text: 'Authored the 80-page Living Handbook (V5.0), creating a crisis-ready constitutional framework for organizational autonomy.'
+          }, {
+            label: 'Talent Intelligence',
+            text: 'Developed the Integrated Talent Lifecycle, applying psychological profiling to match candidate purpose with company mission from screening to offboarding.'
+          }, {
+            label: 'Fiscal Precision',
+            text: 'Orchestrating end-to-end Payroll and Attendance systems with zero-margin error to ensure 100% policy and statutory compliance.'
+          }]
+        }, {
+          year: 2024,
+          company: 'Teglax',
+          role: 'HR & Finance Intern',
+          dates: 'May 2024 – Nov 2024',
+          details: [{
+            label: 'Workflow Optimization',
+            text: 'Accelerated the processing of foundational HR documentation and supported the design of high-velocity recruitment funnels.'
+          }, {
+            label: 'Financial Integrity',
+            text: 'Executed precision audit logs for attendance and assisted in the monthly payroll reconciliation cycles.'
+          }, {
+            label: 'Lifecycle Coordination',
+            text: 'Managed the initial screening and scheduling logistics for large-scale candidate pipelines.'
+          }, {
+            label: 'Compliance Auditing',
+            text: 'Performed research-driven internal audits to align workplace standards with evolving labor regulations.'
+          }]
+        }, {
+          year: 2024,
+          company: 'Govt. Special Education Centre',
+          role: 'Internee Child Psychologist',
+          dates: 'Apr 2024 – May 2024',
+          details: [{
+            label: 'Developmental Strategy',
+            text: 'Conducted psychological assessments for students with intellectual disabilities, designing personalized educational plans through family-teacher collaboration.'
+          }]
+        }, {
+          year: 2023,
+          company: 'Insight Mind Care Center',
+          role: 'Internee Clinical Psychologist',
+          dates: 'Nov 2023 – Jan 2024',
+          details: [{
+            label: 'Workplace Diagnostics',
+            text: 'Diagnosed psychological conditions and implemented clinical interventions to help adults navigate complex mental health challenges in professional settings.'
+          }]
+        }, {
+          year: 2023,
+          company: 'UK-Based Retail (Freelance)',
+          role: 'Social Media Manager',
+          dates: 'Jul 2023 – Dec 2023',
+          details: [{
+            label: 'Growth Marketing',
+            text: 'Strategically targeted high-intent audiences on Facebook, significantly increasing engagement and traffic for a UK-based dropshipping enterprise.'
+          }]
+        }, {
+          year: 2020,
+          company: 'Self-Employed',
+          role: 'Academic Tutor',
+          dates: 'May 2020 – Jun 2023',
+          details: [{
+            label: 'Performance Coaching',
+            text: 'Crafted bespoke lesson plans and feedback loops that consistently drove student academic success and improved study habits.'
+          }]
+        }];
+        const currentYear = new Date().getFullYear();
+        const yearReelDrum = document.getElementById('yearReelDrum');
+        const ghostStack = document.getElementById('ghostStack');
+        const connectorLine = document.getElementById('connectorLine');
+        const connectorDot = document.getElementById('connectorDot');
+        let activeCard = null;
+        const digitHeight = 40;
+        let connectorTimeout;
+        for (let y = currentYear; y >= 2002; y--) {
+          const digit = document.createElement('div');
+          digit.className = 'year-digit';
+          digit.textContent = String(y).slice(-2);
+          digit.setAttribute('data-year', y);
+          digit.addEventListener('click', function() {
+            spinToYear(y);
+          });
+          yearReelDrum.appendChild(digit);
+        }
+        experienceData.forEach(function(exp, index) {
+          const card = document.createElement('div');
+          card.className = 'ghost-card';
+          card.setAttribute('data-year', exp.year);
+          card.setAttribute('data-index', index);
+          card.innerHTML = '<span class="ghost-role">' + exp.role + '</span><div class="ghost-meta"><span class="company-name">' + exp.company +
+            '</span><span class="pipe">|</span><span class="dates">' + exp.dates + '</span></div><div class="ghost-details">' + exp.details.map(
+              function(d) {
+                return '<div class="ghost-detail-item"><span class="ghost-detail-label">' + d.label + ':</span> ' + d.text + '</div>';
+              }).join('') + '</div>';
+          card.addEventListener('click', function() {
+            if (activeCard && activeCard !== card) activeCard.classList.remove('expanded');
+            if (card.classList.contains('expanded')) {
+              card.classList.remove('expanded');
+              activeCard = null;
+            } else {
+              card.classList.add('expanded');
+              activeCard = card;
+              spinToYear(parseInt(card.getAttribute('data-year')));
+            }
+          });
+          ghostStack.appendChild(card);
+        });
+
+        function spinToYear(year) {
+          const indexFromTop = currentYear - year;
+          const offset = indexFromTop * digitHeight;
+          const centerOffset = 60;
+          yearReelDrum.style.transform = 'translateY(' + (centerOffset - offset) + 'px)';
+          document.querySelectorAll('.year-digit').forEach(function(d) {
+            d.classList.remove('active');
+            if (parseInt(d.getAttribute('data-year')) === year) d.classList.add('active');
+          });
+          document.querySelectorAll('.ghost-card').forEach(function(c) {
+            c.classList.remove('expanded');
+          });
+          const matchingCards = document.querySelectorAll('.ghost-card[data-year="' + year + '"]');
+          if (matchingCards.length > 0) {
+            matchingCards[0].classList.add('expanded');
+            activeCard = matchingCards[0];
+            matchingCards[0].scrollIntoView({
+              behavior: 'smooth',
+              block: 'center'
+            });
+          } else {
+            activeCard = null;
+          }
+          if (connectorLine && connectorDot) {
+            connectorLine.classList.add('active-connection');
+            connectorDot.classList.add('active-dot');
+            clearTimeout(connectorTimeout);
+            connectorTimeout = setTimeout(function() {
+              connectorLine.classList.remove('active-connection');
+              connectorDot.classList.remove('active-dot');
+            }, 2000);
+          }
+        }
+        spinToYear(currentYear);
+        const expSection = document.getElementById('experience');
+        if (expSection) {
+          gsap.fromTo(expSection, {
+            opacity: 0,
+            y: 50
+          }, {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: expSection,
+              start: 'top 85%',
+              toggleActions: 'play none none none'
+            }
+          });
+          gsap.fromTo('.ghost-card', {
+            opacity: 0,
+            x: -30
+          }, {
+            opacity: 1,
+            x: 0,
+            duration: 0.5,
+            stagger: 0.1,
+            ease: 'power2.out',
+            scrollTrigger: {
+              trigger: expSection,
+              start: 'top 80%',
+              toggleActions: 'play none none none'
+            }
+          });
+        }
+      });
+    })();
+  </script>
+
+  <!-- ============================================ -->
+  <!-- ACADEMIC SECTION -->
+  <!-- ============================================ -->
+  <style>
+    #academic {
+      background: #F4F6F9;
+      padding: 110px 0;
+      position: relative;
+      overflow: hidden;
+      min-height: 100vh;
+    }
+    .acad-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      position: relative;
+      z-index: 2;
+    }
+    .acad-label {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      color: #101A31;
+      opacity: 0.6;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    .acad-title {
+      font-family: 'Raleway', sans-serif;
+      font-size: clamp(2rem, 4vw, 2.6rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.6rem;
+      line-height: 1.2;
+    }
+    .acad-title .navy {
+      color: #101A31;
+    }
+    .acad-title .orange {
+      color: #FF8308;
+    }
+    .acad-subhead {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1rem;
+      color: #2c3a5c;
+      max-width: 600px;
+      margin-bottom: 3rem;
+      line-height: 1.7;
+    }
+    .timeline-wrapper {
+      position: relative;
+      padding-left: 4rem;
+    }
+    .timeline-spine {
+      position: absolute;
+      left: 1.8rem;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: #101A31;
+      opacity: 0.2;
+      border-radius: 2px;
+      z-index: 0;
+    }
+    .spine-highlight {
+      position: absolute;
+      left: 1.8rem;
+      width: 3px;
+      background: #FF8308;
+      opacity: 0;
+      border-radius: 2px;
+      z-index: 1;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+    }
+    .spine-highlight.active {
+      opacity: 0.8;
+      box-shadow: 0 0 12px rgba(255, 131, 8, 0.5);
+    }
+    .spine-dot {
+      position: absolute;
+      left: 1.8rem;
+      width: 12px;
+      height: 12px;
+      background: #101A31;
+      border-radius: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      transition: all 0.4s ease;
+      pointer-events: none;
+    }
+    .spine-dot.active-dot {
+      background: #FF8308;
+      box-shadow: 0 0 16px rgba(255, 131, 8, 0.6);
+      transform: translateX(-50%) scale(1.4);
+    }
+    .edu-card {
+      background: #FFFFFF;
+      border-radius: 20px;
+      padding: 1.5rem 2rem;
+      position: relative;
+      margin-bottom: 2.5rem;
+      cursor: pointer;
+      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1.2);
+      border: 2px solid transparent;
+      overflow: visible;
+      z-index: 3;
+    }
+    .edu-card:hover {
+      border-color: #FF8308;
+      box-shadow: 0 15px 35px rgba(16, 26, 49, 0.06);
+    }
+    .year-badge {
+      position: absolute;
+      top: -14px;
+      left: 1.5rem;
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #FF8308;
+      background: #FFFFFF;
+      padding: 0.2rem 0.7rem;
+      border-radius: 10px;
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+      z-index: 5;
+      box-shadow: 0 2px 8px rgba(16, 26, 49, 0.06);
+      border: 1px solid rgba(255, 131, 8, 0.2);
+    }
+    .year-badge.visible {
+      opacity: 1;
+    }
+    .edu-degree {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #101A31;
+      letter-spacing: -0.02em;
+      display: block;
+    }
+    .edu-institution {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #2c3a5c;
+      display: block;
+      margin-top: 0.1rem;
+    }
+    .edu-meta {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #2c3a5c;
+      margin-top: 0.35rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      align-items: center;
+    }
+    .meta-divider {
+      color: #ccc;
+      font-weight: 400;
+    }
+    .grade-orange {
+      color: #FF8308;
+      font-weight: 700;
+    }
+    .gold-medalist-text {
+      color: #FF8308;
+      font-weight: 700;
+    }
+    .edu-desc-wrapper {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s cubic-bezier(0.25, 0.8, 0.25, 1.2);
+    }
+    .edu-card:hover .edu-desc-wrapper {
+      max-height: 200px;
+    }
+    .edu-desc {
+      padding-top: 0.8rem;
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.9rem;
+      color: #2c3a5c;
+      line-height: 1.7;
+    }
+    .acad-ctas {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+      margin-left: 4rem;
+    }
+    .acad-cta-primary {
+      padding: 0.9rem 2.2rem;
+      background: #FF8308;
+      color: #FFFFFF;
+      font-weight: 700;
+      border-radius: 50px;
+      text-decoration: none;
+      font-family: 'Raleway', sans-serif;
+      letter-spacing: 0.3px;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+    }
+    .acad-cta-secondary {
+      padding: 0.9rem 2.2rem;
+      border: 2px solid #FF8308;
+      color: #FF8308;
+      font-weight: 700;
+      border-radius: 50px;
+      text-decoration: none;
+      font-family: 'Raleway', sans-serif;
+      letter-spacing: 0.3px;
+      font-size: 0.95rem;
+      background: transparent;
+      transition: all 0.3s ease;
+    }
+    .acad-cta-secondary:hover {
+      background: #FF8308;
+      color: #FFFFFF;
+    }
+    @media (max-width: 768px) {
+      #academic {
+        padding: 80px 0;
+      }
+      .timeline-wrapper {
+        padding-left: 3rem;
+      }
+      .timeline-spine {
+        left: 1.2rem;
+      }
+      .spine-highlight {
+        left: 1.2rem;
+      }
+      .spine-dot {
+        left: 1.2rem;
+        width: 10px;
+        height: 10px;
+      }
+      .edu-card {
+        padding: 1.2rem 1.2rem;
+        margin-bottom: 2rem;
+      }
+      .edu-degree {
+        font-size: 1.05rem;
+      }
+      .edu-institution {
+        font-size: 0.8rem;
+      }
+      .edu-meta {
+        font-size: 0.7rem;
+      }
+      .year-badge {
+        font-size: 0.65rem;
+        top: -12px;
+        left: 1rem;
+      }
+      .acad-ctas {
+        margin-left: 3rem;
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+  </style>
+  <section id="academic" data-section="academic">
+    <div class="acad-container">
+      <div class="acad-label">Academic Foundations</div>
+      <h2 class="acad-title">
+        <span class="navy">The Academic Excellence behind</span> <span class="orange">My Humane Approach</span>
+      </h2>
+      <p class="acad-subhead">The excellent academic discipline steering the desire for a more human workplace.</p>
+      <div class="timeline-wrapper" id="timelineWrapper">
+        <div class="timeline-spine"></div>
+        <div class="spine-highlight" id="highlight1" style="top:0; height:115px;"></div>
+        <div class="spine-highlight" id="highlight2" style="top:140px; height:95px;"></div>
+        <div class="spine-highlight" id="highlight3" style="top:260px; height:85px;"></div>
+        <div class="spine-dot" id="dot1" style="top:2.2rem;"></div>
+        <div class="spine-dot" id="dot2" style="top:10.2rem;"></div>
+        <div class="spine-dot" id="dot3" style="top:17.7rem;"></div>
+        <div class="edu-card" id="eduCard1" data-highlight="highlight1" data-dot="dot1">
+          <div class="year-badge" id="badge1">2020 – 24</div>
+          <span class="edu-degree">BS in Applied Psychology</span>
+          <span class="edu-institution">University of Okara</span>
+          <div class="edu-meta">
+            <span>2020 – 24</span>
+            <span class="meta-divider">|</span>
+            <span>CGPA: 3.76</span>
+            <span class="meta-divider">|</span>
+            <span class="gold-medalist-text">Gold Medalist</span>
+          </div>
+          <div class="edu-desc-wrapper">
+            <div class="edu-desc">University awarded the Gold Medal in recognition of my academic honor for mastering behavioral mechanics, research methodology, and psychological diagnostics. This foundation allows me to view organizational challenges through a lens of human behavioral data.</div>
+          </div>
+        </div>
+        <div class="edu-card" id="eduCard2" data-highlight="highlight2" data-dot="dot2">
+          <div class="year-badge" id="badge2">2018 – 20</div>
+          <span class="edu-degree">F.Sc. (Pre-Medical)</span>
+          <span class="edu-institution">ILM Group of Colleges</span>
+          <div class="edu-meta">
+            <span>2018 – 20</span>
+            <span class="meta-divider">|</span>
+            <span>Grade: <span class="grade-orange">A+</span></span>
+          </div>
+          <div class="edu-desc-wrapper">
+            <div class="edu-desc">Beyond academic excellence, I led competitive debate circuits and served as a Student Proctor, developing the high-stakes communication skills I now use for HR negotiations and public speaking.</div>
+          </div>
+        </div>
+        <div class="edu-card" id="eduCard3" data-highlight="highlight3" data-dot="dot3">
+          <div class="year-badge" id="badge3">2016 – 18</div>
+          <span class="edu-degree">Matriculation</span>
+          <span class="edu-institution">Kahnur Education House</span>
+          <div class="edu-meta">
+            <span>2016 – 18</span>
+            <span class="meta-divider">|</span>
+            <span>Grade: <span class="grade-orange">A+</span></span>
+          </div>
+          <div class="edu-desc-wrapper">
+            <div class="edu-desc">Consistently ranked at the top of the cohort, with a focus on refined communication and school-wide leadership roles.</div>
+          </div>
+        </div>
+      </div>
+      <div class="acad-ctas">
+        <a href="#about" class="acad-cta-primary">My Journey</a>
+        <a href="/assets/docs/thesis-roman-fajar.pdf" class="acad-cta-secondary">Read My Thesis</a>
+      </div>
+    </div>
+  </section>
+  <script>
+    (function() {
+      window.addEventListener('load', function() {
+        const cards = document.querySelectorAll('.edu-card');
+        let fadeTimeout;
+
+        function resetAll() {
+          document.querySelectorAll('.spine-highlight').forEach(function(h) {
+            h.classList.remove('active');
+          });
+          document.querySelectorAll('.spine-dot').forEach(function(d) {
+            d.classList.remove('active-dot');
+          });
+          document.querySelectorAll('.year-badge').forEach(function(b) {
+            b.classList.remove('visible');
+          });
+        }
+        cards.forEach(function(card) {
+          card.addEventListener('mouseenter', function() {
+            clearTimeout(fadeTimeout);
+            resetAll();
+            const hl = document.getElementById(this.getAttribute('data-highlight'));
+            const dt = document.getElementById(this.getAttribute('data-dot'));
+            const badge = this.querySelector('.year-badge');
+            if (hl) hl.classList.add('active');
+            if (dt) dt.classList.add('active-dot');
+            if (badge) badge.classList.add('visible');
+          });
+          card.addEventListener('mouseleave', function() {
+            const badge = this.querySelector('.year-badge');
+            const hl = document.getElementById(this.getAttribute('data-highlight'));
+            const dt = document.getElementById(this.getAttribute('data-dot'));
+            fadeTimeout = setTimeout(function() {
+              if (badge) badge.classList.remove('visible');
+              if (hl) hl.classList.remove('active');
+              if (dt) dt.classList.remove('active-dot');
+            }, 2000);
+          });
+        });
+        gsap.fromTo('.timeline-spine', {
+          scaleY: 0,
+          transformOrigin: 'top center'
+        }, {
+          scaleY: 1,
+          duration: 1.5,
+          ease: 'power2.inOut',
+          scrollTrigger: {
+            trigger: '#timelineWrapper',
+            start: 'top 75%',
+            toggleActions: 'play none none none'
+          }
+        });
+        gsap.fromTo('.edu-card', {
+          opacity: 0,
+          x: -30
+        }, {
+          opacity: 1,
+          x: 0,
+          duration: 0.6,
+          stagger: 0.2,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: '#timelineWrapper',
+            start: 'top 80%',
+            toggleActions: 'play none none none'
+          }
+        });
+        const acadSection = document.getElementById('academic');
+        if (acadSection) {
+          gsap.fromTo(acadSection, {
+            opacity: 0,
+            y: 50
+          }, {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: acadSection,
+              start: 'top 85%',
+              toggleActions: 'play none none none'
+            }
+          });
+        }
+      });
+    })();
+  </script>
+
+  <!-- ============================================ -->
+  <!-- RECOGNITIONS SECTION -->
+  <!-- ============================================ -->
+  <style>
+    #recognitions {
+      background: #F4F6F9;
+      padding: 110px 0;
+      position: relative;
+      overflow: hidden;
+      min-height: 100vh;
+    }
+    .rec-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      position: relative;
+      z-index: 2;
+    }
+    .rec-label {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      color: #101A31;
+      opacity: 0.6;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    .rec-title {
+      font-family: 'Raleway', sans-serif;
+      font-size: clamp(2rem, 4vw, 2.6rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+    .rec-title .navy {
+      color: #101A31;
+    }
+    .rec-title .orange {
+      color: #FF8308;
+    }
+    .rec-subhead {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1rem;
+      color: #2c3a5c;
+      max-width: 600px;
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+    .carousel-viewport {
+      position: relative;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      perspective: 1000px;
+    }
+    .carousel-track {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .rec-card {
+      position: absolute;
+      width: 340px;
+      max-width: 80vw;
+      min-height: 320px;
+      background: #FFFFFF;
+      border-radius: 24px;
+      padding: 1.8rem 1.6rem;
+      cursor: pointer;
+      transition: all 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 12px 35px rgba(16, 26, 49, 0.05);
+      border: 1px solid rgba(16, 26, 49, 0.04);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .rec-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 32px;
+      height: 32px;
+      border-top: 3px solid #FF8308;
+      border-left: 3px solid #FF8308;
+      border-radius: 24px 0 0 0;
+      pointer-events: none;
+      z-index: 2;
+    }
+    .rec-card::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 32px;
+      height: 32px;
+      border-bottom: 3px solid #FF8308;
+      border-right: 3px solid #FF8308;
+      border-radius: 0 0 24px 0;
+      pointer-events: none;
+      z-index: 2;
+    }
+    .rec-card.center {
+      transform: translateX(0) scale(1);
+      z-index: 5;
+      filter: blur(0);
+      opacity: 1;
+    }
+    .rec-card.inner-flank {
+      transform: translateX(0) scale(0.82);
+      z-index: 3;
+      filter: blur(3px);
+      opacity: 0.55;
+    }
+    .rec-card.outer-periphery {
+      transform: translateX(0) scale(0.65);
+      z-index: 1;
+      filter: blur(6px);
+      opacity: 0.3;
+    }
+    .rec-card.hidden-card {
+      transform: translateX(0) scale(0.45);
+      z-index: 0;
+      filter: blur(10px);
+      opacity: 0;
+      pointer-events: none;
+    }
+    .rec-card.expanded {
+      min-height: 440px;
+    }
+    .rec-progress {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 4px;
+      background: #FF8308;
+      width: 0%;
+      transition: width 0.5s ease;
+      border-radius: 0 0 24px 24px;
+      z-index: 3;
+    }
+    .rec-card.expanded .rec-progress {
+      width: 100%;
+    }
+    .rec-name {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #101A31;
+      margin-bottom: 0.15rem;
+    }
+    .rec-role {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: #FF8308;
+      margin-bottom: 0.8rem;
+      letter-spacing: 0.5px;
+    }
+    .rec-quote {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.82rem;
+      color: #2c3a5c;
+      line-height: 1.75;
+      flex: 1;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .rec-card.center .rec-quote {
+      -webkit-line-clamp: 7;
+    }
+    .rec-card.expanded .rec-quote {
+      -webkit-line-clamp: unset;
+      display: block;
+      overflow: visible;
+    }
+    .carousel-arrows {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .carousel-arrow {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 2px solid #FF8308;
+      background: transparent;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FF8308;
+      font-size: 1.1rem;
+      font-weight: 700;
+      transition: all 0.3s ease;
+      font-family: 'Raleway', sans-serif;
+    }
+    .carousel-arrow:hover {
+      background: #FF8308;
+      color: #FFFFFF;
+    }
+    .rec-ctas {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .rec-cta-primary {
+      padding: 0.9rem 2.2rem;
+      background: #FF8308;
+      color: #FFFFFF;
+      font-weight: 700;
+      border-radius: 50px;
+      text-decoration: none;
+      font-family: 'Raleway', sans-serif;
+      letter-spacing: 0.3px;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+    }
+    .rec-cta-secondary {
+      padding: 0.9rem 2.2rem;
+      border: 2px solid #FF8308;
+      color: #FF8308;
+      font-weight: 700;
+      border-radius: 50px;
+      text-decoration: none;
+      font-family: 'Raleway', sans-serif;
+      letter-spacing: 0.3px;
+      font-size: 0.95rem;
+      background: transparent;
+      transition: all 0.3s ease;
+    }
+    .rec-cta-secondary:hover {
+      background: #FF8308;
+      color: #FFFFFF;
+    }
+    @media (max-width: 768px) {
+      #recognitions {
+        padding: 80px 0;
+      }
+      .carousel-viewport {
+        height: 380px;
+      }
+      .rec-card {
+        width: 75vw;
+        min-height: 280px;
+        padding: 1.3rem;
+      }
+      .rec-card.expanded {
+        min-height: 420px;
+      }
+      .rec-name {
+        font-size: 0.9rem;
+      }
+      .rec-role {
+        font-size: 0.65rem;
+      }
+      .rec-quote {
+        font-size: 0.75rem;
+      }
+    }
+  </style>
+  <section id="recognitions" data-section="recognitions">
+    <div class="rec-container">
+      <div class="rec-label">Recognitions</div>
+      <h2 class="rec-title">
+        <span class="navy">Hear the</span> <span class="orange">Endorsing Voices of Others</span>
+      </h2>
+      <p class="rec-subhead">Testimonials from industry leaders on the intersection of behavioral intelligence and operational precision.</p>
+      <div class="carousel-viewport">
+        <div class="carousel-track" id="carouselTrack"></div>
+      </div>
+      <div class="carousel-arrows">
+        <button class="carousel-arrow" id="prevArrow">←</button>
+        <button class="carousel-arrow" id="nextArrow">→</button>
+      </div>
+      <div class="rec-ctas">
+        <a href="#projects" class="rec-cta-primary">View My Projects</a>
+        <a href="#contact" class="rec-cta-secondary">Connect with Me</a>
+      </div>
+    </div>
+  </section>
+  <script>
+    (function() {
+      window.addEventListener('load', function() {
+        const endorsements = [{
+          name: 'Zeeshan Hanif',
+          role: 'Tech Lead - Mulesoft Integrations at Lightspeed Commerce',
+          quote: 'Roman was an outstanding HR professional. She played an important role in defining and maturing company policies and nurturing newly hired employees. Committed, dedicated, and possesses amazing communication skills.'
+        }, {
+          name: 'Muhammad Saad',
+          role: 'Recruitment Supervisor at Rang Logistics',
+          quote: 'I had the opportunity to work with Roman during the early stages of her career, and it was a pleasure to see her grow professionally. She brings a calm and composed presence to the workplace, along with a strong ability to listen, learn, and adapt. She is highly attentive, thoughtful in her approach, and consistently shows a willingness to improve and take on new challenges. Her professionalism and positive attitude make her someone who contributes meaningfully to any team she is part of. I would confidently recommend her to any organization looking for a dedicated and reliable professional with strong potential for continued growth.'
+        }, {
+          name: 'Muhammad Dilawar',
+          role: 'Technical Recruitment Executive at Fantech Labs',
+          quote: 'Roman manages the financial side of HR with impressive precision and reliability. She\'s someone you can always count on to keep things running smoothly and efficiently. What stands out most is her strong sense of responsibility and determination.'
+        }, {
+          name: 'Haider Ali',
+          role: 'Brand Strategist at KBM BPO Digital',
+          quote: 'Roman is one of those rare individuals who combines technical competence with a relentless drive for results. During our time working together, she consistently demonstrated a proactive approach to problem-solving and a deep commitment to organizational goals.'
+        }, {
+          name: 'Amna Huamir',
+          role: 'HR Assistant at MS HR Solutions',
+          quote: 'Ms. Roman is incredibly kind to freshers. She has this unique way of engaging and guiding us through the stormy waters of the corporate world with such peace, making the transition feel seamless through her constant help.'
+        }, {
+          name: 'Kashaf Shahid',
+          role: 'Radio Jockey & Media Sciences Specialist at PU',
+          quote: 'In an industry that can be overwhelming, Ms. Roman is a calm guide. She is naturally helpful and takes the time to mentor freshers, ensuring they navigate their early challenges with confidence and peace of mind.'
+        }];
+        const track = document.getElementById('carouselTrack');
+        let currentIndex = 0;
+        endorsements.forEach(function(rec, i) {
+          const card = document.createElement('div');
+          card.className = 'rec-card';
+          card.setAttribute('data-index', i);
+          card.innerHTML = '<span class="rec-name">' + rec.name + '</span><span class="rec-role">' + rec.role +
+            '</span><p class="rec-quote">' + rec.quote + '</p><div class="rec-progress"></div>';
+          card.addEventListener('click', function() {
+            if (this.classList.contains('center')) {
+              this.classList.toggle('expanded');
+            } else {
+              moveToIndex(parseInt(this.getAttribute('data-index')));
+            }
+          });
+          track.appendChild(card);
+        });
+        const allCards = document.querySelectorAll('.rec-card');
+        const totalCards = allCards.length;
+
+        function updateCarousel() {
+          allCards.forEach(function(card, i) {
+            let relPos = i - currentIndex;
+            if (relPos > totalCards / 2) relPos -= totalCards;
+            if (relPos < -totalCards / 2) relPos += totalCards;
+            card.classList.remove('center', 'inner-flank', 'outer-periphery', 'hidden-card', 'expanded');
+            card.style.transform = '';
+            card.style.zIndex = '';
+            const absRel = Math.abs(relPos);
+            if (relPos === 0) {
+              card.classList.add('center');
+              card.style.transform = 'translateX(0) scale(1)';
+              card.style.zIndex = '5';
+            } else if (absRel === 1) {
+              card.classList.add('inner-flank');
+              card.style.transform = 'translateX(' + (relPos * 100) + 'px) scale(0.82)';
+              card.style.zIndex = '3';
+            } else if (absRel === 2) {
+              card.classList.add('outer-periphery');
+              card.style.transform = 'translateX(' + (relPos * 160) + 'px) scale(0.65)';
+              card.style.zIndex = '1';
+            } else {
+              card.classList.add('hidden-card');
+              card.style.transform = 'translateX(' + (relPos * 200) + 'px) scale(0.45)';
+              card.style.zIndex = '0';
+            }
+          });
+        }
+
+        function moveToIndex(idx) {
+          currentIndex = idx;
+          updateCarousel();
+        }
+        document.getElementById('prevArrow').addEventListener('click', function() {
+          currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+          updateCarousel();
+        });
+        document.getElementById('nextArrow').addEventListener('click', function() {
+          currentIndex = (currentIndex + 1) % totalCards;
+          updateCarousel();
+        });
+        updateCarousel();
+        const recSection = document.getElementById('recognitions');
+        if (recSection) {
+          gsap.fromTo(recSection, {
+            opacity: 0,
+            y: 50
+          }, {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: recSection,
+              start: 'top 85%',
+              toggleActions: 'play none none none'
+            }
+          });
+        }
+      });
+    })();
+  </script>
+
+  <!-- ============================================ -->
+  <!-- ACCREDITATIONS SECTION -->
+  <!-- ============================================ -->
+  <style>
+    #accreditations {
+      background: #FFFFFF;
+      padding: 110px 0;
+      position: relative;
+      overflow: hidden;
+      min-height: 100vh;
+    }
+    .acc-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      position: relative;
+      z-index: 2;
+    }
+    .acc-label {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      color: #101A31;
+      opacity: 0.6;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    .acc-title {
+      font-family: 'Raleway', sans-serif;
+      font-size: clamp(2rem, 4vw, 2.6rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+    .acc-title .navy {
+      color: #101A31;
+    }
+    .acc-title .orange {
+      color: #FF8308;
+    }
+    .acc-subhead {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1rem;
+      color: #2c3a5c;
+      max-width: 600px;
+      margin-bottom: 3rem;
+      line-height: 1.7;
+    }
+    .deck-viewport {
+      position: relative;
+      height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      perspective: 1200px;
+    }
+    .deck-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .cert-card {
+      position: absolute;
+      width: 300px;
+      height: 210px;
+      background: #F4F6F9;
+      border-radius: 16px;
+      padding: 0.5rem;
+      cursor: pointer;
+      transition: all 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 15px 40px rgba(16, 26, 49, 0.08);
+      border: 2px solid #F4F6F9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+    }
+    .cert-card::after {
+      content: "";
+      position: absolute;
+      inset: -2px;
+      border-radius: 18px;
+      padding: 2px;
+      background: linear-gradient(135deg, rgba(255, 131, 8, 0.3), transparent 40%, transparent 60%, rgba(255, 131, 8, 0.3));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.6;
+    }
+    .cert-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 10px;
+      display: block;
+    }
+    .cert-title {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #101A31;
+      text-align: center;
+      margin-top: 0.5rem;
+      letter-spacing: -0.01em;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      line-height: 1.3;
+    }
+    .cert-designation {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.6rem;
+      font-weight: 500;
+      color: #FF8308;
+      text-align: center;
+      margin-top: 0.1rem;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    .cert-check {
+      position: absolute;
+      bottom: 0.7rem;
+      right: 0.7rem;
+      width: 20px;
+      height: 20px;
+      background: #FF8308;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 3;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    .cert-check::after {
+      content: "✓";
+      color: #FFFFFF;
+      font-size: 0.65rem;
+      font-weight: 700;
+    }
+    .cert-card.stacked {
+      pointer-events: none;
+    }
+    .cert-card.top-card {
+      transform: translateX(0) translateY(0) rotate(0deg);
+      z-index: 5;
+    }
+    .cert-card.top-card .cert-title,
+    .cert-card.top-card .cert-designation,
+    .cert-card.top-card .cert-check {
+      opacity: 1;
+    }
+    .deck-container.fanned .cert-card {
+      pointer-events: auto;
+    }
+    .deck-container.fanned .cert-card .cert-title,
+    .deck-container.fanned .cert-card .cert-designation,
+    .deck-container.fanned .cert-card .cert-check {
+      opacity: 1;
+    }
+    .lightbox-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(16, 26, 49, 0.9);
+      z-index: 10000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+    .lightbox-overlay.active {
+      display: flex;
+    }
+    .lightbox-image {
+      max-width: 85vw;
+      max-height: 85vh;
+      border-radius: 12px;
+      border: 3px solid #FF8308;
+      box-shadow: 0 0 60px rgba(255, 131, 8, 0.3), 0 0 120px rgba(255, 131, 8, 0.1);
+      object-fit: contain;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 2px solid #FF8308;
+      background: transparent;
+      color: #FF8308;
+      font-size: 1.3rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: 'Raleway', sans-serif;
+      z-index: 10001;
+    }
+    .lightbox-close:hover {
+      background: #FF8308;
+      color: #101A31;
+    }
+    .acc-ctas {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+    .acc-cta-primary {
+      padding: 0.9rem 2.2rem;
+      background: #FF8308;
+      color: #FFFFFF;
+      font-weight: 700;
+      border-radius: 50px;
+      text-decoration: none;
+      font-family: 'Raleway', sans-serif;
+      letter-spacing: 0.3px;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+    }
+    .acc-cta-secondary {
+      padding: 0.9rem 2.2rem;
+      border: 2px solid #FF8308;
+      color: #FF8308;
+      font-weight: 700;
+      border-radius: 50px;
+      text-decoration: none;
+      font-family: 'Raleway', sans-serif;
+      letter-spacing: 0.3px;
+      font-size: 0.95rem;
+      background: transparent;
+      transition: all 0.3s ease;
+    }
+    .acc-cta-secondary:hover {
+      background: #FF8308;
+      color: #FFFFFF;
+    }
+    @media (max-width: 768px) {
+      #accreditations {
+        padding: 80px 0;
+      }
+      .deck-viewport {
+        height: 480px;
+      }
+      .cert-card {
+        width: 200px;
+        height: 155px;
+        padding: 0.35rem;
+      }
+      .cert-card img {
+        height: 115px;
+      }
+      .cert-title {
+        font-size: 0.6rem;
+      }
+      .cert-designation {
+        font-size: 0.5rem;
+      }
+      .cert-check {
+        width: 16px;
+        height: 16px;
+        bottom: 0.5rem;
+        right: 0.5rem;
+      }
+      .cert-check::after {
+        font-size: 0.5rem;
+      }
+      .lightbox-image {
+        max-width: 95vw;
+        max-height: 80vh;
+      }
+    }
+  </style>
+  <section id="accreditations" data-section="accreditations">
+    <div class="acc-container">
+      <div class="acc-label">Accreditations</div>
+      <h2 class="acc-title">
+        <span class="navy">Meet the Person Dedicated to</span> <span class="orange">Continuous Learning and Verified Expertise</span>
+      </h2>
+      <p class="acc-subhead">The strategic portfolio of certifications across Human Capital Management, Financial Logic, and Technical Sourcing.</p>
+      <div class="deck-viewport">
+        <div class="deck-container" id="deckContainer"></div>
+      </div>
+      <div class="acc-ctas">
+        <a href="#experience" class="acc-cta-primary">View My Professional Path</a>
+        <a href="#contact" class="acc-cta-secondary">Get Connected</a>
+      </div>
+    </div>
+    <div class="lightbox-overlay" id="lightboxOverlay">
+      <button class="lightbox-close" id="lightboxClose">X</button>
+      <img src="" alt="" class="lightbox-image" id="lightboxImage">
+    </div>
+  </section>
+  <script>
+    (function() {
+      window.addEventListener('load', function() {
+        const certs = [{
+          file: 'ROMAN FAJAR- Boolean Search Essentials for Recruitment Professionals.jpg',
+          title: 'Boolean Search Essentials',
+          designation: 'The Sourcing Engine'
+        }, {
+          file: 'ROMAN FAJAR- Effective Human Resource Course.jpg',
+          title: 'Effective Human Resource Course',
+          designation: 'The Operational Standard'
+        }, {
+          file: 'ROMAN FAJAR- Bookkeeping Basics.jpg',
+          title: 'Bookkeeping Basics',
+          designation: 'The Financial Foundation'
+        }, {
+          file: 'ROMAN FAJAR- Exit Interview.jpg',
+          title: 'Exit Interview Strategy',
+          designation: 'The Retention Specialist'
+        }, {
+          file: 'ROMAN FAJAR- Introduction to Human Resource Concepts.jpg',
+          title: 'Intro to HR Concepts',
+          designation: 'The Theoretical Baseline'
+        }];
+        const deckContainer = document.getElementById('deckContainer');
+        const lightboxOverlay = document.getElementById('lightboxOverlay');
+        const lightboxImage = document.getElementById('lightboxImage');
+        const lightboxClose = document.getElementById('lightboxClose');
+        let isFanned = false;
+        const isMobile = window.innerWidth <= 768;
+        certs.forEach(function(cert, i) {
+          const card = document.createElement('div');
+          card.className = 'cert-card stacked';
+          card.setAttribute('data-index', i);
+          card.innerHTML = '<img src="/assets/certifications/' + cert.file + '" alt="' + cert.title +
+            '" loading="lazy" onerror="this.style.background=\'#e8eaed\'; this.style.minHeight=\'160px\';"><span class="cert-title">' + cert.title +
+            '</span><span class="cert-designation">' + cert.designation + '</span><div class="cert-check"></div>';
+          card.addEventListener('click', function(e) {
+            const mobile = window.innerWidth <= 768;
+            if (!mobile && !isFanned && !this.classList.contains('top-card')) return;
+            lightboxImage.src = '/assets/certifications/' + cert.file;
+            lightboxImage.alt = cert.title;
+            lightboxOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+          });
+          deckContainer.appendChild(card);
+        });
+        const allCards = document.querySelectorAll('.cert-card');
+
+        function stackDeck() {
+          isFanned = false;
+          deckContainer.classList.remove('fanned');
+          allCards.forEach(function(card, i) {
+            card.classList.add('stacked');
+            card.classList.remove('top-card');
+            card.style.transform = '';
+            card.style.zIndex = '';
+          });
+          const topCard = allCards[0];
+          topCard.classList.remove('stacked');
+          topCard.classList.add('top-card');
+          topCard.style.transform = 'translateX(0) translateY(0) rotate(0deg)';
+          topCard.style.zIndex = '5';
+        }
+
+        function fanDeckDesktop() {
+          isFanned = true;
+          deckContainer.classList.add('fanned');
+          const total = allCards.length;
+          const spacing = 170;
+          const startX = -(spacing * (total - 1)) / 2;
+          const rotations = [-8, -4, 0, 4, 8];
+          allCards.forEach(function(card, i) {
+            card.classList.remove('stacked', 'top-card');
+            card.style.transform = 'translateX(' + (startX + i * spacing) + 'px) rotate(' + rotations[i] + 'deg)';
+            card.style.zIndex = i + 1;
+          });
+        }
+
+        function fanDeckMobile() {
+          isFanned = true;
+          deckContainer.classList.add('fanned');
+          const positions = [{
+            x: 0,
+            y: 0,
+            rot: 0
+          }, {
+            x: 0,
+            y: -150,
+            rot: -3
+          }, {
+            x: 0,
+            y: 150,
+            rot: 3
+          }, {
+            x: -160,
+            y: 0,
+            rot: -5
+          }, {
+            x: 160,
+            y: 0,
+            rot: 5
+          }];
+          allCards.forEach(function(card, i) {
+            card.classList.remove('stacked', 'top-card');
+            const pos = positions[i];
+            card.style.transform = 'translateX(' + pos.x + 'px) translateY(' + pos.y + 'px) rotate(' + pos.rot +
+              'deg) scale(0.85)';
+            card.style.zIndex = i === 0 ? 5 : 2;
+          });
+        }
+
+        function fanDeck() {
+          if (window.innerWidth <= 768) {
+            fanDeckMobile();
+          } else {
+            fanDeckDesktop();
+          }
+        }
+        deckContainer.addEventListener('mouseenter', fanDeck);
+        deckContainer.addEventListener('mouseleave', stackDeck);
+        deckContainer.addEventListener('touchstart', function(e) {
+          fanDeck();
+        }, {
+          passive: true
+        });
+        lightboxClose.addEventListener('click', function() {
+          lightboxOverlay.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+        lightboxOverlay.addEventListener('click', function(e) {
+          if (e.target === lightboxOverlay) {
+            lightboxOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+          }
+        });
+        stackDeck();
+        const accSection = document.getElementById('accreditations');
+        if (accSection) {
+          gsap.fromTo(accSection, {
+            opacity: 0,
+            y: 50
+          }, {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: accSection,
+              start: 'top 85%',
+              toggleActions: 'play none none none'
+            }
+          });
+        }
+      });
+    })();
+  </script>
+
+  <!-- ============================================ -->
+  <!-- FUN FACTS SECTION -->
+  <!-- ============================================ -->
+  <style>
+    #funfacts {
+      background: #F4F6F9;
+      padding: 110px 0;
+      position: relative;
+      overflow: hidden;
+      min-height: 100vh;
+    }
+    .fun-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      position: relative;
+      z-index: 2;
+    }
+    .fun-label {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      color: #101A31;
+      opacity: 0.6;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    .fun-title {
+      font-family: 'Raleway', sans-serif;
+      font-size: clamp(2rem, 4vw, 2.6rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+    .fun-title .grey {
+      color: #9ca3af;
+    }
+    .fun-title .orange {
+      color: #FF8308;
+    }
+    .fun-title .navy {
+      color: #101A31;
+    }
+    .fun-subhead {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1rem;
+      color: #2c3a5c;
+      max-width: 600px;
+      margin-bottom: 4rem;
+      line-height: 1.7;
+    }
+    .polaroid-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 3rem;
+    }
+    .fact-card {
+      background: #FFFFFF;
+      border-radius: 20px;
+      padding: 2rem;
+      cursor: pointer;
+      transition: all 0.45s cubic-bezier(0.25, 0.8, 0.25, 1.2);
+      border: 2px solid transparent;
+      position: relative;
+      box-shadow: 0 15px 35px rgba(16, 26, 49, 0.05);
+      transform: rotate(var(--tilt, 0deg));
+      min-height: 220px;
+      overflow: hidden;
+    }
+    .fact-card:nth-child(1) {
+      --tilt: -3deg;
+    }
+    .fact-card:nth-child(2) {
+      --tilt: 2.5deg;
+    }
+    .fact-card:nth-child(3) {
+      --tilt: -2deg;
+    }
+    .fact-card:nth-child(4) {
+      --tilt: 3deg;
+    }
+    .fact-card:hover {
+      transform: rotate(0deg) translateY(-6px);
+      border-color: #FF8308;
+      box-shadow: 0 25px 50px rgba(16, 26, 49, 0.1);
+      z-index: 10;
+    }
+    .fact-header {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #101A31;
+      margin-bottom: 0.3rem;
+      letter-spacing: -0.02em;
+    }
+    .fact-subheader {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #2c3a5c;
+      margin-bottom: 0.6rem;
+    }
+    .fact-twist {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.85rem;
+      color: #2c3a5c;
+      line-height: 1.7;
+      position: relative;
+      z-index: 2;
+    }
+    .glitch-word {
+      display: inline-block;
+      color: #101A31;
+      transition: color 0.3s ease;
+    }
+    .fact-card:nth-child(1):hover .glitch-word {
+      animation: glitchSwap 0.8s steps(3) forwards;
+    }
+    @keyframes glitchSwap {
+      0% {
+        color: #101A31;
+      }
+      33% {
+        color: #FF8308;
+        opacity: 0.6;
+      }
+      66% {
+        color: #101A31;
+        opacity: 1;
+      }
+      100% {
+        color: #FF8308;
+      }
+    }
+    .data-stream-bg {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+      border-radius: 20px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.65rem;
+      color: rgba(16, 26, 49, 0.06);
+      display: flex;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      gap: 0.3rem;
+      padding: 1.5rem;
+      opacity: 1;
+      transition: opacity 0.5s ease;
+    }
+    .fact-card:nth-child(1):hover .data-stream-bg {
+      opacity: 0.5;
+    }
+    .data-num {
+      color: rgba(16, 26, 49, 0.1);
+      transition: color 0.4s ease;
+    }
+    .fact-card:nth-child(1):hover .data-num {
+      color: rgba(255, 131, 8, 0.25);
+    }
+    .scanner-line-orange {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: #FF8308;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 2;
+      box-shadow: 0 0 20px rgba(255, 131, 8, 0.5);
+    }
+    .scanner-line-grey {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: #888;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 2;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    }
+    .fact-card:nth-child(2):hover .scanner-line-orange {
+      opacity: 1;
+      animation: scanOrange 2s ease-in-out infinite;
+    }
+    .fact-card:nth-child(2):hover .scanner-line-grey {
+      opacity: 1;
+      animation: scanGrey 2s ease-in-out infinite 0.7s;
+    }
+    @keyframes scanOrange {
+      0%, 100% {
+        top: 20%;
+      }
+      50% {
+        top: 55%;
+      }
+    }
+    @keyframes scanGrey {
+      0%, 100% {
+        top: 50%;
+      }
+      50% {
+        top: 75%;
+      }
+    }
+    .stamp-text {
+      position: absolute;
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      opacity: 0;
+      transform: rotate(-15deg);
+      transition: all 0.5s ease;
+      border: 3px solid;
+      padding: 0.3rem 0.8rem;
+      border-radius: 6px;
+      pointer-events: none;
+      z-index: 3;
+    }
+    .stamp-hired {
+      bottom: 2.5rem;
+      right: 1.8rem;
+      color: #FF8308;
+      border-color: #FF8308;
+    }
+    .stamp-rejected {
+      bottom: 0.8rem;
+      right: 2.5rem;
+      color: #888;
+      border-color: #888;
+      font-size: 1rem;
+    }
+    .fact-card:nth-child(2):hover .stamp-hired {
+      opacity: 0.8;
+      animation: stampAppear 2s ease-in-out infinite;
+    }
+    .fact-card:nth-child(2):hover .stamp-rejected {
+      opacity: 0.7;
+      animation: stampAppear 2s ease-in-out infinite 0.7s;
+    }
+    @keyframes stampAppear {
+      0%, 100% {
+        transform: rotate(-15deg) scale(0.9);
+        opacity: 0.4;
+      }
+      50% {
+        transform: rotate(-15deg) scale(1.05);
+        opacity: 0.9;
+      }
+    }
+    .trail-line-top {
+      position: absolute;
+      height: 2px;
+      background: #FF8308;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 2;
+      top: 30%;
+      left: 0;
+      width: 100%;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: all 0.5s ease;
+    }
+    .trail-line-mid {
+      position: absolute;
+      height: 2px;
+      background: #FF8308;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 2;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: all 0.5s ease;
+    }
+    .trail-line-bot {
+      position: absolute;
+      height: 2px;
+      background: #FF8308;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 2;
+      top: 70%;
+      left: 0;
+      width: 100%;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: all 0.5s ease;
+    }
+    .fact-card:nth-child(3):hover .trail-line-top {
+      opacity: 0.7;
+      transform: scaleX(1);
+    }
+    .fact-card:nth-child(3):hover .trail-line-mid {
+      opacity: 0.7;
+      transform: scaleX(1);
+      transition-delay: 0.1s;
+    }
+    .fact-card:nth-child(3):hover .trail-line-bot {
+      opacity: 0.7;
+      transform: scaleX(1);
+      transition-delay: 0.2s;
+    }
+    .shuttlecock {
+      position: absolute;
+      font-size: 1.8rem;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 3;
+    }
+    .fact-card:nth-child(3):hover .shuttlecock {
+      opacity: 1;
+      animation: smashThree 1.4s ease-in-out infinite;
+    }
+    @keyframes smashThree {
+      0% {
+        left: -10%;
+        top: 28%;
+      }
+      25% {
+        left: 105%;
+        top: 28%;
+      }
+      26% {
+        left: 105%;
+        top: 48%;
+        opacity: 0;
+      }
+      27% {
+        left: -10%;
+        top: 48%;
+        opacity: 0;
+      }
+      28% {
+        left: -10%;
+        top: 48%;
+        opacity: 1;
+      }
+      50% {
+        left: 105%;
+        top: 48%;
+      }
+      51% {
+        left: 105%;
+        top: 68%;
+        opacity: 0;
+      }
+      52% {
+        left: -10%;
+        top: 68%;
+        opacity: 0;
+      }
+      53% {
+        left: -10%;
+        top: 68%;
+        opacity: 1;
+      }
+      75% {
+        left: 105%;
+        top: 68%;
+      }
+      76% {
+        left: 105%;
+        top: 28%;
+        opacity: 0;
+      }
+      77% {
+        left: -10%;
+        top: 28%;
+        opacity: 0;
+      }
+      78% {
+        left: -10%;
+        top: 28%;
+        opacity: 1;
+      }
+      100% {
+        left: -10%;
+        top: 28%;
+      }
+    }
+    .spotlight {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle 120px at var(--mx, 50%) var(--my, 50%), rgba(255, 255, 255, 0.15) 0%, rgba(16, 26, 49, 0.7) 100%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+      z-index: 1;
+      border-radius: 20px;
+    }
+    .fact-card:nth-child(4):hover .spotlight {
+      opacity: 1;
+    }
+    .film-reel {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 1.8rem;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      z-index: 3;
+      pointer-events: none;
+    }
+    .fact-card:nth-child(4):hover .film-reel {
+      opacity: 1;
+      animation: spinReel 2s linear infinite;
+    }
+    @keyframes spinReel {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    .fun-ctas {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .fun-cta-primary {
+      padding: 0.9rem 2.2rem;
+      background: #FF8308;
+      color: #FFFFFF;
+      font-weight: 700;
+      border-radius: 50px;
+      text-decoration: none;
+      font-family: 'Raleway', sans-serif;
+      letter-spacing: 0.3px;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+    }
+    .fun-cta-secondary {
+      padding: 0.9rem 2.2rem;
+      border: 2px solid #FF8308;
+      color: #FF8308;
+      font-weight: 700;
+      border-radius: 50px;
+      text-decoration: none;
+      font-family: 'Raleway', sans-serif;
+      letter-spacing: 0.3px;
+      font-size: 0.95rem;
+      background: transparent;
+      transition: all 0.3s ease;
+    }
+    .fun-cta-secondary:hover {
+      background: #FF8308;
+      color: #FFFFFF;
+    }
+    @media (max-width: 768px) {
+      #funfacts {
+        padding: 80px 0;
+      }
+      .polaroid-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      .fact-card {
+        min-height: 200px;
+        padding: 1.5rem;
+      }
+      .fact-header {
+        font-size: 0.95rem;
+      }
+      .fact-twist {
+        font-size: 0.78rem;
+      }
+    }
+  </style>
+  <section id="funfacts" data-section="funfacts">
+    <div class="fun-container">
+      <div class="fun-label">Fun Facts</div>
+      <h2 class="fun-title">
+        <span class="navy">The</span> <span class="orange">Beating Human Heart</span> <span class="navy">behind the Desk</span>
+      </h2>
+      <p class="fun-subhead">Proof that even an Architect of Human Capital has a glitch or two (or maybe three).</p>
+      <div class="polaroid-grid">
+        <div class="fact-card" id="fact1">
+          <div class="data-stream-bg">
+            <span class="data-num">12% Turnover</span>
+            <span class="data-num">8.5% Growth</span>
+            <span class="data-num">44pts Engage</span>
+            <span class="data-num">3.2x ROI</span>
+            <span class="data-num">67% Retain</span>
+            <span class="data-num">22% Churn</span>
+            <span class="data-num">91% Sat</span>
+          </div>
+          <div class="fact-header">The Data Whisperer</div>
+          <p class="fact-subheader">A skilled orator who finds the human story behind every data point.</p>
+          <p class="fact-twist">"I'm basically a data whisperer. I can make a spreadsheet of turnover rates sound like a cinematic masterpiece—it's not a <span class="glitch-word">'resignation,'</span> it's a <span style="color:#FF8308;">'dramatic character arc exit.'</span> Give me a bar chart, and I'll give you a tragedy with a redemption plot."</p>
+        </div>
+        <div class="fact-card" id="fact2">
+          <div class="scanner-line-orange"></div>
+          <div class="scanner-line-grey"></div>
+          <div class="stamp-text stamp-hired">Hired</div>
+          <div class="stamp-text stamp-rejected">Rejected</div>
+          <div class="fact-header">HR by day, Foodie by night.</div>
+          <p class="fact-twist">"I treat my meals like my recruitment pipeline: heavily scrutinized, perfectly seasoned, and if the 'vibe check' fails at the first bite, we're not moving to the final round. I've 'rejected' more salads than I have resumes."</p>
+        </div>
+        <div class="fact-card" id="fact3">
+          <div class="trail-line-top"></div>
+          <div class="trail-line-mid"></div>
+          <div class="trail-line-bot"></div>
+          <div class="shuttlecock">🏸</div>
+          <div class="fact-header">The Pacing Pro</div>
+          <p class="fact-subheader">Cricket lover turned high-velocity badminton enthusiast.</p>
+          <p class="fact-twist">"I switched to badminton because the pace matches my workday. If I'm not moving at 100mph to smash a payroll error, am I even working? Plus, a shuttlecock is much easier to manage than a stakeholder's mood on a Monday."</p>
+        </div>
+        <div class="fact-card" id="fact4">
+          <div class="spotlight"></div>
+          <div class="film-reel">🎬</div>
+          <div class="fact-header">The Culture Critic</div>
+          <p class="fact-subheader">Movie buff analyzing character dynamics like team cultures.</p>
+          <p class="fact-twist">"While you're watching a horror movie for the jumpscares, I'm wondering if the villain's behavior could have been avoided with a better Onboarding process. Most cinematic 'monsters' are just victims of a non-inclusive workplace culture. Dark? Maybe. Ethical? Always. Change my mind."</p>
+        </div>
+      </div>
+      <div class="fun-ctas">
+        <a href="#about" class="fun-cta-primary">Meet the Human</a>
+        <a href="#contact" class="fun-cta-secondary">Learn More</a>
+      </div>
+    </div>
+  </section>
+  <script>
+    (function() {
+      window.addEventListener('load', function() {
+        const cards = document.querySelectorAll('.fact-card');
+        cards.forEach(function(card) {
+          gsap.to(card, {
+            rotation: gsap.utils.random(-3, 3),
+            duration: gsap.utils.random(2.5, 4),
+            ease: 'sine.inOut',
+            yoyo: true,
+            repeat: -1,
+            delay: gsap.utils.random(0, 2)
+          });
+        });
+        const fact4 = document.getElementById('fact4');
+        const spotlight = fact4 ? fact4.querySelector('.spotlight') : null;
+        if (fact4 && spotlight) {
+          fact4.addEventListener('mousemove', function(e) {
+            const rect = fact4.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / rect.width) * 100;
+            const y = ((e.clientY - rect.top) / rect.height) * 100;
+            spotlight.style.setProperty('--mx', x + '%');
+            spotlight.style.setProperty('--my', y + '%');
+          });
+        }
+        const funSection = document.getElementById('funfacts');
+        if (funSection) {
+          gsap.fromTo(funSection, {
+            opacity: 0,
+            y: 50
+          }, {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: funSection,
+              start: 'top 85%',
+              toggleActions: 'play none none none'
+            }
+          });
+        }
+      });
+    })();
+  </script>
+
+  <!-- ============================================ -->
+  <!-- CONTACT SECTION -->
+  <!-- ============================================ -->
+  <style>
+    #contact {
+      background: #FFFFFF;
+      padding: 110px 0;
+      position: relative;
+      overflow: hidden;
+      min-height: 100vh;
+    }
+    .contact-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    .contact-label {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      color: #101A31;
+      opacity: 0.6;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    .contact-title {
+      font-family: 'Raleway', sans-serif;
+      font-size: clamp(2rem, 4vw, 2.6rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+    .contact-title .navy {
+      color: #101A31;
+    }
+    .contact-title .orange {
+      color: #FF8308;
+    }
+    .contact-subhead {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1rem;
+      color: #2c3a5c;
+      max-width: 600px;
+      margin-bottom: 4rem;
+      line-height: 1.7;
+    }
+    .contact-split {
+      display: flex;
+      gap: 4rem;
+      align-items: center;
+    }
+    .contact-info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-decoration: none;
+      color: #101A31;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    .contact-item:hover,
+    .contact-item:hover .contact-value,
+    .contact-item:hover .contact-label-small {
+      color: #FF8308;
+    }
+    .icon-circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #F4F6F9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      position: relative;
+      flex-shrink: 0;
+      transition: all 0.3s ease;
+    }
+    .contact-item:hover .icon-circle {
+      background: #FF8308;
+    }
+    .contact-item:hover .icon-circle svg {
+      fill: #FFFFFF;
+      stroke: #FFFFFF;
+    }
+    .icon-circle svg {
+      width: 20px;
+      height: 20px;
+      fill: #101A31;
+      stroke: #101A31;
+      transition: all 0.3s ease;
+    }
+    .icon-circle::before {
+      content: "";
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      border: 1.5px solid #FF8308;
+      opacity: 0;
+      animation: sonarPulse 3s ease-out infinite;
+    }
+    @keyframes sonarPulse {
+      0% {
+        transform: scale(0.9);
+        opacity: 0.4;
+      }
+      100% {
+        transform: scale(1.35);
+        opacity: 0;
+      }
+    }
+    .contact-text {
+      display: flex;
+      flex-direction: column;
+    }
+    .contact-label-small {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #FF8308;
+      margin-bottom: 0.1rem;
+      transition: color 0.3s ease;
+    }
+    .contact-value {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #101A31;
+      transition: color 0.3s ease;
+    }
+    .contact-form-wrap {
+      flex: 1;
+      background: #F4F6F9;
+      border-radius: 28px;
+      padding: 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+    .form-group {
+      position: relative;
+    }
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 1rem 1.2rem;
+      border: 2px solid transparent;
+      border-radius: 16px;
+      background: #FFFFFF;
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.9rem;
+      color: #101A31;
+      transition: all 0.3s ease;
+      outline: none;
+      resize: none;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: #FF8308;
+      box-shadow: 0 0 0 4px rgba(255, 131, 8, 0.06);
+    }
+    .form-group textarea {
+      min-height: 120px;
+    }
+    .data-flow-line {
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      height: 2px;
+      background: #FF8308;
+      width: 0%;
+      transition: width 0.4s ease;
+      border-radius: 0 0 16px 16px;
+    }
+    .form-group input:focus~.data-flow-line,
+    .form-group textarea:focus~.data-flow-line {
+      width: 100%;
+    }
+    .submit-btn {
+      padding: 1rem 2.5rem;
+      background: transparent;
+      border: 2px solid #FF8308;
+      color: #FF8308;
+      font-weight: 700;
+      border-radius: 50px;
+      cursor: pointer;
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+      align-self: flex-start;
+      margin-top: 0.5rem;
+    }
+    .submit-btn.charged {
+      background: #FF8308;
+      color: #FFFFFF;
+    }
+    .submit-btn:hover {
+      box-shadow: 0 0 30px rgba(255, 131, 8, 0.4);
+    }
+    .submit-btn::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.6s, height 0.6s;
+    }
+    .submit-btn:hover::before {
+      width: 350px;
+      height: 350px;
+    }
+    .submit-btn span {
+      position: relative;
+      z-index: 2;
+    }
+    .submit-btn.sent {
+      pointer-events: none;
+      border-color: #101A31;
+      color: #101A31;
+      background: transparent;
+    }
+    .submit-btn.sent::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 2px;
+      background: #FF8308;
+      transform: translate(-50%, -50%) scaleX(0);
+      animation: scanSent 0.8s ease-in-out forwards;
+    }
+    @keyframes scanSent {
+      0% {
+        transform: translate(-50%, -50%) scaleX(0);
+      }
+      50% {
+        transform: translate(-50%, -50%) scaleX(1);
+      }
+      100% {
+        transform: translate(-50%, -50%) scaleX(0);
+      }
+    }
+    .success-msg {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.85rem;
+      color: #FF8308;
+      font-weight: 600;
+      margin-top: 0.5rem;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    .success-msg.show {
+      opacity: 1;
+    }
+    @media (max-width: 768px) {
+      #contact {
+        padding: 80px 0;
+      }
+      .contact-split {
+        flex-direction: column;
+        gap: 2.5rem;
+      }
+      .contact-form-wrap {
+        padding: 1.8rem;
+      }
+      .contact-title {
+        font-size: 1.8rem;
+      }
+      .icon-circle {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  </style>
+  <section id="contact" data-section="contact">
+    <div class="contact-container">
+      <div class="contact-label">Contact</div>
+      <h2 class="contact-title">
+        <span class="navy">Let's Build</span> <span class="orange">Better Workspaces</span> <span class="navy">for</span> <span class="orange">Best Experiences</span>
+      </h2>
+      <p class="contact-subhead">Reach out to discuss human capital architecture, strategic consulting, or a high-velocity partnership.</p>
+      <div class="contact-split">
+        <div class="contact-info">
+          <a href="https://wa.me/923000530137" target="_blank" rel="noopener" class="contact-item">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.91-9.91-9.91zM8.66 16.5l-.33.2c-.87.52-1.85.8-2.87.8-2.97 0-5.38-2.41-5.38-5.38 0-1.02.28-2 .8-2.87l.2-.33-1.02-3.72 3.72.98.33-.2c.87-.52 1.85-.8 2.87-.8 2.97 0 5.38 2.41 5.38 5.38 0 1.02-.28 2-.8 2.87l-.2.33 1.02 3.72-3.72-.98z"/></svg>
+            </div>
+            <div class="contact-text">
+              <span class="contact-label-small">WhatsApp</span>
+              <span class="contact-value">+92 300 0530137</span>
+            </div>
+          </a>
+          <a href="mailto:romanfajar.work@gmail.com" class="contact-item">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
+            </div>
+            <div class="contact-text">
+              <span class="contact-label-small">Email</span>
+              <span class="contact-value">romanfajar.work@gmail.com</span>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/romanfajar" target="_blank" rel="noopener" class="contact-item">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </div>
+            <div class="contact-text">
+              <span class="contact-label-small">LinkedIn</span>
+              <span class="contact-value">linkedin.com/in/romanfajar</span>
+            </div>
+          </a>
+          <div class="contact-item">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="contact-text">
+              <span class="contact-label-small">Location</span>
+              <span class="contact-value">Okara, Pakistan</span>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrap">
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <input type="text" id="name" placeholder="Your Name" required>
+              <div class="data-flow-line"></div>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" placeholder="name@company.com" required>
+              <div class="data-flow-line"></div>
+            </div>
+            <div class="form-group">
+              <input type="tel" id="phone" placeholder="+92 XXX XXXXXXX">
+              <div class="data-flow-line"></div>
+            </div>
+            <div class="form-group">
+              <textarea id="message" placeholder="Tell me about your organizational challenges or the role you're looking to fill..." required></textarea>
+              <div class="data-flow-line"></div>
+            </div>
+            <button type="submit" class="submit-btn" id="submitBtn">
+              <span>Send Message</span>
+            </button>
+            <p class="success-msg" id="successMsg">Transmission Successful.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    (function() {
+      window.addEventListener('load', function() {
+        const form = document.getElementById('contactForm');
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const messageInput = document.getElementById('message');
+        const submitBtn = document.getElementById('submitBtn');
+        const successMsg = document.getElementById('successMsg');
+
+        function checkFormComplete() {
+          if (nameInput.value.trim() && emailInput.value.trim() && messageInput.value.trim()) {
+            submitBtn.classList.add('charged');
+          } else {
+            submitBtn.classList.remove('charged');
+          }
+        }
+        nameInput.addEventListener('input', checkFormComplete);
+        emailInput.addEventListener('input', checkFormComplete);
+        messageInput.addEventListener('input', checkFormComplete);
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          if (!nameInput.value.trim() || !emailInput.value.trim() || !messageInput.value.trim()) return;
+          submitBtn.classList.add('sent');
+          submitBtn.querySelector('span').textContent = '';
+          const formData = new FormData();
+          formData.append('name', nameInput.value.trim());
+          formData.append('email', emailInput.value.trim());
+          formData.append('phone', document.getElementById('phone').value.trim());
+          formData.append('message', messageInput.value.trim());
+          fetch('https://formspree.io/f/mjglkdwp', {
+            method: 'POST',
+            body: formData,
+            headers: {
+              'Accept': 'application/json'
+            }
+          }).then(function() {
+            setTimeout(function() {
+              submitBtn.classList.remove('sent');
+              submitBtn.querySelector('span').textContent = 'Sent';
+              successMsg.classList.add('show');
+              form.reset();
+              submitBtn.classList.remove('charged');
+              setTimeout(function() {
+                submitBtn.querySelector('span').textContent = 'Send Message';
+                successMsg.classList.remove('show');
+              }, 3000);
+            }, 800);
+          }).catch(function() {
+            setTimeout(function() {
+              submitBtn.classList.remove('sent');
+              submitBtn.querySelector('span').textContent = 'Sent';
+              successMsg.classList.add('show');
+              form.reset();
+              submitBtn.classList.remove('charged');
+              setTimeout(function() {
+                submitBtn.querySelector('span').textContent = 'Send Message';
+                successMsg.classList.remove('show');
+              }, 3000);
+            }, 800);
+          });
+        });
+        const contactSection = document.getElementById('contact');
+        if (contactSection) {
+          gsap.fromTo(contactSection, {
+            opacity: 0,
+            y: 50
+          }, {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: contactSection,
+              start: 'top 85%',
+              toggleActions: 'play none none none'
+            }
+          });
+        }
+      });
+    })();
+  </script>
+
+  <!-- ============================================ -->
+  <!-- FOOTER SECTION -->
+  <!-- ============================================ -->
+  <style>
+    #siteFooter {
+      background: #101A31;
+      padding: 80px 0 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .footer-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 4rem;
+    }
+    .footer-col-title {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #FF8308;
+      margin-bottom: 1.5rem;
+    }
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .footer-links li {
+      position: relative;
+    }
+    .footer-links a {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #c4c8d0;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 2px;
+    }
+    .footer-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: #FF8308;
+      transition: width 0.3s ease;
+    }
+    .footer-links a:hover {
+      color: #FF8308;
+    }
+    .footer-links a:hover::after {
+      width: 100%;
+    }
+    .footer-contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .footer-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      text-decoration: none;
+      color: #c4c8d0;
+      transition: color 0.3s ease;
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+    .footer-contact-item:hover {
+      color: #FF8308;
+    }
+    .footer-contact-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.3s ease;
+    }
+    .footer-contact-item:hover .footer-contact-icon {
+      background: #FF8308;
+    }
+    .footer-contact-icon svg {
+      width: 14px;
+      height: 14px;
+      fill: #c4c8d0;
+      stroke: #c4c8d0;
+      transition: all 0.3s ease;
+    }
+    .footer-contact-item:hover .footer-contact-icon svg {
+      fill: #FFFFFF;
+      stroke: #FFFFFF;
+    }
+    .footer-brand-name {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.3rem;
+    }
+    .footer-brand-role {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: #FF8308;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 1rem;
+    }
+    .footer-brand-quote {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #c4c8d0;
+      line-height: 1.6;
+      font-style: italic;
+    }
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 1.8rem 0;
+      text-align: center;
+    }
+    .footer-bottom p {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.4);
+      font-weight: 500;
+    }
+    .footer-bottom span {
+      color: #FF8308;
+      font-weight: 600;
+    }
+    .scroll-top-btn {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #101A31;
+      border: 2px solid #FF8308;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.4s ease;
+      pointer-events: none;
+    }
+    .scroll-top-btn.visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    .scroll-top-btn:hover {
+      background: #FF8308;
+      box-shadow: 0 0 25px rgba(255, 131, 8, 0.5);
+    }
+    .scroll-top-btn svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: #FF8308;
+      stroke-width: 2.5;
+      transition: stroke 0.3s ease;
+    }
+    .scroll-top-btn:hover svg {
+      stroke: #FFFFFF;
+    }
+    .scroll-top-label {
+      position: absolute;
+      right: 60px;
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #FF8308;
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .scroll-top-btn:hover .scroll-top-label {
+      opacity: 1;
+    }
+    @media (max-width: 768px) {
+      #siteFooter {
+        padding: 60px 0 0;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        text-align: center;
+      }
+      .footer-links {
+        align-items: center;
+      }
+      .footer-contact-list {
+        align-items: center;
+      }
+      .footer-brand-quote {
+        max-width: 300px;
+        margin: 0 auto;
+      }
+      .scroll-top-btn {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        width: 42px;
+        height: 42px;
+      }
+    }
+  </style>
+  <footer id="siteFooter">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div>
+          <h3 class="footer-col-title">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#academic">Education</a></li>
+            <li><a href="#recognitions">Recommendations</a></li>
+            <li><a href="#accreditations">Certifications</a></li>
+            <li><a href="#funfacts">Fun Facts</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-col-title">Get in Touch</h3>
+          <div class="footer-contact-list">
+            <a href="https://wa.me/923000530137" target="_blank" rel="noopener" class="footer-contact-item">
+              <div class="footer-contact-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.91-9.91-9.91zM8.66 16.5l-.33.2c-.87.52-1.85.8-2.87.8-2.97 0-5.38-2.41-5.38-5.38 0-1.02.28-2 .8-2.87l.2-.33-1.02-3.72 3.72.98.33-.2c.87-.52 1.85-.8 2.87-.8 2.97 0 5.38 2.41 5.38 5.38 0 1.02-.28 2-.8 2.87l-.2.33 1.02 3.72-3.72-.98z"/></svg>
+              </div>+92 300 0530137
+            </a>
+            <a href="mailto:romanfajar.work@gmail.com" class="footer-contact-item">
+              <div class="footer-contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
+              </div>romanfajar.work@gmail.com
+            </a>
+            <a href="https://www.linkedin.com/in/romanfajar" target="_blank" rel="noopener" class="footer-contact-item">
+              <div class="footer-contact-icon">
+                <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </div>linkedin.com/in/romanfajar
+            </a>
+            <a href="#contact" class="footer-contact-item">
+              <div class="footer-contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+              </div>Contact Me
+            </a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-brand-name">Roman Fajar</div>
+          <div class="footer-brand-role">HR Professional</div>
+          <p class="footer-brand-quote">Creating a Better World at Work.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 <span>Roman Fajar</span>. All Rights Reserved.</p>
+      </div>
+    </div>
+    <div class="scroll-top-btn" id="scrollTopBtnFooter">
+      <span class="scroll-top-label">Back to the Start</span>
+      <svg viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+  </footer>
+  <script>
+    (function() {
+      window.addEventListener('load', function() {
+        const scrollTopBtn = document.getElementById('scrollTopBtnFooter');
+        window.addEventListener('scroll', function() {
+          if (window.scrollY > 600) {
+            scrollTopBtn.classList.add('visible');
+          } else {
+            scrollTopBtn.classList.remove('visible');
+          }
+        });
+        scrollTopBtn.addEventListener('click', function() {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+        const isMobile = window.innerWidth <= 768;
+        if (isMobile) {
+          const contactItems = document.querySelectorAll('.footer-contact-item');
+          const footer = document.getElementById('siteFooter');
+          if (footer && contactItems.length > 0) {
+            ScrollTrigger.create({
+              trigger: footer,
+              start: 'top 90%',
+              onEnter: function() {
+                contactItems.forEach(function(item, i) {
+                  const icon = item.querySelector('.footer-contact-icon');
+                  if (icon) {
+                    gsap.fromTo(icon, {
+                      boxShadow: '0 0 0px rgba(255,131,8,0)'
+                    }, {
+                      boxShadow: '0 0 18px rgba(255,131,8,0.7)',
+                      duration: 0.5,
+                      delay: i * 0.2,
+                      yoyo: true,
+                      repeat: 1,
+                      ease: 'power2.out'
+                    });
+                  }
+                });
+              },
+              toggleActions: 'play none none none'
+            });
+          }
+        }
+        document.querySelectorAll('.footer-links a, .footer-contact-item[href^="#"]').forEach(function(link) {
+          link.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if (targetId && targetId.startsWith('#')) {
+              e.preventDefault();
+              const target = document.querySelector(targetId);
+              if (target) {
+                target.scrollIntoView({
+                  behavior: 'smooth',
+                  block: 'start'
+                });
+              }
+            }
+          });
+        });
+      });
+    })();
+  </script>
+
+  <!-- ===== GLOBAL NAV & SCROLL SCRIPTS ===== -->
+  <script>
+    (function() {
+      gsap.registerPlugin(ScrollTrigger);
+      const stb = document.getElementById('scrollTopBtn');
+      if (stb) {
+        window.addEventListener('scroll', function() {
+          stb.classList.toggle('visible', window.scrollY > 600);
+        });
+        stb.addEventListener('click', function() {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+      }
+      window.addEventListener('scroll', function() {
+        let current = 'hero';
+        document.querySelectorAll('section[id]').forEach(function(s) {
+          if (s.getBoundingClientRect().top <= 150) current = s.getAttribute('id');
+        });
+        document.querySelectorAll('.nav-links a').forEach(function(l) {
+          l.classList.remove('active');
+          if (l.getAttribute('href') === '#' + current) l.classList.add('active');
+        });
+      });
+      document.querySelectorAll('.nav-links a').forEach(function(l) {
+        l.addEventListener('click', function(e) {
+          const id = this.getAttribute('href');
+          if (id && id.startsWith('#')) {
+            e.preventDefault();
+            const t = document.querySelector(id);
+            if (t) t.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+            });
+    })();
+  </script>
+
+  <!-- ===== MOBILE TOUCH SUPPORT ===== -->
+  <script>
+    (function(){
+      // Convert mouseenter to touchstart for all elements
+      document.querySelectorAll('.fact-card, .skill-cluster, .service-content, .edu-card, .rec-card, .perspective-card, .ghost-card, .project-node, .cert-card').forEach(function(el){
+        el.addEventListener('touchstart', function(e){
+          el.dispatchEvent(new MouseEvent('mouseenter', {bubbles:true}));
+        }, {passive:true});
+      });
+
+      // Convert mousemove to touchmove for spotlight/follow effects
+      document.querySelectorAll('.fact-card, .skill-cluster').forEach(function(el){
+        el.addEventListener('touchmove', function(e){
+          const touch = e.touches[0];
+          const mouseEvent = new MouseEvent('mousemove', {
+            clientX: touch.clientX,
+            clientY: touch.clientY,
+            bubbles: true
+          });
+          el.dispatchEvent(mouseEvent);
+        }, {passive:true});
+        
+        el.addEventListener('touchstart', function(e){
+          const touch = e.touches[0];
+          const mouseEvent = new MouseEvent('mousemove', {
+            clientX: touch.clientX,
+            clientY: touch.clientY,
+            bubbles: true
+          });
+          el.dispatchEvent(mouseEvent);
+        }, {passive:true});
+      });
+
+      // Service cards on mobile — tap to toggle description
+      if(window.innerWidth <= 768){
+        document.querySelectorAll('.service-content').forEach(function(card){
+          card.addEventListener('click', function(e){
+            e.stopPropagation();
+            const p = this.querySelector('p');
+            if(p){
+              if(p.style.maxHeight === '200px'){
+                p.style.maxHeight = '0px';
+                p.style.opacity = '0';
+                p.style.marginTop = '0';
+              } else {
+                p.style.maxHeight = '200px';
+                p.style.opacity = '1';
+                p.style.marginTop = '0.6rem';
+              }
+            }
+          });
+        });
+
+        // Fact cards on mobile — tap to trigger hover effects
+        document.querySelectorAll('.fact-card').forEach(function(card){
+          card.addEventListener('click', function(){
+            this.classList.toggle('mobile-active');
+            if(this.classList.contains('mobile-active')){
+              this.style.transform = 'rotate(0deg) translateY(-6px)';
+              this.style.borderColor = '#FF8308';
+            } else {
+              this.style.transform = '';
+              this.style.borderColor = 'transparent';
+            }
+          });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
