@@ -527,159 +527,58 @@ padding: 20px 2rem 2rem;
     </div>
   </section>
   <script>
-    (function() {
-      window.addEventListener('load', function() {
-        const preloader = document.getElementById('preloader');
-        const preloaderLogo = document.getElementById('preloaderLogo');
-        const heroSection = document.getElementById('hero');
-        if (!preloader || !heroSection) {
-          return;
-        }
-        const preloaderTL = gsap.timeline({
-          onComplete: function() {
-            gsap.to(preloader, {
-              clipPath: 'circle(0% at 50% 50%)',
-              duration: 0.25,
-              ease: 'power3.inOut',
-              onComplete: function() {
-                preloader.style.display = 'none';
-                startHeroAnimation();
-              }
-            });
-          }
-        });
-        preloaderTL.to(preloaderLogo, {
-          opacity: 1,
-          duration: 0.1,
-          ease: 'power2.out'
-        }).to(preloaderLogo, {
-          scale: 1.3,
-          duration: 0.2,
-          ease: 'sine.inOut',
-          yoyo: true,
-          repeat: 1
-        }).to(preloaderLogo, {
-          scale: 0.95,
-          duration: 0.1,
-          ease: 'power2.in'
-        });
-        function startHeroAnimation() {
-          const romanLetters = document.querySelectorAll('#romanLine .name-letter');
-          const fajarLetters = document.querySelectorAll('#fajarLine .name-letter');
-          const heroDesignation = document.getElementById('heroDesignation');
-          const heroTagline = document.getElementById('heroTagline');
-          const heroCTAs = document.getElementById('heroCTAs');
-          const impactMetrics = document.getElementById('impactMetrics');
-          const impactMetricsRow2 = document.getElementById('impactMetricsRow2');
-          if (romanLetters.length === 0 || fajarLetters.length === 0) return;
-          const masterTL = gsap.timeline({
-            defaults: {
-              ease: 'power3.out'
+(function() {
+  window.addEventListener('load', function() {
+    var heroSection = document.getElementById('hero');
+    if (heroSection) heroSection.style.opacity = '1';
+    
+    var romanLetters = document.querySelectorAll('#romanLine .name-letter');
+    var fajarLetters = document.querySelectorAll('#fajarLine .name-letter');
+    if (romanLetters.length === 0 || fajarLetters.length === 0) return;
+    
+    var masterTL = gsap.timeline({defaults:{ease:'power3.out'}});
+    masterTL.to(romanLetters, {opacity:1, y:0, duration:0.8, stagger:0.08, ease:'elastic.out(1,0.4)'})
+      .to(fajarLetters, {opacity:1, y:0, duration:0.8, stagger:0.08, ease:'elastic.out(1,0.4)'}, '-=1.0')
+      .to({}, {duration:0.3})
+      .call(function() {
+        document.getElementById('romanLine').classList.add('glass-text','glint-overlay');
+        document.getElementById('fajarLine').classList.add('glass-text','glint-overlay');
+      })
+      .to(['#romanLine','#fajarLine'], {transform:'perspective(1000px) rotateX(8deg) rotateY(-4deg)', duration:0.8, ease:'power2.inOut'})
+      .to('#heroDesignation', {opacity:1, duration:0.6}, '-=0.3')
+      .to('#heroTagline', {opacity:1, scale:1, duration:0.7, ease:'back.out(1.4)'}, '-=0.3')
+      .to('#heroCTAs', {opacity:1, y:0, duration:0.6}, '-=0.2')
+      .to(['#impactMetrics','#impactMetricsRow2'], {opacity:1, duration:0.5, stagger:0.15}, '-=0.1')
+      .call(function() {
+        document.querySelectorAll('.metric-number').forEach(function(el) {
+          var t = parseInt(el.getAttribute('data-target'),10);
+          var l = el.parentElement.querySelector('.metric-label').textContent.toLowerCase();
+          var isD = l.includes('time-to-hire'), isC = l.includes('cost-per-hire'), isP = l.includes('talent pool')||t>=100;
+          var c = {value:0};
+          gsap.to(c, {value:t, duration:1, ease:'power2.out',
+            onUpdate:function() {
+              var v = Math.round(c.value);
+              if(isD) el.textContent = v + ' Days';
+              else if(isC) el.textContent = v + '%';
+              else if(isP) el.textContent = v + '+';
+              else if(t===3) el.textContent = v + '+';
+              else if(t===80) el.textContent = v + '%';
+              else el.textContent = v + '+';
+            },
+            onComplete:function() {
+              if(isD) el.textContent = t + ' Days';
+              else if(isC) el.textContent = t + '%';
+              else if(isP) el.textContent = t + '+';
+              else if(t===3) el.textContent = t + '+';
+              else if(t===80) el.textContent = t + '%';
+              else el.textContent = t + '+';
             }
           });
-          masterTL.to(romanLetters, {
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            stagger: 0.08,
-            ease: 'elastic.out(1, 0.4)'
-          }).to(fajarLetters, {
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            stagger: 0.08,
-            ease: 'elastic.out(1, 0.4)'
-          }, '-=1.0').to({}, {
-            duration: 0.3
-          }).call(function() {
-            document.getElementById('romanLine').classList.add('glass-text', 'glint-overlay');
-            document.getElementById('fajarLine').classList.add('glass-text', 'glint-overlay');
-          }).to(['#romanLine', '#fajarLine'], {
-            transform: 'perspective(1000px) rotateX(8deg) rotateY(-4deg)',
-            duration: 0.8,
-            ease: 'power2.inOut'
-          }).to(heroDesignation, {
-            opacity: 1,
-            duration: 0.6
-          }, '-=0.3').to(heroTagline, {
-            opacity: 1,
-            scale: 1,
-            duration: 0.7,
-            ease: 'back.out(1.4)'
-          }, '-=0.3').to(heroCTAs, {
-            opacity: 1,
-            y: 0,
-            duration: 0.6
-          }, '-=0.2').to([impactMetrics, impactMetricsRow2], {
-            opacity: 1,
-            duration: 0.5,
-            stagger: 0.15
-          }, '-=0.1').call(function() {
-            const allCounters = document.querySelectorAll('.metric-number');
-            allCounters.forEach(function(el) {
-              const target = parseInt(el.getAttribute('data-target'), 10);
-              const label = el.parentElement.querySelector('.metric-label').textContent.toLowerCase();
-              const isDays = label.includes('time-to-hire');
-              const isCost = label.includes('cost-per-hire');
-              const isPool = label.includes('talent pool') || target >= 100;
-              const counterObj = {
-                value: 0
-              };
-              gsap.to(counterObj, {
-                value: target,
-                duration: 1,
-                ease: 'power2.out',
-                onUpdate: function() {
-                  const current = Math.round(counterObj.value);
-                  if (isDays) {
-                    el.textContent = current + ' Days';
-                  } else if (isCost) {
-                    el.textContent = current + '%';
-                  } else if (isPool) {
-                    el.textContent = current + '+';
-                  } else if (target === 3) {
-                    el.textContent = current + '+';
-                  } else if (target === 80) {
-                    el.textContent = current + '%';
-                  } else {
-                    el.textContent = current + '+';
-                  }
-                },
-                onComplete: function() {
-                  if (isDays) {
-                    el.textContent = target + ' Days';
-                  } else if (isCost) {
-                    el.textContent = target + '%';
-                  } else if (isPool) {
-                    el.textContent = target + '+';
-                  } else if (target === 3) {
-                    el.textContent = target + '+';
-                  } else if (target === 80) {
-                    el.textContent = target + '%';
-                  } else {
-                    el.textContent = target + '+';
-                  }
-                }
-              });
-            });
-          });
-          const navLinks = document.querySelectorAll('.header-nav a');
-          navLinks.forEach(function(link) {
-            link.addEventListener('click', function(e) {
-              navLinks.forEach(function(l) {
-                l.classList.remove('active');
-              });
-              link.classList.add('active');
-            });
-          });
-        }
-        preloaderLogo.addEventListener('error', function() {
-          gsap.killTweensOf(preloader);
-          preloader.style.display = 'none';
-          startHeroAnimation();
         });
       });
-    })();
+  });
+})();
+</script>
   </script>
 
   <!-- ============================================ -->
