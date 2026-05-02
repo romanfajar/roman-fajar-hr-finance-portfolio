@@ -481,7 +481,7 @@
   </style>
 
   <div id="preloader">
-    <img src="/assets/images/favicon.png" alt="RF Logo" id="preloaderLogo" onerror="this.style.display='none'; document.getElementById('preloader').style.display='none'; document.getElementById('hero').style.visibility='visible'; if(typeof startHeroAnimation==='function') startHeroAnimation();">
+    <img src="/favicon.png" alt="RF Logo" id="preloaderLogo" onerror="this.style.display='none'; document.getElementById('preloader').style.display='none'; document.getElementById('hero').style.visibility='visible'; if(typeof startHeroAnimation==='function') startHeroAnimation();">
   </div>
   <section id="hero" data-section="hero">
     <div class="hero-text-container">
@@ -505,7 +505,7 @@
         <a href="#services" class="hero-cta-primary">
           <span>Explore My Impact</span>
         </a>
-        <a href="/assets/docs/resume-roman-fajar.pdf" class="hero-cta-secondary">
+        <a href="/resume-roman-fajar.pdf" class="hero-cta-secondary">
           <span>Download Resume</span>
         </a>
       </div>
@@ -925,7 +925,7 @@
         <div class="about-portrait-col">
           <div class="about-portrait-wrapper" id="portraitWrapper">
             <div class="about-portrait-frame"></div>
-            <img src="/assets/images/roman-fajar.png" alt="Roman Fajar" class="about-portrait" id="aboutPortrait" onerror="this.style.display='none';">
+            <img src="/roman-fajar.png" alt="Roman Fajar" class="about-portrait" id="aboutPortrait" onerror="this.style.display='none';">
             <div class="about-portrait-dot"></div>
           </div>
         </div>
@@ -1297,7 +1297,7 @@
         </div>
         <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-top:4rem; position:relative; z-index:2;">
           <a href="#contact" style="display:inline-block; padding:0.9rem 2.2rem; background:#FF8308; color:#FFFFFF; font-weight:700; border-radius:50px; text-decoration:none; font-family:'Raleway',sans-serif; letter-spacing:0.3px; font-size:0.95rem; transition:all 0.3s ease;">Inquire About Services</a>
-          <a href="/assets/docs/resume-roman-fajar.pdf" style="display:inline-block; padding:0.9rem 2.2rem; border:2px solid #FF8308; color:#FF8308; font-weight:700; border-radius:50px; text-decoration:none; font-family:'Raleway',sans-serif; letter-spacing:0.3px; font-size:0.95rem; background:transparent; transition:all 0.3s ease;">Download Resume</a>
+          <a href="/resume-roman-fajar.pdf" style="display:inline-block; padding:0.9rem 2.2rem; border:2px solid #FF8308; color:#FF8308; font-weight:700; border-radius:50px; text-decoration:none; font-family:'Raleway',sans-serif; letter-spacing:0.3px; font-size:0.95rem; background:transparent; transition:all 0.3s ease;">Download Resume</a>
         </div>
       </div>
     </div>
@@ -2979,7 +2979,7 @@
       </div>
       <div class="acad-ctas">
         <a href="#about" class="acad-cta-primary">My Journey</a>
-        <a href="/assets/docs/thesis-roman-fajar.pdf" class="acad-cta-secondary">Read My Thesis</a>
+        <a href="/thesis-roman-fajar.pdf" class="acad-cta-secondary">Read My Thesis</a>
       </div>
     </div>
   </section>
@@ -3809,13 +3809,13 @@
           const card = document.createElement('div');
           card.className = 'cert-card stacked';
           card.setAttribute('data-index', i);
-          card.innerHTML = '<img src="/assets/certifications/' + cert.file + '" alt="' + cert.title +
+          card.innerHTML = '<img src="/' + cert.file + '" alt="' + cert.title +
             '" loading="lazy" onerror="this.style.background=\'#e8eaed\'; this.style.minHeight=\'160px\';"><span class="cert-title">' + cert.title +
             '</span><span class="cert-designation">' + cert.designation + '</span><div class="cert-check"></div>';
           card.addEventListener('click', function(e) {
             const mobile = window.innerWidth <= 768;
             if (!mobile && !isFanned && !this.classList.contains('top-card')) return;
-            lightboxImage.src = '/assets/certifications/' + cert.file;
+            lightboxImage.src = '/' + cert.file;
             lightboxImage.alt = cert.title;
             lightboxOverlay.classList.add('active');
             document.body.style.overflow = 'hidden';
