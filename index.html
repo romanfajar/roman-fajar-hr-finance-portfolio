@@ -149,6 +149,19 @@
   </style>
 </head>
 <body>
+  <nav class="side-nav" id="sideNav">
+  <div class="nav-dot active" data-target="hero"><span class="nav-label">Home</span></div>
+  <div class="nav-dot" data-target="about"><span class="nav-label">About</span></div>
+  <div class="nav-dot" data-target="services"><span class="nav-label">Services</span></div>
+  <div class="nav-dot" data-target="projects"><span class="nav-label">Projects</span></div>
+  <div class="nav-dot" data-target="skills"><span class="nav-label">Skills</span></div>
+  <div class="nav-dot" data-target="experience"><span class="nav-label">Experience</span></div>
+  <div class="nav-dot" data-target="academic"><span class="nav-label">Education</span></div>
+  <div class="nav-dot" data-target="recognitions"><span class="nav-label">Recs</span></div>
+  <div class="nav-dot" data-target="accreditations"><span class="nav-label">Certs</span></div>
+  <div class="nav-dot" data-target="funfacts"><span class="nav-label">Fun</span></div>
+  <div class="nav-dot" data-target="contact"><span class="nav-label">Contact</span></div>
+</nav>
   <nav id="globalNav">
     <a href="#hero" class="nav-logo">
       <div class="nav-logo-icon">RF</div>
@@ -159,12 +172,8 @@
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#academic">Education</a></li>
-      <li><a href="#recognitions">Recs</a></li>
-      <li><a href="#accreditations">Certs</a></li>
-      <li><a href="#funfacts">Fun</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -181,6 +190,53 @@
   <!-- HERO SECTION -->
   <!-- ============================================ -->
   <style>
+    .side-nav {
+  position: fixed;
+  right: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9997;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  background: rgba(255,255,255,0.3);
+  backdrop-filter: blur(8px);
+  padding: 0.6rem 0.35rem;
+  border-radius: 2rem;
+}
+.nav-dot {
+  width: 8px;
+  height: 8px;
+  background: #101A31;
+  opacity: 0.35;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.25s;
+  position: relative;
+}
+.nav-dot.active {
+  opacity: 1;
+  background: #FF8308;
+  transform: scale(1.5);
+}
+.nav-label {
+  position: absolute;
+  right: 1.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: #101A31;
+  background: white;
+  padding: 0.15rem 0.5rem;
+  border-radius: 10px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+}
+.nav-dot:hover .nav-label {
+  opacity: 1;
+}
     #hero {
       height: 100vh;
       display: flex;
@@ -5311,5 +5367,23 @@ padding: 70px 2rem 2rem;
       }
     })();
   </script>
+  <script>
+document.querySelectorAll('.nav-dot').forEach(function(dot) {
+  dot.addEventListener('click', function() {
+    var target = document.getElementById(this.getAttribute('data-target'));
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+window.addEventListener('scroll', function() {
+  var current = 'hero';
+  document.querySelectorAll('section[id]').forEach(function(s) {
+    if (s.getBoundingClientRect().top <= 200) current = s.getAttribute('id');
+  });
+  document.querySelectorAll('.nav-dot').forEach(function(d) {
+    d.classList.remove('active');
+    if (d.getAttribute('data-target') === current) d.classList.add('active');
+  });
+});
+</script>
 </body>
 </html>
