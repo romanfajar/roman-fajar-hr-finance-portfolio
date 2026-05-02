@@ -181,23 +181,6 @@
   <!-- HERO SECTION -->
   <!-- ============================================ -->
   <style>
-    #preloader {
-      position: fixed;
-      inset: 0;
-      background: #FFFFFF;
-      z-index: 10000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      clip-path: circle(100% at 50% 50%);
-    }
-    #preloaderLogo {
-      width: 80px;
-      height: 80px;
-      opacity: 0;
-      border-radius: 50%;
-      display: block;
-    }
     #hero {
       height: 100vh;
       display: flex;
@@ -479,10 +462,6 @@ padding: 20px 2rem 2rem;
       }
     }
   </style>
-
-  <div id="preloader">
-    <img src="/favicon.png" alt="RF Logo" id="preloaderLogo" onerror="this.style.display='none'; document.getElementById('preloader').style.display='none'; document.getElementById('hero').style.visibility='visible'; if(typeof startHeroAnimation==='function') startHeroAnimation();">
-  </div>
   <section id="hero" data-section="hero">
     <div class="hero-text-container">
       <div class="name-row" id="romanLine">
