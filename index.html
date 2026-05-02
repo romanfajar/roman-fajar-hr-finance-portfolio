@@ -5114,8 +5114,9 @@ padding: 70px 2rem 2rem;
         text-align: center;
       }
       .footer-links {
-        align-items: center;
-      }
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+}
       .footer-contact-list {
         align-items: center;
       }
@@ -5136,19 +5137,19 @@ padding: 70px 2rem 2rem;
       <div class="footer-grid">
         <div>
           <h3 class="footer-col-title">Quick Links</h3>
-          <ul class="footer-links">
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#academic">Education</a></li>
-            <li><a href="#recognitions">Recommendations</a></li>
-            <li><a href="#accreditations">Certifications</a></li>
-            <li><a href="#funfacts">Fun Facts</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+          <ul class="footer-links" style="display:grid;grid-template-columns:1fr 1fr;gap:0.4rem 1.5rem;">
+  <li><a href="#hero">Home</a></li>
+  <li><a href="#about">About Me</a></li>
+  <li><a href="#services">Services</a></li>
+  <li><a href="#projects">Projects</a></li>
+  <li><a href="#skills">Skills</a></li>
+  <li><a href="#experience">Experience</a></li>
+  <li><a href="#academic">Education</a></li>
+  <li><a href="#recognitions">Recommendations</a></li>
+  <li><a href="#accreditations">Certifications</a></li>
+  <li><a href="#funfacts">Fun Facts</a></li>
+  <li><a href="#contact">Contact</a></li>
+</ul>
         </div>
         <div>
           <h3 class="footer-col-title">Get in Touch</h3>
