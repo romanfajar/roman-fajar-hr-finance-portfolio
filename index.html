@@ -181,62 +181,6 @@
   <!-- HERO SECTION -->
   <!-- ============================================ -->
   <style>
-    #globalHeader {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 9999;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem 2.5rem;
-      background: rgba(244, 246, 249, 0.6);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(16, 26, 49, 0.05);
-      height: 70px;
-    }
-    .header-logo {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      flex-shrink: 0;
-    }
-    .header-favicon {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      display: block;
-    }
-    .header-favicon-svg {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      display: block;
-    }
-    .header-nav {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    .header-nav a {
-      text-decoration: none;
-      font-family: 'Raleway', sans-serif;
-      font-weight: 600;
-      font-size: 0.85rem;
-      color: #101A31;
-      letter-spacing: 0.5px;
-      transition: color 0.3s ease;
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
-    .header-nav a:hover,
-    .header-nav a.active {
-      color: #FF8308;
-    }
     #preloader {
       position: fixed;
       inset: 0;
@@ -452,22 +396,6 @@
       margin-top: 0.5rem;
       letter-spacing: 0.5px;
     }
-    @media (max-width: 768px) {
-      #globalHeader {
-        padding: 0.8rem 1.2rem;
-        height: 60px;
-      }
-      .header-nav {
-        gap: 1rem;
-      }
-      .header-nav a {
-        font-size: 0.7rem;
-      }
-      .header-favicon,
-      .header-favicon-svg {
-        width: 28px;
-        height: 28px;
-      }
       #hero {
         height: auto;
         min-height: 100vh;
@@ -551,24 +479,7 @@
       }
     }
   </style>
-  <header id="globalHeader">
-    <a href="#hero" class="header-logo">
-      <img src="/assets/images/favicon.png" alt="RF" class="header-favicon" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-      <svg class="header-favicon-svg" viewBox="0 0 100 100" style="display:none;">
-        <rect width="100" height="100" rx="20" fill="#101A31" />
-        <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="#FF8308" font-family="Raleway, sans-serif" font-weight="700" font-size="55">RF</text>
-      </svg>
-    </a>
-    <nav>
-      <ul class="header-nav">
-        <li><a href="#hero" class="active">Home</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+
   <div id="preloader">
     <img src="/assets/images/favicon.png" alt="RF Logo" id="preloaderLogo" onerror="this.style.display='none'; document.getElementById('preloader').style.display='none'; document.getElementById('hero').style.visibility='visible'; if(typeof startHeroAnimation==='function') startHeroAnimation();">
   </div>
