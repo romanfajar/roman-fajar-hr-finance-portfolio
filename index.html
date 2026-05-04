@@ -247,7 +247,7 @@
       background: #F4F6F9;
       position: relative;
       overflow: hidden;
-padding: 70px 2rem 2rem;
+      padding: 70px 2rem 2rem;
     }
     .hero-text-container {
       position: relative;
@@ -370,12 +370,8 @@ padding: 70px 2rem 2rem;
       display: inline-block;
     }
     @keyframes glassGlint {
-      0% {
-        background-position: -200% center;
-      }
-      100% {
-        background-position: 200% center;
-      }
+      0% { background-position: -200% center; }
+      100% { background-position: 200% center; }
     }
     .glint-overlay {
       position: relative;
@@ -436,6 +432,8 @@ padding: 70px 2rem 2rem;
       margin-top: 0.5rem;
       letter-spacing: 0.5px;
     }
+
+    @media (max-width: 768px) {
       #hero {
         height: auto;
         min-height: 100vh;
@@ -449,13 +447,8 @@ padding: 70px 2rem 2rem;
       #fajarLine {
         padding-left: 2.5ch;
       }
-      #heroDesignation {
-        font-size: 1rem;
-      }
-      #heroTagline {
-        font-size: 0.9rem;
-        max-width: 90%;
-      }
+      #heroDesignation { font-size: 1rem; }
+      #heroTagline { font-size: 0.9rem; max-width: 90%; }
       #heroCTAs {
         flex-direction: column;
         align-items: center;
@@ -471,52 +464,27 @@ padding: 70px 2rem 2rem;
         grid-template-columns: repeat(2, 1fr);
         gap: 0.8rem;
       }
-      .metric-card {
-        padding: 1.2rem 0.8rem;
-      }
-      .metric-number {
-        font-size: 1.8rem;
-      }
-      .metric-label {
-        font-size: 0.65rem;
-      }
+      .metric-card { padding: 1.2rem 0.8rem; }
+      .metric-number { font-size: 1.8rem; }
+      .metric-label { font-size: 0.65rem; }
       .glass-text {
         backdrop-filter: blur(6px);
         -webkit-backdrop-filter: blur(6px);
       }
     }
     @media (max-width: 480px) {
-      .header-nav {
-        gap: 0.5rem;
-      }
-      .header-nav a {
-        font-size: 0.6rem;
-      }
-      .header-favicon,
-      .header-favicon-svg {
-        width: 24px;
-        height: 24px;
-      }
       .name-letter {
         font-size: clamp(2.2rem, 11vw, 3.2rem);
       }
-      #fajarLine {
-        padding-left: 2ch;
-      }
+      #fajarLine { padding-left: 2ch; }
       #impactMetrics,
       #impactMetricsRow2 {
         grid-template-columns: 1fr 1fr;
         gap: 0.6rem;
       }
-      .metric-card {
-        padding: 0.9rem 0.5rem;
-      }
-      .metric-number {
-        font-size: 1.5rem;
-      }
-      .metric-label {
-        font-size: 0.6rem;
-      }
+      .metric-card { padding: 0.9rem 0.5rem; }
+      .metric-number { font-size: 1.5rem; }
+      .metric-label { font-size: 0.6rem; }
     }
   </style>
   <section id="hero" data-section="hero">
