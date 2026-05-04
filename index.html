@@ -147,9 +147,11 @@
         height: 44px;
       }
           }
+  body::before, body::after { display: none !important; }
   </style>
 </head>
 <body>
+<div style="display:none !important;position:fixed;inset:0;background:black;z-index:-9999;"></div>
   <nav class="side-nav" id="sideNav">
   <div class="nav-dot active" data-target="hero"><span class="nav-label">Home</span></div>
   <div class="nav-dot" data-target="about"><span class="nav-label">About</span></div>
