@@ -1308,24 +1308,24 @@
     gap: 2rem;
     margin-bottom: 2rem;
   }
-  .category-card {
-    background: #FFFFFF;
-    border-radius: 24px;
-    padding: 3rem 2rem;
-    cursor: pointer;
-    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1.2);
-    border: 2px solid transparent;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  .category-card:hover {
-    border-color: #FF8308;
-    transform: translateY(-6px);
-    box-shadow: 0 25px 50px rgba(16, 26, 49, 0.08);
-  }
+ .category-card {
+  background: #FFFFFF;
+  border-radius: 24px;
+  padding: 3rem 2rem;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border: 2px solid transparent;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
+}
+.category-card:hover {
+  border-color: #FF8308;
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 30px 60px rgba(16, 26, 49, 0.12);
+}
   .category-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
@@ -1587,16 +1587,16 @@
     <!-- Tier 1: Category Cards -->
     <div class="category-cards" id="categoryCards">
       <div class="category-card" data-category="hr">
-        <div class="category-icon">🏛️</div>
+        <div class="category-icon"></div>
         <h3>Human Resource & Organizational Architecture</h3>
         <p>Strategic systems, policies, and frameworks that transform how organizations operate and grow.</p>
-        <span class="category-count">4 Projects</span>
+        <span class="category-count">View Projects</span>
       </div>
       <div class="category-card" data-category="psych">
-        <div class="category-icon">🧠</div>
+        <div class="category-icon"></div>
         <h3>Psychological & Behavioral Research</h3>
         <p>Research-driven insights into human behavior, personality development, and social dynamics.</p>
-        <span class="category-count">Coming Soon</span>
+        <span class="category-count">View Projects</span>
       </div>
     </div>
 
@@ -1625,10 +1625,29 @@
       </div>
     </div>
 
-    <!-- Tier 2: Psychology Projects (hidden initially) -->
+        <!-- Tier 2: Psychology Projects (hidden initially) -->
     <div class="project-nodes-wrapper" id="psychProjects">
       <button class="back-to-categories">← Back to Categories</button>
-      <p style="text-align:center; color:#2c3a5c; padding:3rem;">Psychology projects coming soon.</p>
+      <div class="project-node" data-project="5">
+        <div class="project-number">Psychology Project 01</div>
+        <h3>The Human Cost of Addiction</h3>
+        <p class="project-brief">A Phenomenological Study of Injection Drug Abuse among the Youth of District Okara.</p>
+      </div>
+      <div class="project-node" data-project="6">
+        <div class="project-number">Psychology Project 02</div>
+        <h3>The Phubbing Scale Development</h3>
+        <p class="project-brief">Developing a psychometric instrument to measure social snubbing and smartphone addiction in young adults.</p>
+      </div>
+      <div class="project-node" data-project="7">
+        <div class="project-number">Psychology Project 03</div>
+        <h3>Behavioral Engineering through Operant Conditioning</h3>
+        <p class="project-brief">A single-subject experimental study on prosocial behavior modification in middle childhood.</p>
+      </div>
+      <div class="project-node" data-project="8">
+        <div class="project-number">Psychology Project 04</div>
+        <h3>The Impact of University Environment</h3>
+        <p class="project-brief">How campus ecosystems shape personality, behavior choices, and academic success in undergraduates.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -1657,7 +1676,7 @@
       psychProjects.classList.remove('active');
       hrProjects.style.display = 'none';
       psychProjects.style.display = 'none';
-      gsap.fromTo('.category-card', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, stagger: 0.1 });
+      gsap.fromTo('.category-card', { opacity: 0, y: 60, scale: 0.9 }, { opacity: 1, y: 0, scale: 1, duration: 0.7, stagger: 0.15, ease: 'back.out(1.4)' });
     }
 
     categoryCards.forEach(function(card) {
@@ -1687,7 +1706,7 @@
       trigger: '#categoryCards',
       start: 'top 85%',
       onEnter: function() {
-        gsap.fromTo('.category-card', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, stagger: 0.1 });
+        gsap.fromTo('.category-card', { opacity: 0, y: 60, scale: 0.9 }, { opacity: 1, y: 0, scale: 1, duration: 0.7, stagger: 0.15, ease: 'back.out(1.4)' });
       },
       once: true
     });
@@ -1768,7 +1787,95 @@
           'Legal & Financial Compliance: Ensures every policy aligns with local labor laws and fiscal constraints.',
           'Human-Centric Language: Written to be accessible and supportive, moving away from "cold" legal jargon.',
           'Leadership Vision Integration: Translates high-level goals into daily actionable behaviors for the workforce.'
-        ]
+                ]
+      },
+      5: {
+        heroText: 'THE HUMAN COST',
+        title: 'Psychology Project 01: The Human Cost of Addiction',
+        philosophy: 'A Phenomenological Study of Injection Drug Abuse among the Youth of District Okara.',
+        challenge: 'As a primary researcher at the University of Okara, I conducted an interpretive, qualitative study to explore the "lived experiences" of youth (ages 18–35) trapped in the cycle of injection drug use (IDU). This wasn\'t just data collection; it was a deep dive into the psychosocial mechanics of addiction—loneliness, parental coldness, and peer influence.',
+        action: 'The Methodology: "The Snowball Effect". Paradigm: Interpretive Qualitative Approach. Technique: Purposive Snowball Sampling. Fieldwork: Conducted 11 in-depth, semi-structured interviews in Urdu and Punjabi within natural settings—local streets and cemeteries—to capture raw, unfiltered human data. Analysis: Utilized Thematic Analysis to transform recorded archival data into actionable psychological insights.',
+        impact: 'The study revealed that while curiosity initiates the "Character Arc" of addiction, the path to recovery is paved by Family Ties. Socializing with previous peer groups remains the primary catalyst for relapse, highlighting the need for systemic, inclusive workplace and social cultures.',
+        features: [
+          'Explore: Understanding the subjective reality of youth engaging in IDU.',
+          'Identify: Pinpointing the risk factors — unemployment, curiosity, and easy availability.',
+          'Investigate: Mapping the severe health implications, including the transmission of blood-borne viruses (HCV/HIV).',
+          'Method: Interpretive Qualitative Approach with Purposive Snowball Sampling.',
+          'Fieldwork: 11 in-depth, semi-structured interviews conducted in Urdu and Punjabi.',
+          'Setting: Natural environments — local streets and cemeteries for raw, unfiltered data.',
+          'Analysis: Thematic Analysis transforming archival data into psychological insights.',
+          'Key Finding: Curiosity initiates addiction; family ties enable recovery.',
+          'Relapse Trigger: Socializing with previous peer groups is the primary catalyst.',
+          'Implication: Need for systemic, inclusive workplace and social cultures to support recovery.'
+        ],
+        pdfLink: '/A Phenomenological Study of Injection Drug Abuse among Youth of District Okara.pdf',
+        ctaLabel: 'View Report'
+      },
+      6: {
+        heroText: 'PHUBBING SCALE',
+        title: 'Psychology Project 02: The Phubbing Scale Development',
+        philosophy: 'Developing a psychometric instrument to measure social snubbing and smartphone addiction in young adults.',
+        challenge: 'In an era of hyper-connectivity, the act of "Phubbing" (ignoring others in favor of a smartphone) has become a silent killer of social and professional cohesion. Under the supervision of Ms. Humna Haider, I co-led a research team to develop a verified psychometric scale to measure this phenomenon in young adults (Aged 18–35).',
+        action: 'We utilized a rigorous mixed-methods framework. Phase 1 (Qualitative): Phenomenological interviews generated 30 initial items. Phase 2 (Expert Validation): A panel of research experts vetted items, retaining only those with >50% validity. Phase 3 (Quantitative): Exploratory Factor Analysis (EFA) on 150+ participants tested reliability and construct validity.',
+        impact: 'The final 20-item scale serves as a diagnostic tool for identifying maladaptive digital patterns that lead to clinically significant distress and impaired social functioning.',
+        features: [
+          'Social Neglect: Ignoring conversational etiquette in favor of digital notifications.',
+          'Emotional Dependency: Feeling "incomplete" without constant device proximity.',
+          'Defensive Usage: Using the phone as a "shield" to avoid complex social environments.',
+          'Phase 1: Phenomenological interviews generating 30 initial items from raw human experience.',
+          'Phase 2: Expert panel validation with >50% validity threshold for item retention.',
+          'Phase 3: Exploratory Factor Analysis (EFA) on 150+ participants.',
+          'Mixed-Methods: Combining qualitative depth with quantitative statistical rigor.',
+          'Cultural Relevance: Scale developed specifically for young adults in the Pakistani context.',
+          'Diagnostic Tool: 20-item scale identifying maladaptive digital behavioral patterns.',
+          'Clinical Significance: Measures distress and impaired social functioning from phone addiction.'
+        ],
+        pdfLink: '/Phubbing Scale Development.pdf',
+        ctaLabel: 'View the Scale\'s Research'
+      },
+      7: {
+        heroText: 'OPERANT CONDITIONING',
+        title: 'Psychology Project 03: Behavioral Engineering through Operant Conditioning',
+        philosophy: 'A single-subject experimental study on prosocial behavior modification in middle childhood.',
+        challenge: 'Working under the supervision of Ms. Kashmala, I designed and executed a controlled laboratory experiment to increase prosocial sharing behaviors in a 9-year-old subject (Anaya). The goal was to transform a natural reluctance to share into a consistent, positive social habit using Fixed-Ratio (FR) Reinforcement Schedules.',
+        action: 'This study utilized B.F. Skinner\'s Operant Conditioning across four phases: Baseline Phase (documenting natural interactions), Intervention Phase (Fixed-Ratio 3 Schedule with chocolates and praise rewards), Extinction Phase (systematically withdrawing reinforcement), and Follow-up Phase (assessing Spontaneous Recovery). A structured Sharing Behavior Checklist measured "Sibling Interaction Time" quantitatively, while real-time "Vibe Checks" ensured genuine attitude shifts.',
+        impact: 'Positive reinforcement triggered a 460% increase in shared sibling play time (from 5-minute baseline to 28-minute peak). Upon reintroduction, the conditioned behavior returned instantly with higher quality, proving the "Behavioral Blueprint" had been successfully rewritten.',
+        features: [
+          'Conditioning Success: 460% increase in shared sibling play time achieved.',
+          'Baseline: 5-minute sharing behavior documented before intervention.',
+          'Peak Performance: 28-minute sharing achieved during FR3 reinforcement schedule.',
+          'Extinction Curve: Behavior softened immediately upon reinforcement withdrawal.',
+          'Spontaneous Recovery: Conditioned behavior returned instantly upon reintroduction.',
+          'Method: Single-Subject Multi-Phase Design with Fixed-Ratio (FR3) Schedule.',
+          'Reinforcers: Tangible (chocolates) and verbal (praise) rewards used.',
+          'Qualitative: Real-time "Vibe Checks" ensured genuine attitude shift.',
+          'Framework: B.F. Skinner\'s Operant Conditioning principles applied.',
+          'Conclusion: The "Behavioral Blueprint" was successfully rewritten for long-term change.'
+        ],
+        pdfLink: '/Operant Conditioning & Anaya\'s Behavior.pdf',
+        ctaLabel: 'View the Report'
+      },
+      8: {
+        heroText: 'CAMPUS IMPACT',
+        title: 'Psychology Project 04: The Impact of University Environment',
+        philosophy: 'A comprehensive psychological study exploring how the multifaceted campus ecosystem shapes the personality of an undergraduate student.',
+        challenge: 'This quantitative study surveyed 193 undergraduates to determine how their campus environment influences their personality, academic success, and physical health habits. The university is defined as a transformative landscape where identity is formed through interactions with peers, faculty, and academic challenges.',
+        action: 'A cross-sectional survey collected data from 193 students in Punjab, Pakistan, using validated scales for personality (BFI-10) and physical activity (TAPAS). Statistical analysis (correlation and regression) measured exactly how much the university environment predicts student outcomes.',
+        impact: 'A supportive university environment significantly boosts personality development and academic achievement. However, increased academic engagement correlates with less physical exercise. Social connection and peer support were critical for resilience, while high academic pressure increased neuroticism. Universities must balance academic rigor with wellness programs.',
+        features: [
+          'Positive Correlation: Supportive environment boosts personality and academic achievement.',
+          'Physical Activity Trade-off: More academic engagement correlates with less exercise.',
+          'Social Connection: Feeling connected to the university fosters resilience and optimism.',
+          'Academic Pressure: High demands linked to increased neuroticism and stress.',
+          'Sample: 193 undergraduate students surveyed in Punjab, Pakistan.',
+          'Scales Used: BFI-10 for personality, TAPAS for physical activity measurement.',
+          'Analysis: Correlation and regression statistical methods applied.',
+          'Recommendation: Invest in wellness programs alongside academic rigor.',
+          'Recommendation: Campus facilities like gyms and healthy food options are essential.',
+          'Recommendation: Mental health counseling and support services need enhancement.'
+        ],
+        pdfLink: '/thesis-roman-fajar.pdf',
+        ctaLabel: 'Read My Thesis'
       }
     };
 
@@ -2509,24 +2616,6 @@
           }, {
             label: 'Fiscal Precision',
             text: 'Orchestrating end-to-end Payroll and Attendance systems with zero-margin error to ensure 100% policy and statutory compliance.'
-          }]
-        }, {
-          year: 2024,
-          company: 'Teglax',
-          role: 'HR & Finance Intern',
-          dates: 'May 2024 – Nov 2024',
-          details: [{
-            label: 'Workflow Optimization',
-            text: 'Accelerated the processing of foundational HR documentation and supported the design of high-velocity recruitment funnels.'
-          }, {
-            label: 'Financial Integrity',
-            text: 'Executed precision audit logs for attendance and assisted in the monthly payroll reconciliation cycles.'
-          }, {
-            label: 'Lifecycle Coordination',
-            text: 'Managed the initial screening and scheduling logistics for large-scale candidate pipelines.'
-          }, {
-            label: 'Compliance Auditing',
-            text: 'Performed research-driven internal audits to align workplace standards with evolving labor regulations.'
           }]
         }, {
           year: 2024,
