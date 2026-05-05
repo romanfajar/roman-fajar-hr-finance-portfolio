@@ -1884,7 +1884,7 @@
     var overlayContent = document.getElementById('overlayContent');
     var overlayClose = document.getElementById('overlayClose');
 
-    document.querySelectorAll('.project-node').forEach(function(node) {
+    document.querySelectorAll('#hrProjects .project-node, #psychProjects .project-node').forEach(function(node) {
       node.addEventListener('click', function() {
         var projectId = this.getAttribute('data-project');
         var data = projectData[projectId];
