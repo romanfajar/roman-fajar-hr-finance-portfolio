@@ -1256,273 +1256,353 @@
   </script>
 
   <!-- ============================================ -->
-  <!-- PROJECTS SECTION -->
-  <!-- ============================================ -->
-  <style>
-    #projects {
-      background: #F4F6F9;
-      padding: 110px 0;
-      position: relative;
-      overflow: hidden;
-      min-height: 100vh;
-    }
-    .projects-container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 2rem;
-      position: relative;
-    }
-    .projects-label {
-      font-family: 'Raleway', sans-serif;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 2.5px;
-      color: #101A31;
-      opacity: 0.6;
-      margin-bottom: 0.5rem;
-      font-weight: 600;
-    }
-    .projects-title {
-      font-family: 'Raleway', sans-serif;
-      font-size: clamp(2rem, 4vw, 2.6rem);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin-bottom: 0.6rem;
-      line-height: 1.2;
-    }
-    .projects-title .navy {
-      color: #101A31;
-    }
-    .projects-title .orange {
-      color: #FF8308;
-    }
-    .projects-subhead {
-      font-family: 'Raleway', sans-serif;
-      font-size: 1rem;
-      color: #2c3a5c;
-      max-width: 600px;
-      margin-bottom: 4rem;
-      line-height: 1.7;
-    }
-    .project-node {
-      background: #FFFFFF;
-      border-radius: 20px;
-      padding: 2.5rem;
-      margin-bottom: 2.5rem;
-      cursor: pointer;
-      position: relative;
-      overflow: hidden;
-      transition: all 0.4s ease;
-      border: 2px solid transparent;
-      z-index: 2;
-    }
-    .project-node:hover {
-      border-color: #FF8308;
-      box-shadow: 0 0 40px rgba(255, 131, 8, 0.06);
-    }
-    .project-node::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-image: linear-gradient(rgba(255, 131, 8, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 131, 8, 0.03) 1px, transparent 1px);
-      background-size: 20px 20px;
-      opacity: 0;
-      transition: opacity 0.4s ease;
-      pointer-events: none;
-      z-index: 0;
-    }
-    .project-node:hover::before {
-      opacity: 1;
-    }
-    .project-number {
-      font-family: 'Raleway', sans-serif;
-      font-size: 0.7rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: #FF8308;
-      margin-bottom: 0.3rem;
-      position: relative;
-      z-index: 1;
-    }
-    .project-node h3 {
-      font-family: 'Raleway', sans-serif;
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: #101A31;
-      letter-spacing: -0.02em;
-      position: relative;
-      z-index: 1;
-      opacity: 0;
-    }
-    .project-node h3.revealed {
-      opacity: 1;
-    }
-    .project-brief {
-      font-family: 'Raleway', sans-serif;
-      font-size: 0.9rem;
-      color: #2c3a5c;
-      margin-top: 0.5rem;
-      position: relative;
-      z-index: 1;
-    }
-    #projectOverlay {
-      position: fixed;
-      inset: 0;
-      background: #101A31;
-      z-index: 9999;
-      display: none;
-      overflow-y: auto;
-      padding: 3rem 2rem;
-    }
-    #projectOverlay.active {
-      display: block;
-    }
-    .overlay-close {
-      position: fixed;
-      top: 1.5rem;
-      right: 2rem;
-      z-index: 10001;
-      background: transparent;
-      border: 2px solid #FF8308;
-      color: #FF8308;
-      font-size: 1.2rem;
-      font-weight: 700;
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      font-family: 'Raleway', sans-serif;
-    }
-    .overlay-close:hover {
-      background: #FF8308;
-      color: #101A31;
-    }
-    .overlay-content {
-      max-width: 1000px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 2;
-    }
-    .overlay-hero-text {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-family: 'Raleway', sans-serif;
-      font-size: clamp(3rem, 10vw, 8rem);
-      font-weight: 800;
-      color: rgba(255, 255, 255, 0.04);
-      pointer-events: none;
-      white-space: nowrap;
-      z-index: 1;
-      letter-spacing: 0.05em;
-    }
-    .overlay-title {
-      font-family: 'Raleway', sans-serif;
-      font-size: 2rem;
-      font-weight: 700;
-      color: #FFFFFF;
-      margin-bottom: 1rem;
-      letter-spacing: -0.02em;
-    }
-    .overlay-philosophy {
-      font-family: 'Raleway', sans-serif;
-      font-size: 1rem;
-      color: #FF8308;
-      font-weight: 600;
-      margin-bottom: 2rem;
-    }
-    .overlay-section {
-      margin-bottom: 2rem;
-    }
-    .overlay-section h4 {
-      font-family: 'Raleway', sans-serif;
-      font-size: 1rem;
-      font-weight: 700;
-      color: #FF8308;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 0.6rem;
-    }
-    .overlay-section p {
-      font-family: 'Raleway', sans-serif;
-      font-size: 0.95rem;
-      color: #d0d4dd;
-      line-height: 1.8;
-    }
-    .overlay-features {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.8rem;
-      margin-top: 2rem;
-    }
-    .overlay-feature-item {
-      font-family: 'Raleway', sans-serif;
-      font-size: 0.85rem;
-      color: #bcc1cc;
-      padding: 0.6rem 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-    }
-    .overlay-ctas {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-top: 3rem;
-      padding-bottom: 2rem;
-    }
-    .overlay-cta-primary {
-      padding: 0.9rem 2.2rem;
-      background: #FF8308;
-      color: #FFFFFF;
-      font-weight: 700;
-      border-radius: 50px;
-      text-decoration: none;
-      font-family: 'Raleway', sans-serif;
-      letter-spacing: 0.3px;
-      font-size: 0.95rem;
-      transition: all 0.3s ease;
-    }
-    .overlay-cta-secondary {
-      padding: 0.9rem 2.2rem;
-      border: 2px solid #FF8308;
-      color: #FF8308;
-      font-weight: 700;
-      border-radius: 50px;
-      text-decoration: none;
-      font-family: 'Raleway', sans-serif;
-      letter-spacing: 0.3px;
-      font-size: 0.95rem;
-      background: transparent;
-      transition: all 0.3s ease;
-    }
-    .overlay-cta-secondary:hover {
-      background: #FF8308;
-      color: #101A31;
-    }
-    @media (max-width: 768px) {
-      #projects {
-        padding: 80px 0;
-      }
-      .overlay-features {
-        grid-template-columns: 1fr;
-      }
-      .overlay-hero-text {
-        font-size: clamp(2rem, 8vw, 4rem);
-      }
-      .project-node {
-        padding: 1.8rem;
-      }
-    }
-  </style>
-  <section id="projects" data-section="projects">
-    <div class="projects-container">
-      <div class="projects-label">Projects</div>
-      <h2 class="projects-title">
-        <span class="navy">Architecting the Future of</span> <span class="orange">Work, Human & Organizational Capital</span>
-      </h2>
-      <p class="projects-subhead">Turning raw organizational data into human-centric momentum.</p>
+<!-- PROJECTS SECTION — TWO-TIER CATEGORIES -->
+<!-- ============================================ -->
+<style>
+  #projects {
+    background: #F4F6F9;
+    padding: 110px 0;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+  }
+  .projects-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+  }
+  .projects-label {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #101A31;
+    opacity: 0.6;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  .projects-title {
+    font-family: 'Raleway', sans-serif;
+    font-size: clamp(2rem, 4vw, 2.6rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.6rem;
+    line-height: 1.2;
+  }
+  .projects-title .navy { color: #101A31; }
+  .projects-title .orange { color: #FF8308; }
+  .projects-subhead {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    color: #2c3a5c;
+    max-width: 600px;
+    margin-bottom: 3rem;
+    line-height: 1.7;
+  }
+
+  /* Category Cards */
+  .category-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  .category-card {
+    background: #FFFFFF;
+    border-radius: 24px;
+    padding: 3rem 2rem;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1.2);
+    border: 2px solid transparent;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  .category-card:hover {
+    border-color: #FF8308;
+    transform: translateY(-6px);
+    box-shadow: 0 25px 50px rgba(16, 26, 49, 0.08);
+  }
+  .category-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .category-card h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #101A31;
+    margin-bottom: 0.6rem;
+    letter-spacing: -0.02em;
+  }
+  .category-card p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.9rem;
+    color: #2c3a5c;
+    line-height: 1.6;
+  }
+  .category-count {
+    display: inline-block;
+    margin-top: 1rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #FF8308;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border: 2px solid #FF8308;
+    padding: 0.4rem 1.2rem;
+    border-radius: 20px;
+  }
+
+  /* Back Button */
+  .back-to-categories {
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #FF8308;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    padding: 0.5rem 0;
+    letter-spacing: 0.5px;
+    transition: color 0.3s;
+  }
+  .back-to-categories:hover { color: #101A31; }
+
+  /* Project Nodes (same as original) */
+  .project-nodes-wrapper {
+    display: none;
+  }
+  .project-nodes-wrapper.active {
+    display: block;
+  }
+  .project-node {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    border: 2px solid transparent;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  .project-node:hover {
+    border-color: #FF8308;
+    box-shadow: 0 0 40px rgba(255, 131, 8, 0.06);
+  }
+  .project-node::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(255,131,8,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,131,8,0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .project-node:hover::before { opacity: 1; }
+  .project-number {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #FF8308;
+    margin-bottom: 0.3rem;
+    position: relative;
+    z-index: 1;
+  }
+  .project-node h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #101A31;
+    letter-spacing: -0.02em;
+    position: relative;
+    z-index: 1;
+  }
+  .project-brief {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.9rem;
+    color: #2c3a5c;
+    margin-top: 0.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Overlay */
+  #projectOverlay {
+    position: fixed;
+    inset: 0;
+    background: #101A31;
+    z-index: 9999;
+    display: none;
+    overflow-y: auto;
+    padding: 3rem 2rem;
+  }
+  #projectOverlay.active { display: block; }
+  .overlay-close {
+    position: fixed;
+    top: 1.5rem;
+    right: 2rem;
+    z-index: 10001;
+    background: transparent;
+    border: 2px solid #FF8308;
+    color: #FF8308;
+    font-size: 1.2rem;
+    font-weight: 700;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Raleway', sans-serif;
+  }
+  .overlay-close:hover { background: #FF8308; color: #101A31; }
+  .overlay-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+  .overlay-hero-text {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Raleway', sans-serif;
+    font-size: clamp(3rem, 10vw, 8rem);
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.04);
+    pointer-events: none;
+    white-space: nowrap;
+    z-index: 1;
+    letter-spacing: 0.05em;
+  }
+  .overlay-title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+  }
+  .overlay-philosophy {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    color: #FF8308;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+  .overlay-section { margin-bottom: 2rem; }
+  .overlay-section h4 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #FF8308;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.6rem;
+  }
+  .overlay-section p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.95rem;
+    color: #d0d4dd;
+    line-height: 1.8;
+  }
+  .overlay-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+    margin-top: 2rem;
+  }
+  .overlay-feature-item {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.85rem;
+    color: #bcc1cc;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .overlay-ctas {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    padding-bottom: 2rem;
+  }
+  .overlay-cta-primary {
+    padding: 0.9rem 2.2rem;
+    background: #FF8308;
+    color: #FFFFFF;
+    font-weight: 700;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 0.3px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+  }
+  .overlay-cta-secondary {
+    padding: 0.9rem 2.2rem;
+    border: 2px solid #FF8308;
+    color: #FF8308;
+    font-weight: 700;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 0.3px;
+    font-size: 0.95rem;
+    background: transparent;
+    transition: all 0.3s ease;
+  }
+  .overlay-cta-secondary:hover { background: #FF8308; color: #101A31; }
+
+  @media (max-width: 768px) {
+    #projects { padding: 80px 0; }
+    .category-cards { grid-template-columns: 1fr; gap: 1.5rem; }
+    .overlay-features { grid-template-columns: 1fr; }
+    .project-node { padding: 1.8rem; }
+  }
+</style>
+
+<section id="projects" data-section="projects">
+  <div class="projects-container">
+    <div class="projects-label">Projects</div>
+    <h2 class="projects-title">
+      <span class="navy">Architecting the Future of</span> <span class="orange">Work, Human & Organizational Capital</span>
+    </h2>
+    <p class="projects-subhead">Turning raw organizational data into human-centric momentum.</p>
+
+    <!-- Tier 1: Category Cards -->
+    <div class="category-cards" id="categoryCards">
+      <div class="category-card" data-category="hr">
+        <div class="category-icon">🏛️</div>
+        <h3>Human Resource & Organizational Architecture</h3>
+        <p>Strategic systems, policies, and frameworks that transform how organizations operate and grow.</p>
+        <span class="category-count">4 Projects</span>
+      </div>
+      <div class="category-card" data-category="psych">
+        <div class="category-icon">🧠</div>
+        <h3>Psychological & Behavioral Research</h3>
+        <p>Research-driven insights into human behavior, personality development, and social dynamics.</p>
+        <span class="category-count">Coming Soon</span>
+      </div>
+    </div>
+
+    <!-- Tier 2: HR Projects (hidden initially) -->
+    <div class="project-nodes-wrapper" id="hrProjects">
+      <button class="back-to-categories">← Back to Categories</button>
       <div class="project-node" data-project="1">
         <div class="project-number">Project 01</div>
         <h3>The Asset Depreciation Engine</h3>
@@ -1544,133 +1624,179 @@
         <p class="project-brief">A Human-Centric Strategic Framework. 80-page handbook evolved through five revisions.</p>
       </div>
     </div>
-  </section>
-  <div id="projectOverlay">
-    <button class="overlay-close" id="overlayClose">X</button>
-    <div class="overlay-hero-text" id="overlayHeroText"></div>
-    <div class="overlay-content" id="overlayContent"></div>
+
+    <!-- Tier 2: Psychology Projects (hidden initially) -->
+    <div class="project-nodes-wrapper" id="psychProjects">
+      <button class="back-to-categories">← Back to Categories</button>
+      <p style="text-align:center; color:#2c3a5c; padding:3rem;">Psychology projects coming soon.</p>
+    </div>
   </div>
-  <script>
-    (function() {
-      window.addEventListener('load', function() {
-        const projectNodes = document.querySelectorAll('.project-node');
-        const projectTitles = document.querySelectorAll('.project-node h3');
-        projectTitles.forEach(function(title) {
-          ScrollTrigger.create({
-            trigger: title.closest('.project-node'),
-            start: 'top 60%',
-            onEnter: function() {
-              title.classList.add('revealed');
-            }
-          });
-        });
-        const projectData = {
-          1: {
-            heroText: '0% CALCULATED ERROR',
-            title: 'Project 01: The Asset Depreciation Engine',
-            philosophy: 'The Core Philosophy: Precision in Every Decimal.',
-            challenge: 'Management was struggling with "paper losses" and assets depreciating into negative values, leading to skewed financial health reports and manual audit nightmares.',
-            action: 'I engineered a "Temporal Logic" system that treats assets as living entities, reconciling complex accounting math with real-world business cycles.',
-            impact: '100% elimination of depreciation errors and a "one-click" snapshot capability for any historical or future financial period.',
-            features: ['Automated Depreciation Ceiling: Prevents assets from depreciating below salvage value.', 'R1 Temporal Control: A single-cell "Time-Travel" trigger that updates the entire sheet for any month.', 'Dual-Track Loss Attribution: Distinguishes between expected retirement and accidental economic leakage.', 'Inaugural Date +1 Logic: Ensures the first month of ownership is captured immediately for tax accuracy.',
-              'Header-Level "Brain" Formulas: Utilizes Array & Map logic to eliminate "drag-down" formula errors.', 'Dynamic Projection Modeling: Allows leadership to forecast future asset value for five-year planning.', 'Auto-Updating Accumulation: Real-time tracking of total accumulated depreciation across thousands of rows.', 'Disposal Sensitivity Analysis: Calculates the exact paper loss versus physical loss upon asset exit.',
-              'Scalable Data Validation: Built-in triggers to flag duplicate serial numbers or inconsistent purchase dates.', 'Financial Health Dashboard: A visual summary of net book value vs. original cost for immediate reporting.'
-            ]
-          },
-          2: {
-            heroText: '100% ASSET TRACEABILITY',
-            title: 'Project 02: Enterprise Asset Inventory Architecture',
-            philosophy: 'The Core Philosophy: Zero-Touch Operational Excellence.',
-            challenge: 'A growing team relied on 15+ fragmented manual lists, causing data silos, "missing" hardware, and hours of wasted administrative labor.',
-            action: 'I architected a Relational Database ecosystem that bridges live user submissions directly to a master financial dictionary.',
-            impact: 'Transformed a full day of manual entry into a 5-minute automated audit, ensuring 100% asset visibility as the company scales.',
-            features: ['Relational Data Mapping: Connects live form responses to static asset identifiers automatically.', 'Multi-Clause QUERY Stacks: Instantly categorizes disparate hardware into a unified, vertical stream.',
-              'VLOOKUP Exception Handling: A proactive flagging system that isolates "unlabeled" or "uncoded" assets.', 'One-Click Label Readiness: Optimized data structure for immediate physical inventory sticker printing.', 'Rotten Data Filtering: Logic-based cleaning that removes typos and duplicate submissions.',
-              'Real-Time Audit Readiness: The system is always "audit-ready" with a live count of all company hardware.', 'Cross-Departmental Sync: Links procurement data with IT deployment and Finance records.', 'Automated Stacking Logic: Dynamically stacks 15+ hardware types into one master view without manual sorting.',
-              'User-End Simplicity: Front-facing Google Forms designed for high completion rates and clean data entry.', 'Systemic Scalability: Architecture remains stable whether managing 50 or 5,000 unique assets.'
-            ]
-          },
-          3: {
-            heroText: 'DATA-DRIVEN BEHAVIOR',
-            title: 'Project 03: The Integrated Talent Lifecycle',
-            philosophy: 'The Core Philosophy: Matching People with Purpose.',
-            challenge: 'Interviewers struggled to quantify "soft" behavioral traits, leading to inconsistent hiring and lack of data during the transition from probation to full-time roles.',
-            action: 'I developed a smooth, integrated forms system that captures behavioral and technical data from the first interview through to offboarding.',
-            impact: 'A data-driven hiring process that provides a clear trajectory for PIPs (Performance Improvement) and long-term human capital investment.',
-            features: ['Multi-Dimensional Scoring: Captures behavioral, technical, and emotional intelligence on unified scales.', 'Department-Specific Questionnaires: Customized logic that adapts the form based on the specific role being filled.',
-              'Interview Expression Bridge: Helps interviewers translate "gut feelings" into objective, actionable data points.', 'Automated Probation Workflows: Data from the hiring phase automatically populates the first 90-day review.',
-              'OPIP Pathway Logic: Identifies performance gaps early and suggests specific improvement plans.', 'Cultural Alignment Mapping: Measures how well a candidate fits the "human-centric" mission of the firm.',
-              'End-to-End Tracking: A single digital thread that follows an employee from screening to professional exit.', 'Executive Decision Dashboard: Gives leadership a high-level view of the talent pipeline health.'
-            ]
-          },
-          4: {
-            heroText: 'HAPPY GOVERNANCE',
-            title: 'Project 04: The Living Organizational Constitution',
-            philosophy: 'The Core Philosophy: A Human-Centric Strategic Framework.',
-            challenge: 'Inconsistent policy application and lack of clarity during organizational crises were creating friction and reducing employee morale.',
-            action: 'I authored a comprehensive, 80-page "Living Handbook" that evolved through five revisions to meet real-time management and employee needs.',
-            impact: 'Established a definitive professional standard that protected the company\'s legal interests while fostering a culture of autonomy and trust.',
-            features: ['Full-Lifecycle Governance: Covers every aspect of employee life from pre-boarding to post-exit.', 'Crisis-Response Agility: Rapidly updated modules to handle unprecedented organizational shifts.',
-              'Autonomy-First Policies: Built-in frameworks that encourage employee ownership of their career paths.', 'Strategic Benefit Alignment: Policies redesigned to serve as retention tools rather than just "rules."',
-              'Iterative Version Control: Five-stage refinement based on feedback from both leadership and staff.', 'Legal & Financial Compliance: Ensures every policy aligns with local labor laws and fiscal constraints.',
-              'Human-Centric Language: Written to be accessible and supportive, moving away from "cold" legal jargon.', 'Leadership Vision Integration: Translates high-level goals into daily actionable behaviors for the workforce.'
-            ]
-          }
-        };
-        const overlay = document.getElementById('projectOverlay');
-        const overlayHeroText = document.getElementById('overlayHeroText');
-        const overlayContent = document.getElementById('overlayContent');
-        const overlayClose = document.getElementById('overlayClose');
-        projectNodes.forEach(function(node) {
-          node.addEventListener('click', function() {
-            const projectId = this.getAttribute('data-project');
-            const data = projectData[projectId];
-            if (!data) return;
-            overlayHeroText.textContent = data.heroText;
-            overlayContent.innerHTML = '<div class="overlay-title">' + data.title +
-              '</div><div class="overlay-philosophy">' + data.philosophy +
-              '</div><div class="overlay-section"><h4>The Challenge</h4><p>' + data.challenge +
-              '</p></div><div class="overlay-section"><h4>The Strategic Action</h4><p>' + data.action +
-              '</p></div><div class="overlay-section"><h4>The Resulting Impact</h4><p>' + data.impact +
-              '</p></div><h4 style="color:#FF8308; text-transform:uppercase; letter-spacing:2px; font-size:1rem; margin-top:2rem;">Salient Features</h4><div class="overlay-features">' +
-              data.features.map(function(f) {
-                return '<div class="overlay-feature-item">' + f + '</div>';
-              }).join('') +
-              '</div><div class="overlay-ctas"><a href="#contact" class="overlay-cta-primary">Get in Touch</a><a href="#about" class="overlay-cta-secondary">Explore My Journey</a></div>';
-            overlay.classList.add('active');
-            document.body.style.overflow = 'hidden';
-            gsap.fromTo(overlay, {
-              opacity: 0
-            }, {
-              opacity: 1,
-              duration: 0.4
-            });
-            gsap.fromTo(overlayContent.children, {
-              opacity: 0,
-              y: 30
-            }, {
-              opacity: 1,
-              y: 0,
-              duration: 0.5,
-              stagger: 0.08,
-              ease: 'power2.out'
-            });
-          });
-        });
-        overlayClose.addEventListener('click', function() {
-          gsap.to(overlay, {
-            opacity: 0,
-            duration: 0.3,
-            onComplete: function() {
-              overlay.classList.remove('active');
-              document.body.style.overflow = '';
-              overlayContent.innerHTML = '';
-            }
-          });
-        });
+</section>
+
+<div id="projectOverlay">
+  <button class="overlay-close" id="overlayClose">X</button>
+  <div class="overlay-hero-text" id="overlayHeroText"></div>
+  <div class="overlay-content" id="overlayContent"></div>
+</div>
+
+<script>
+(function() {
+  window.addEventListener('load', function() {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Category click logic
+    var categoryCards = document.querySelectorAll('.category-card');
+    var hrProjects = document.getElementById('hrProjects');
+    var psychProjects = document.getElementById('psychProjects');
+    var categoryCardsWrapper = document.getElementById('categoryCards');
+    var backButtons = document.querySelectorAll('.back-to-categories');
+
+    function showCategories() {
+      categoryCardsWrapper.style.display = 'grid';
+      hrProjects.classList.remove('active');
+      psychProjects.classList.remove('active');
+      hrProjects.style.display = 'none';
+      psychProjects.style.display = 'none';
+      gsap.fromTo('.category-card', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, stagger: 0.1 });
+    }
+
+    categoryCards.forEach(function(card) {
+      card.addEventListener('click', function() {
+        var cat = this.getAttribute('data-category');
+        categoryCardsWrapper.style.display = 'none';
+
+        if (cat === 'hr') {
+          hrProjects.style.display = 'block';
+          hrProjects.classList.add('active');
+          setTimeout(function() {
+            gsap.fromTo('#hrProjects .project-node', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, stagger: 0.1 });
+          }, 100);
+        } else if (cat === 'psych') {
+          psychProjects.style.display = 'block';
+          psychProjects.classList.add('active');
+        }
       });
-    })();
-  </script>
+    });
+
+    backButtons.forEach(function(btn) {
+      btn.addEventListener('click', showCategories);
+    });
+
+    // Animate category cards on scroll
+    ScrollTrigger.create({
+      trigger: '#categoryCards',
+      start: 'top 85%',
+      onEnter: function() {
+        gsap.fromTo('.category-card', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, stagger: 0.1 });
+      },
+      once: true
+    });
+
+    // Project overlay logic (unchanged)
+    var projectData = {
+      1: {
+        heroText: '0% CALCULATED ERROR',
+        title: 'Project 01: The Asset Depreciation Engine',
+        philosophy: 'The Core Philosophy: Precision in Every Decimal.',
+        challenge: 'Management was struggling with "paper losses" and assets depreciating into negative values, leading to skewed financial health reports and manual audit nightmares.',
+        action: 'I engineered a "Temporal Logic" system that treats assets as living entities, reconciling complex accounting math with real-world business cycles.',
+        impact: '100% elimination of depreciation errors and a "one-click" snapshot capability for any historical or future financial period.',
+        features: [
+          'Automated Depreciation Ceiling: Prevents assets from depreciating below salvage value.',
+          'R1 Temporal Control: A single-cell "Time-Travel" trigger that updates the entire sheet for any month.',
+          'Dual-Track Loss Attribution: Distinguishes between expected retirement and accidental economic leakage.',
+          'Inaugural Date +1 Logic: Ensures the first month of ownership is captured immediately for tax accuracy.',
+          'Header-Level "Brain" Formulas: Utilizes Array & Map logic to eliminate "drag-down" formula errors.',
+          'Dynamic Projection Modeling: Allows leadership to forecast future asset value for five-year planning.',
+          'Auto-Updating Accumulation: Real-time tracking of total accumulated depreciation across thousands of rows.',
+          'Disposal Sensitivity Analysis: Calculates the exact paper loss versus physical loss upon asset exit.',
+          'Scalable Data Validation: Built-in triggers to flag duplicate serial numbers or inconsistent purchase dates.',
+          'Financial Health Dashboard: A visual summary of net book value vs. original cost for immediate reporting.'
+        ]
+      },
+      2: {
+        heroText: '100% ASSET TRACEABILITY',
+        title: 'Project 02: Enterprise Asset Inventory Architecture',
+        philosophy: 'The Core Philosophy: Zero-Touch Operational Excellence.',
+        challenge: 'A growing team relied on 15+ fragmented manual lists, causing data silos, "missing" hardware, and hours of wasted administrative labor.',
+        action: 'I architected a Relational Database ecosystem that bridges live user submissions directly to a master financial dictionary.',
+        impact: 'Transformed a full day of manual entry into a 5-minute automated audit, ensuring 100% asset visibility as the company scales.',
+        features: [
+          'Relational Data Mapping: Connects live form responses to static asset identifiers automatically.',
+          'Multi-Clause QUERY Stacks: Instantly categorizes disparate hardware into a unified, vertical stream.',
+          'VLOOKUP Exception Handling: A proactive flagging system that isolates "unlabeled" or "uncoded" assets.',
+          'One-Click Label Readiness: Optimized data structure for immediate physical inventory sticker printing.',
+          'Rotten Data Filtering: Logic-based cleaning that removes typos and duplicate submissions.',
+          'Real-Time Audit Readiness: The system is always "audit-ready" with a live count of all company hardware.',
+          'Cross-Departmental Sync: Links procurement data with IT deployment and Finance records.',
+          'Automated Stacking Logic: Dynamically stacks 15+ hardware types into one master view without manual sorting.',
+          'User-End Simplicity: Front-facing Google Forms designed for high completion rates and clean data entry.',
+          'Systemic Scalability: Architecture remains stable whether managing 50 or 5,000 unique assets.'
+        ]
+      },
+      3: {
+        heroText: 'DATA-DRIVEN BEHAVIOR',
+        title: 'Project 03: The Integrated Talent Lifecycle',
+        philosophy: 'The Core Philosophy: Matching People with Purpose.',
+        challenge: 'Interviewers struggled to quantify "soft" behavioral traits, leading to inconsistent hiring and lack of data during the transition from probation to full-time roles.',
+        action: 'I developed a smooth, integrated forms system that captures behavioral and technical data from the first interview through to offboarding.',
+        impact: 'A data-driven hiring process that provides a clear trajectory for PIPs (Performance Improvement) and long-term human capital investment.',
+        features: [
+          'Multi-Dimensional Scoring: Captures behavioral, technical, and emotional intelligence on unified scales.',
+          'Department-Specific Questionnaires: Customized logic that adapts the form based on the specific role being filled.',
+          'Interview Expression Bridge: Helps interviewers translate "gut feelings" into objective, actionable data points.',
+          'Automated Probation Workflows: Data from the hiring phase automatically populates the first 90-day review.',
+          'OPIP Pathway Logic: Identifies performance gaps early and suggests specific improvement plans.',
+          'Cultural Alignment Mapping: Measures how well a candidate fits the "human-centric" mission of the firm.',
+          'End-to-End Tracking: A single digital thread that follows an employee from screening to professional exit.',
+          'Executive Decision Dashboard: Gives leadership a high-level view of the talent pipeline health.'
+        ]
+      },
+      4: {
+        heroText: 'HAPPY GOVERNANCE',
+        title: 'Project 04: The Living Organizational Constitution',
+        philosophy: 'The Core Philosophy: A Human-Centric Strategic Framework.',
+        challenge: 'Inconsistent policy application and lack of clarity during organizational crises were creating friction and reducing employee morale.',
+        action: 'I authored a comprehensive, 80-page "Living Handbook" that evolved through five revisions to meet real-time management and employee needs.',
+        impact: 'Established a definitive professional standard that protected the company\'s legal interests while fostering a culture of autonomy and trust.',
+        features: [
+          'Full-Lifecycle Governance: Covers every aspect of employee life from pre-boarding to post-exit.',
+          'Crisis-Response Agility: Rapidly updated modules to handle unprecedented organizational shifts.',
+          'Autonomy-First Policies: Built-in frameworks that encourage employee ownership of their career paths.',
+          'Strategic Benefit Alignment: Policies redesigned to serve as retention tools rather than just "rules."',
+          'Iterative Version Control: Five-stage refinement based on feedback from both leadership and staff.',
+          'Legal & Financial Compliance: Ensures every policy aligns with local labor laws and fiscal constraints.',
+          'Human-Centric Language: Written to be accessible and supportive, moving away from "cold" legal jargon.',
+          'Leadership Vision Integration: Translates high-level goals into daily actionable behaviors for the workforce.'
+        ]
+      }
+    };
+
+    var overlay = document.getElementById('projectOverlay');
+    var overlayHeroText = document.getElementById('overlayHeroText');
+    var overlayContent = document.getElementById('overlayContent');
+    var overlayClose = document.getElementById('overlayClose');
+
+    document.querySelectorAll('.project-node').forEach(function(node) {
+      node.addEventListener('click', function() {
+        var projectId = this.getAttribute('data-project');
+        var data = projectData[projectId];
+        if (!data) return;
+        overlayHeroText.textContent = data.heroText;
+        overlayContent.innerHTML = '<div class="overlay-title">' + data.title + '</div><div class="overlay-philosophy">' + data.philosophy + '</div><div class="overlay-section"><h4>The Challenge</h4><p>' + data.challenge + '</p></div><div class="overlay-section"><h4>The Strategic Action</h4><p>' + data.action + '</p></div><div class="overlay-section"><h4>The Resulting Impact</h4><p>' + data.impact + '</p></div><h4 style="color:#FF8308;text-transform:uppercase;letter-spacing:2px;font-size:1rem;margin-top:2rem;">Salient Features</h4><div class="overlay-features">' + data.features.map(function(f) { return '<div class="overlay-feature-item">' + f + '</div>'; }).join('') + '</div><div class="overlay-ctas"><a href="#contact" class="overlay-cta-primary">Get in Touch</a><a href="#about" class="overlay-cta-secondary">Explore My Journey</a></div>';
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        gsap.fromTo(overlay, { opacity: 0 }, { opacity: 1, duration: 0.4 });
+        gsap.fromTo(overlayContent.children, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, stagger: 0.08, ease: 'power2.out' });
+      });
+    });
+
+    overlayClose.addEventListener('click', function() {
+      gsap.to(overlay, { opacity: 0, duration: 0.3, onComplete: function() { overlay.classList.remove('active'); document.body.style.overflow = ''; overlayContent.innerHTML = ''; } });
+    });
+  });
+})();
+</script>
 
   <!-- ============================================ -->
   <!-- SKILLS SECTION -->
