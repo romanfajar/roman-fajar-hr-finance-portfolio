@@ -1684,16 +1684,17 @@
         var cat = this.getAttribute('data-category');
         categoryCardsWrapper.style.display = 'none';
 
-        if (cat === 'hr') {
-          hrProjects.style.display = 'block';
-          hrProjects.classList.add('active');
-          setTimeout(function() {
-            gsap.fromTo('#hrProjects .project-node', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, stagger: 0.1 });
-          }, 100);
-        } else if (cat === 'psych') {
-          psychProjects.style.display = 'block';
-          psychProjects.classList.add('active');
-        }
+if (cat === 'hr') {
+  hrProjects.style.display = 'block';
+  hrProjects.classList.add('active');
+  setTimeout(function() {
+    gsap.fromTo('#hrProjects .project-node', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, stagger: 0.1 });
+  }, 100);
+} else if (cat === 'psych') {
+  console.log('Psychology clicked');
+  psychProjects.style.display = 'block';
+  psychProjects.classList.add('active');
+}
       });
     });
 
