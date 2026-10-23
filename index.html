@@ -278,6 +278,625 @@
       }
     }
   body::before, body::after { display: none !important; }
+ 
+/* ============================================================ */
+/* ============================================================ */
+/* CONVOCATION OVERLAY — FULL STYLESHEET v3                     */
+/* (self-contained; drop-in replacement for all prior versions) */
+/* ============================================================ */
+/* ============================================================ */
+
+/* ---------- Overlay shell ---------- */
+.convocation-overlay {
+  position: fixed;
+  inset: 0;
+  background: #101A31;
+  z-index: 99998;
+  display: none;
+  overflow-y: auto;
+  padding: 3rem 2rem;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.convocation-overlay.active {
+  display: block;
+  opacity: 1;
+}
+.convocation-close {
+  position: fixed;
+  top: 1.5rem;
+  right: 2rem;
+  z-index: 100000;
+  background: transparent;
+  border: 2px solid #FF8308;
+  color: #FF8308;
+  font-size: 1.2rem;
+  font-weight: 700;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Raleway', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.convocation-close:hover {
+  background: #FF8308;
+  color: #101A31;
+}
+
+/* ---------- Decorative hero text behind content ---------- */
+.convocation-hero-text {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Raleway', sans-serif;
+  font-size: clamp(3rem, 10vw, 8rem);
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.04);
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 1;
+  letter-spacing: 0.05em;
+}
+
+/* ---------- Content ---------- */
+.convocation-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+  padding: 2rem 0 4rem;
+  color: #FFFFFF;
+  opacity: 0;
+  transform: scale(0.96);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.convocation-content.revealed {
+  opacity: 1;
+  transform: scale(1);
+}
+.convocation-label {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: #FF8308;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+.convocation-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.02em;
+  position: relative;
+}
+.convocation-cgpa-wrap {
+  color: #FF8308;
+  font-weight: 800;
+}
+#convocationCgpa {
+  font-variant-numeric: tabular-nums;
+}
+.convocation-philosophy {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  color: #c4c8d0;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+.convocation-philosophy strong {
+  color: #FF8308;
+  font-weight: 700;
+}
+
+/* ---------- Sections ---------- */
+.convocation-section {
+  margin-bottom: 2.5rem;
+}
+.convocation-section h4 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #FF8308;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+/* ---------- Video ---------- */
+.convocation-video {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 16px;
+  border: 2px solid rgba(255, 131, 8, 0.3);
+  background: #000;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ============================================================ */
+/* GALLERY — 3-ROW LAYOUT                                       */
+/* Row 1: images 1, 2, 3 (grid of 3)                            */
+/* Row 2: image 4 + cert/medal (centered pair)                  */
+/* Row 3: image 5 (full-width wide rectangle)                   */
+/* ============================================================ */
+.convocation-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.conv-gallery-row {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+/* Row 1 — grid of 3 equal squares */
+.conv-gallery-row1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+/* Row 2 — image 4 + cert/medal, centered pair, each = 1/3 width */
+.conv-gallery-row2 {
+  justify-content: center;
+  align-items: stretch;
+}
+.conv-gallery-row2 .convocation-figure {
+  flex: 0 0 calc((100% - 2rem) / 3);
+  max-width: 340px;
+}
+
+/* Row 3 — image 5, full width, wide rectangle, no tilt */
+.conv-gallery-row3 {
+  display: block;
+}
+.conv-gallery-row3 .convocation-figure {
+  width: 100%;
+  aspect-ratio: 2.4 / 1;
+}
+
+/* ---------- Figure base (all gallery tiles) ---------- */
+.convocation-figure {
+  margin: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: zoom-in;
+  position: relative;
+  background: rgba(255, 255, 255, 0.04);
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  aspect-ratio: 1 / 1;
+  transition: transform 0.35s ease, border-color 0.35s ease, opacity 0.4s ease;
+  opacity: 0;
+  transform: translateY(-40px) scale(0.94);
+}
+.convocation-figure.settled {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+.convocation-figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.convocation-figure:hover {
+  transform: translateY(-4px);
+  border-color: #FF8308;
+}
+.convocation-figure:hover img {
+  transform: scale(1.04);
+}
+
+/* ---------- Wide figure (image 5) ---------- */
+.convocation-figure-wide {
+  aspect-ratio: 2.4 / 1;
+}
+.convocation-figure-wide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;     /* top-anchored there too */
+}
+
+/* ---------- Certificate + medal figure ---------- */
+.convocation-figure-cert {
+  aspect-ratio: 1 / 1;
+  position: relative;
+}
+.convocation-figure-cert img {
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.03);
+}
+.convocation-figure-cert figcaption {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #FF8308;
+  text-align: center;
+  padding: 0.5rem;
+  background: rgba(16, 26, 49, 0.9);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+/* ============================================================ */
+/* CEREMONY CURTAIN — fixed full-screen layer                   */
+/* Sits above all overlay content during the 1.4s ceremony      */
+/* ============================================================ */
+.convocation-ceremony-curtain {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #101A31;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.35s ease;
+}
+.convocation-ceremony-curtain.done {
+  opacity: 0;
+  pointer-events: none;
+}
+.convocation-particles {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.convocation-medal-wrap {
+  position: relative;
+  width: 160px;
+  height: 200px;
+  will-change: transform, opacity;
+}
+
+/* ---------- Medal: ribbon ---------- */
+.convocation-medal-ribbon {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 90px;
+  display: flex;
+  pointer-events: none;
+}
+.convocation-medal-ribbon-left,
+.convocation-medal-ribbon-right {
+  width: 50%;
+  height: 100%;
+  display: block;
+}
+.convocation-medal-ribbon-left {
+  background: linear-gradient(180deg, #FF8308 0%, #C45F00 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 82%, 0 100%);
+}
+.convocation-medal-ribbon-right {
+  background: linear-gradient(180deg, #E67300 0%, #9C4700 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 82%, 0 100%);
+}
+
+/* ---------- Medal: disc ---------- */
+.convocation-medal-disc {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 32% 28%,
+    #FFF0C4 0%,
+    #FFC247 28%,
+    #FF8308 60%,
+    #B35C00 100%
+  );
+  box-shadow:
+    0 0 0 5px rgba(255, 194, 71, 0.35),
+    0 0 0 9px rgba(255, 131, 8, 0.18),
+    0 14px 40px rgba(255, 131, 8, 0.55),
+    inset 0 -10px 24px rgba(0, 0, 0, 0.28),
+    inset 0 10px 24px rgba(255, 240, 196, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.convocation-medal-star {
+  width: 72%;
+  height: 72%;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+.convocation-medal-shine {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(
+    115deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.55) 45%,
+    rgba(255, 255, 255, 0.85) 50%,
+    rgba(255, 255, 255, 0.55) 55%,
+    transparent 70%
+  );
+  background-size: 250% 250%;
+  background-position: -100% -100%;
+  animation: convMedalSheen 2.4s ease-in-out infinite;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+@keyframes convMedalSheen {
+  0% {
+    background-position: -100% -100%;
+  }
+  100% {
+    background-position: 200% 200%;
+  }
+}
+
+/* ============================================================ */
+/* PERSISTENT BADGE — appears only on Option-B opens            */
+/* Stays visible top-left for the whole overlay session         */
+/* ============================================================ */
+.convocation-badge-slot {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 110;
+  width: 46px;
+  height: 46px;
+  display: none;
+}
+.convocation-badge-slot.visible {
+  display: block;
+}
+.convocation-badge {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+}
+.convocation-badge-disc {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 32% 28%,
+    #FFF0C4 0%,
+    #FFC247 30%,
+    #FF8308 65%,
+    #B35C00 100%
+  );
+  box-shadow:
+    0 0 0 2px rgba(255, 194, 71, 0.4),
+    0 0 0 4px rgba(255, 131, 8, 0.2),
+    0 6px 16px rgba(255, 131, 8, 0.45),
+    inset 0 -3px 8px rgba(0, 0, 0, 0.3);
+}
+.convocation-badge-shine {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: linear-gradient(
+    115deg,
+    transparent 35%,
+    rgba(255, 255, 255, 0.6) 48%,
+    rgba(255, 255, 255, 0.85) 50%,
+    rgba(255, 255, 255, 0.6) 52%,
+    transparent 65%
+  );
+  background-size: 250% 250%;
+  background-position: -100% -100%;
+  animation: convMedalSheen 2.6s ease-in-out infinite;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+/* ============================================================ */
+/* CTAs                                                         */
+/* ============================================================ */
+.convocation-ctas {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+.convocation-cta-primary {
+  padding: 0.9rem 2.2rem;
+  background: #FF8308;
+  color: #FFFFFF;
+  font-weight: 700;
+  border-radius: 50px;
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+.convocation-cta-primary:hover {
+  background: #E67600;
+}
+.convocation-cta-secondary {
+  padding: 0.9rem 2.2rem;
+  border: 2px solid #FF8308;
+  color: #FF8308;
+  font-weight: 700;
+  border-radius: 50px;
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+.convocation-cta-secondary:hover {
+  background: #FF8308;
+  color: #101A31;
+}
+
+/* ============================================================ */
+/* LIGHTBOX                                                     */
+/* ============================================================ */
+.convocation-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(16, 26, 49, 0.92);
+  z-index: 100001;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.convocation-lightbox.active {
+  display: flex;
+}
+.convocation-lightbox img {
+  max-width: 92vw;
+  max-height: 85vh;
+  border-radius: 12px;
+  border: 3px solid #FF8308;
+  box-shadow: 0 0 60px rgba(255, 131, 8, 0.3);
+  object-fit: contain;
+}
+.convocation-lightbox-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #FF8308;
+  background: #FFFFFF;
+  color: #FF8308;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Raleway', sans-serif;
+}
+.convocation-lightbox-close:hover {
+  background: #FF8308;
+  color: #FFFFFF;
+  transform: rotate(90deg);
+}
+
+/* ============================================================ */
+/* MOBILE                                                       */
+/* ============================================================ */
+@media (max-width: 768px) {
+  .convocation-overlay {
+    padding: 4rem 1.2rem 2rem;
+  }
+  .convocation-close {
+    top: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  /* Row 1 — 2 columns on mobile */
+  .conv-gallery-row1 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+  }
+
+  /* Row 2 — pair wraps, each 1/2 width */
+  .conv-gallery-row2 {
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+  .conv-gallery-row2 .convocation-figure {
+    flex: 0 0 calc((100% - 0.6rem) / 2);
+    max-width: none;
+  }
+
+  /* Row 3 — 2:1 wide on mobile */
+  .conv-gallery-row3 .convocation-figure,
+  .convocation-figure-wide {
+    aspect-ratio: 2 / 1;
+  }
+
+  .convocation-gallery {
+    gap: 0.6rem;
+  }
+  .conv-gallery-row {
+    gap: 0.6rem;
+  }
+
+  /* Medal scales down */
+  .convocation-medal-wrap {
+    width: 120px;
+    height: 150px;
+  }
+  .convocation-medal-disc,
+  .convocation-medal-shine {
+    width: 112px;
+    height: 112px;
+  }
+  .convocation-medal-ribbon {
+    width: 54px;
+    height: 68px;
+  }
+
+  /* Badge smaller */
+  .convocation-badge-slot {
+    top: 0.8rem;
+    left: 0.8rem;
+    width: 38px;
+    height: 38px;
+  }
+
+  /* CTAs stack */
+  .convocation-ctas {
+    flex-direction: column;
+  }
+  .convocation-cta-primary,
+  .convocation-cta-secondary {
+    text-align: center;
+  }
+
+  /* Lightbox */
+  .convocation-lightbox-close {
+    top: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .conv-gallery-row1 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .conv-gallery-row2 .convocation-figure {
+    flex: 0 0 100%;
+  }
+}
+
   </style>
 </head>
 
@@ -3813,6 +4432,590 @@ const data = {
     })();
   </script>
 
+<!-- ============================================ -->
+<!-- EXPERIENCE SECTION - FINAL MASTER -->
+<!-- ============================================ -->
+<style>
+  #experience {
+    background: #FFFFFF;
+    padding: 110px 0;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+  }
+  .exp-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+  }
+  .exp-label {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #101A31;
+    opacity: 0.6;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  .exp-title {
+    font-family: 'Raleway', sans-serif;
+    font-size: clamp(2rem, 4vw, 2.6rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.6rem;
+    line-height: 1.2;
+  }
+  .exp-title .navy { color: #101A31; }
+  .exp-title .orange { color: #FF8308; }
+  .exp-subhead {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    color: #2c3a5c;
+    max-width: 650px;
+    margin-bottom: 4rem;
+    line-height: 1.7;
+  }
+  
+  .exp-layout {
+    display: flex;
+    gap: 1.5rem;
+    position: relative;
+    align-items: flex-start;
+  }
+  
+  /* Year Drum */
+  .year-reel-wrapper {
+    flex-shrink: 0;
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    height: 160px;
+    position: sticky;
+    top: 120px;
+  }
+  .year-static {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #101A31;
+    opacity: 0.25;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    padding-right: 0.2rem;
+    flex-shrink: 0;
+  }
+  .year-reel-window {
+    width: 55px;
+    height: 160px;
+    overflow: hidden;
+    background: transparent;
+    border-radius: 12px;
+    position: relative;
+    mask-image: linear-gradient(to bottom, transparent 0%, black 25%, black 75%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 25%, black 75%, transparent 100%);
+  }
+  .year-reel-drum {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1.2);
+  }
+  .year-digit {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #101A31;
+    opacity: 0.2;
+    text-align: center;
+    line-height: 1;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.35s ease;
+    width: 100%;
+    background: transparent;
+    border-radius: 8px;
+  }
+  .year-digit.active {
+    color: #FFFFFF;
+    background: #FF8308;
+    font-size: 1.8rem;
+    font-weight: 800;
+    opacity: 1;
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+  }
+  .year-digit:hover { opacity: 0.6; }
+  
+  .connector-line {
+    width: 2px;
+    background: #101A31;
+    opacity: 0.15;
+    position: relative;
+    flex-shrink: 0;
+    transition: all 0.5s ease;
+    margin-top: 20px;
+    align-self: stretch;
+    min-height: 100px;
+  }
+  .connector-line.active-connection {
+    opacity: 0.6;
+    background: #FF8308;
+  }
+  
+  .ghost-stack {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 0;
+  }
+  .ghost-card {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 1.2rem 1.5rem;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1.2);
+    box-shadow: 0 4px 15px rgba(16, 26, 49, 0.03);
+    position: relative;
+    overflow: hidden;
+  }
+  .ghost-card:hover {
+    border-color: rgba(255, 131, 8, 0.3);
+    box-shadow: 0 8px 25px rgba(16, 26, 49, 0.06);
+  }
+  .ghost-card.expanded {
+    border-color: #FF8308;
+    box-shadow: 0 10px 30px rgba(255, 131, 8, 0.08);
+    background: #FFFFFF;
+  }
+  .ghost-header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .ghost-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 2px solid rgba(255, 131, 8, 0.2);
+    padding: 2px;
+    background: #FFFFFF;
+  }
+  .ghost-header-text {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+  }
+  .ghost-role {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #101A31;
+    margin-bottom: 0.15rem;
+    letter-spacing: -0.01em;
+  }
+  .ghost-meta {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #2c3a5c;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .ghost-meta .company-link {
+    color: #FF8308;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  .ghost-meta .company-link:hover {
+    text-shadow: 0 0 10px rgba(255, 131, 8, 0.55);
+  }
+  .ghost-meta .pipe { color: #ccc; }
+  .ghost-meta .dates { color: #101A31; font-weight: 600; }
+  .ghost-meta .duration { color: #2c3a5c; font-weight: 500; }
+  .ghost-meta .tag { color: #2c3a5c; font-weight: 500; }
+  
+  .ghost-details {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.4s ease;
+    margin-top: 0;
+  }
+  .ghost-card.expanded .ghost-details {
+    max-height: 600px;
+    opacity: 1;
+    margin-top: 1rem;
+    border-top: 1px solid rgba(16, 26, 49, 0.05);
+    padding-top: 1rem;
+  }
+  .ghost-detail-item {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.85rem;
+    color: #2c3a5c;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(16, 26, 49, 0.05);
+    line-height: 1.6;
+  }
+  .ghost-detail-item:last-child { border-bottom: none; }
+  .ghost-detail-label {
+    font-weight: 700;
+    color: #FF8308;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .exp-ctas { display: flex; gap: 1.5rem; margin-top: 3rem; flex-wrap: wrap; }
+  .exp-cta-primary {
+    padding: 0.9rem 2.2rem;
+    background: #FF8308;
+    color: #FFFFFF;
+    font-weight: 700;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 0.3px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+  }
+  .exp-cta-secondary {
+    padding: 0.9rem 2.2rem;
+    border: 2px solid #FF8308;
+    color: #FF8308;
+    font-weight: 700;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 0.3px;
+    font-size: 0.95rem;
+    background: transparent;
+    transition: all 0.3s ease;
+  }
+  .exp-cta-secondary:hover { background: #FF8308; color: #FFFFFF; }
+
+  /* MOBILE FIX */
+  @media (max-width: 768px) {
+    #experience { padding: 70px 0; }
+    .exp-subhead { margin-bottom: 1.8rem; }
+    
+    .exp-layout { 
+      flex-direction: column; 
+      gap: 1.5rem; 
+      align-items: center;
+    }
+    .year-reel-wrapper { 
+      height: 120px; 
+      justify-content: center; 
+      position: relative; 
+      top: 0; 
+    }
+    .year-static { font-size: 1.5rem; }
+    .year-reel-window { height: 120px; width: 44px; }
+    .year-digit { font-size: 1.1rem; height: 32px; }
+    .year-digit.active { font-size: 1.3rem; }
+    
+    .connector-line { display: none; }
+    
+    .ghost-stack { 
+      width: 100%; 
+    }
+    .ghost-card { padding: 1.2rem 1rem; }
+    .ghost-header { align-items: flex-start; }
+    .ghost-role { font-size: 1rem; }
+    .ghost-meta { font-size: 0.75rem; gap: 0.3rem; }
+    .ghost-logo { width: 36px; height: 36px; }
+    
+    .exp-ctas { margin-top: 2rem; flex-direction: column; gap: 0.8rem; width: 100%; }
+    .exp-cta-primary, .exp-cta-secondary { text-align: center; width: 100%; }
+  }
+</style>
+
+<section id="experience" data-section="experience">
+  <div class="exp-container">
+    <div class="exp-label">Experience</div>
+    <h2 class="exp-title">
+      <span class="navy">The Path of Professional</span> <span class="orange">Growth & Value Creation</span>
+    </h2>
+    <p class="exp-subhead">A strategic documentation of high-impact roles, organizational transformations, and evolution from behavioral insight to architectural HR leadership.</p>
+    
+    <div class="exp-layout">
+      <div class="year-reel-wrapper">
+        <div class="year-static">20</div>
+        <div class="year-reel-window">
+          <div class="year-reel-drum" id="yearReelDrum"></div>
+        </div>
+      </div>
+      <div class="connector-line" id="connectorLine"></div>
+      <div class="ghost-stack" id="ghostStack"></div>
+    </div>
+    
+    <div class="exp-ctas">
+      <a href="#projects" class="exp-cta-primary">Explore My Systems</a>
+      <a href="#contact" class="exp-cta-secondary">Initiate a Partnership</a>
+    </div>
+  </div>
+</section>
+
+<script>
+(function() {
+  window.addEventListener('load', function() {
+    // 1. DATA (Teglax removed, proper links, updated locations)
+    const experienceData = [
+      {
+        year: 2024,
+        company: 'Fantech Labs',
+        link: 'https://fantechlabs.ca/', // Added link
+        role: 'HR & Finance Executive',
+        dates: 'Nov 2024 – Present',
+        location: 'Okara, Pakistan',
+        mode: 'On-Site',
+        logo: 'fantech-labs-logo.png',
+        details: [
+          { label: 'System Architecture', text: 'Engineered the Asset Depreciation Engine and Enterprise Inventory Architecture, converting manual days of labor into a 5-minute automated precision audit.' },
+          { label: 'Strategic Governance', text: 'Authored the 80-page Living Handbook (V5.0), creating a crisis-ready constitutional framework for organizational autonomy.' },
+          { label: 'Talent Intelligence', text: 'Developed the Integrated Talent Lifecycle, applying psychological profiling to match candidate purpose with company mission from screening to offboarding.' },
+          { label: 'Fiscal Precision', text: 'Orchestrating end-to-end Payroll and Attendance systems with zero-margin error to ensure 100% policy and statutory compliance.' }
+        ]
+      },
+      {
+        year: 2024,
+        company: 'Govt. Special Education Centre',
+        link: 'https://www.facebook.com/gsec.okr/',
+        role: 'Internee Child Psychologist',
+        dates: 'Apr 2024 – May 2024',
+        location: 'Okara, Pakistan',
+        mode: 'On-Site',
+        logo: 'GovtSpecialEducationCentreFor03RemainingDisabilitiesOkara-logo.png',
+        details: [
+          { label: 'Developmental Strategy', text: 'Conducted psychological assessments for students with intellectual disabilities, designing personalized educational plans through family-teacher collaboration.' }
+        ]
+      },
+      {
+        year: 2023,
+        company: 'Insight Mind Care Center',
+        link: 'https://share.google/yoKxShmEWipsqzfTY', // Added link
+        role: 'Internee Clinical Psychologist',
+        dates: 'Nov 2023 – Jan 2024',
+        location: 'Sahiwal, Pakistan',
+        mode: 'On-Site',
+        logo: 'InsightMindCareCenterSahiwal-logo.png',
+        details: [
+          { label: 'Workplace Diagnostics', text: 'Diagnosed psychological conditions and implemented clinical interventions to help adults navigate complex mental health challenges in professional settings.' }
+        ]
+      },
+      {
+        year: 2023,
+        company: 'UK-Based Retail (Freelance)',
+        link: '#experience', // No official link provided
+        role: 'Social Media Manager',
+        dates: 'Jul 2023 – Dec 2023',
+        location: 'UK',
+        mode: 'Remote',
+        logo: '',
+        details: [
+          { label: 'Growth Marketing', text: 'Strategically targeted high-intent audiences on Facebook, significantly increasing engagement and traffic for a UK-based dropshipping enterprise.' }
+        ]
+      },
+      {
+        year: 2020,
+        company: 'Self-Employed',
+        link: '#experience',
+        role: 'Academic Tutor',
+        dates: 'May 2020 – Jun 2023',
+        location: 'Renala Khurd, Pakistan',
+        mode: 'On-Site',
+        logo: '',
+        details: [
+          { label: 'Performance Coaching', text: 'Crafted bespoke lesson plans and feedback loops that consistently drove student academic success and improved study habits.' }
+        ]
+      }
+    ];
+
+    // 2. EXACT DURATION CALCULATOR (Inclusive of start month)
+    function calculateDuration(dateString) {
+      const parts = dateString.split('–').map(s => s.trim());
+      const startStr = parts[0];
+      const endStr = parts[1] || 'Present';
+      
+      const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+      
+      const parseDate = (str) => {
+        if (str === 'Present') return new Date();
+        const [m, y] = str.split(' ');
+        return new Date(parseInt(y, 10), monthNames.indexOf(m), 1);
+      };
+
+      const start = parseDate(startStr);
+      const end = parseDate(endStr);
+      
+      // Math: (End Year - Start Year) * 12 + (End Month - Start Month) + 1 (to include the start month)
+      let totalMonths = (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth()) + 1;
+      
+      const years = Math.floor(totalMonths / 12);
+      const remainingMonths = totalMonths % 12;
+
+      let result = [];
+      if (years > 0) result.push(years + (years === 1 ? ' yr' : ' yrs'));
+      if (remainingMonths > 0) result.push(remainingMonths + (remainingMonths === 1 ? ' mo' : ' mos'));
+      
+      return result.length > 0 ? result.join(' ') : '1 mo';
+    }
+
+    // 3. SETUP
+    const currentYear = new Date().getFullYear();
+    const TOP_YEAR = currentYear + 5;
+    const BOTTOM_YEAR = 2002;
+    const yearReelDrum = document.getElementById('yearReelDrum');
+    const ghostStack = document.getElementById('ghostStack');
+    const connectorLine = document.getElementById('connectorLine');
+    
+    let activeCard = null;
+    const digitHeight = 40;
+    const visibleHeight = 160;
+    const centerOffset = (visibleHeight - digitHeight) / 2;
+
+    // 4. RENDER DRUM
+    for (let y = TOP_YEAR; y >= BOTTOM_YEAR; y--) {
+      const digit = document.createElement('div');
+      digit.className = 'year-digit';
+      digit.textContent = String(y).slice(-2);
+      digit.setAttribute('data-year', y);
+      digit.addEventListener('click', function() {
+        centerDrumOnYear(y);
+        document.querySelectorAll('.year-digit').forEach(function(d) { d.classList.remove('active'); });
+        this.classList.add('active');
+        
+        // OPEN THE FIRST CARD OF THAT YEAR
+        const cardsOfYear = document.querySelectorAll('.ghost-card[data-year="' + y + '"]');
+        if (cardsOfYear.length > 0) {
+          // Close previously active card
+          if (activeCard && activeCard !== cardsOfYear[0]) activeCard.classList.remove('expanded');
+          
+          // Open the very first card of this year
+          cardsOfYear[0].classList.add('expanded');
+          activeCard = cardsOfYear[0];
+          
+          // Scroll to it gently
+          cardsOfYear[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      });
+      yearReelDrum.appendChild(digit);
+    }
+
+    // 5. RENDER CARDS
+    experienceData.forEach(function(exp, index) {
+      const card = document.createElement('div');
+      card.className = 'ghost-card';
+      card.setAttribute('data-year', exp.year);
+      card.setAttribute('data-index', index);
+      
+      const duration = calculateDuration(exp.dates);
+      let logoHtml = exp.logo ? `<img src="${exp.logo}" alt="${exp.company}" class="ghost-logo" onerror="this.style.display='none'">` : '';
+      
+      card.innerHTML = `
+        <div class="ghost-header">
+          ${logoHtml}
+          <div class="ghost-header-text">
+            <div class="ghost-role">${exp.role}</div>
+            <div class="ghost-meta">
+              <a href="${exp.link}" target="${exp.link === '#experience' ? '_self' : '_blank'}" class="company-link">${exp.company}</a>
+              <span class="pipe">|</span>
+              <span class="dates">${exp.dates}</span>
+              <span class="pipe">|</span>
+              <span class="duration">${duration}</span>
+              <span class="pipe">|</span>
+              <span class="tag">${exp.location}</span>
+              <span class="pipe">|</span>
+              <span class="tag">${exp.mode}</span>
+            </div>
+          </div>
+        </div>
+        <div class="ghost-details">
+          ${exp.details.map(d => `<div class="ghost-detail-item"><span class="ghost-detail-label">${d.label}:</span> ${d.text}</div>`).join('')}
+        </div>
+      `;
+      
+      // Independent card click behavior
+      card.addEventListener('click', function(e) {
+        // If they clicked the link, don't toggle the card
+        if (e.target.classList.contains('company-link')) return;
+        
+        // If they clicked the currently open card, close it
+        if (card.classList.contains('expanded')) {
+          card.classList.remove('expanded');
+          if (activeCard === card) activeCard = null;
+        } else {
+          // Otherwise, close others and open this one
+          if (activeCard) activeCard.classList.remove('expanded');
+          card.classList.add('expanded');
+          activeCard = card;
+        }
+      });
+      
+      ghostStack.appendChild(card);
+    });
+
+    // 6. INITIALIZE
+    function centerDrumOnYear(year) {
+      const idx = TOP_YEAR - year;
+      const offset = idx * digitHeight;
+      yearReelDrum.style.transform = 'translateY(' + (centerOffset - offset) + 'px)';
+      
+      if (connectorLine) {
+        connectorLine.classList.add('active-connection');
+        clearTimeout(window.connectorTimeout);
+        window.connectorTimeout = setTimeout(function() { 
+          connectorLine.classList.remove('active-connection'); 
+        }, 2000);
+      }
+    }
+
+    (function init() {
+      centerDrumOnYear(currentYear);
+      const target = yearReelDrum.querySelector('[data-year="' + currentYear + '"]');
+      if (target) target.classList.add('active');
+      
+      // Auto-open the very first card of the current year
+      const match = document.querySelector('.ghost-card[data-year="' + currentYear + '"]');
+      if (match) {
+        match.classList.add('expanded');
+        activeCard = match;
+      }
+    })();
+
+    // GSAP Entrance Animations
+    const expSection = document.getElementById('experience');
+    if (expSection) {
+      gsap.fromTo(expSection, { opacity: 0, y: 50 }, { 
+        opacity: 1, y: 0, duration: 1, ease: 'power3.out', 
+        scrollTrigger: { trigger: expSection, start: 'top 85%', toggleActions: 'play none none none' } 
+      });
+      gsap.fromTo('.ghost-card', { opacity: 0, x: -30 }, { 
+        opacity: 1, x: 0, duration: 0.5, stagger: 0.1, ease: 'power2.out', 
+        scrollTrigger: { trigger: expSection, start: 'top 80%', toggleActions: 'play none none none' } 
+      });
+    }
+  });
+})();
+</script>
+
+
 
 <!-- ============================================ -->
 <!-- ACADEMIC SECTION - KNOWLEDGE PRISM SHATTER (FIXED) -->
@@ -4120,13 +5323,22 @@ const data = {
     letter-spacing: -0.02em;
     line-height: 1.3;
   }
+  /* The Fix: Orange, Bold, No Underline, Hover Shadow */
   .edu-institution {
     font-family: 'Raleway', sans-serif;
     font-size: 0.9rem;
-    font-weight: 500;
-    color: #2c3a5c;
+    font-weight: 700;
+    color: #FF8308 !important; /* Forces orange color over browser default blue */
     line-height: 1.3;
     margin-top: 0.05rem;
+    text-decoration: none !important; /* Removes the underline */
+    display: inline-block;
+    transition: all 0.3s ease;
+    width: fit-content;
+  }
+  .edu-institution:hover {
+    color: #FF8308 !important;
+    text-shadow: 0 0 10px rgba(255, 131, 8, 0.55);
   }
   .edu-logo {
     width: 40px;
@@ -4340,14 +5552,13 @@ const data = {
             <div class="edu-header">
               <img src="UO-logo.png" alt="University of Okara" class="edu-logo" loading="lazy">
               <div class="edu-header-text">
-                <span class="edu-degree">BS in Applied Psychology</span>
-                <span class="edu-institution">University of Okara</span>
-                <div class="edu-meta">
+                <span class="edu-degree">BS Applied Psychology</span>
+<a href="https://www.uo.edu.pk/" target="_blank" rel="noopener" class="edu-institution">University of Okara</a>                <div class="edu-meta">
                   <span>2020 – 24</span>
                   <span class="meta-divider">|</span>
                   <span>CGPA: 3.76</span>
                   <span class="meta-divider">|</span>
-                  <span class="gold-medalist-text">Gold Medalist</span>
+                  <span class="gold-medalist-text" id="goldMedalistTrigger" role="button" tabindex="0" style="cursor:pointer;text-decoration:underline;text-underline-offset:3px;">Gold Medalist</span>
                 </div>
               </div>
             </div>
@@ -4362,8 +5573,7 @@ const data = {
               <img src="ILM-logo.png" alt="ILM Group of Colleges" class="edu-logo" loading="lazy">
               <div class="edu-header-text">
                 <span class="edu-degree">F.Sc. (Pre-Medical)</span>
-                <span class="edu-institution">ILM Group of Colleges</span>
-                <div class="edu-meta">
+                <a href="https://share.google/B9vBl9PXfz0Wtps9Z" target="_blank" rel="noopener" class="edu-institution">ILM Group of Colleges</a>                <div class="edu-meta">
                   <span>2018 – 20</span>
                   <span class="meta-divider">|</span>
                   <span>Grade: <span class="grade-orange">A+</span></span>
@@ -4381,8 +5591,7 @@ const data = {
               <img src="Kahnur-logo.png" alt="Kahnur Education House" class="edu-logo" loading="lazy">
               <div class="edu-header-text">
                 <span class="edu-degree">Matriculation</span>
-                <span class="edu-institution">Kahnur Education House</span>
-                <div class="edu-meta">
+                <a href="https://share.google/6UTnjp6C4OPfK0cry" target="_blank" rel="noopener" class="edu-institution">Kahnur Education House</a>                <div class="edu-meta">
                   <span>2016 – 18</span>
                   <span class="meta-divider">|</span>
                   <span>Grade: <span class="grade-orange">A+</span></span>
@@ -5186,6 +6395,21 @@ function animatePrism() {
         font-size: 0.75rem;
       }
     }
+    .edu-institution .edu-inst-link {
+  color: #0A66C2;                 /* the blue you use on LinkedIn buttons */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.edu-institution .edu-inst-link:hover {
+  color: #FF8308;                 /* your signature orange */
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.edu-institution .edu-inst-link:focus-visible {
+  outline: 2px solid #FF8308;
+  outline-offset: 2px;
+  border-radius: 3px;
+}
   </style>
   <section id="recognitions" data-section="recognitions">
     <div class="rec-container">
@@ -7230,6 +8454,126 @@ function animatePrism() {
     <svg viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </div>
 </footer>
+<!-- ============================================ -->
+<!-- CONVOCATION OVERLAY v3 — ALTERNATING CEREMONY -->
+<!-- ============================================ -->
+<div id="convocationOverlay" class="convocation-overlay">
+  <button class="convocation-close" id="convocationClose" aria-label="Close">✕</button>
+  <div class="convocation-hero-text">GOLD MEDALIST</div>
+
+  <!-- Ceremony curtain: fixed full-screen layer, appears above all content -->
+  <div class="convocation-ceremony-curtain" id="convocationCurtain">
+    <canvas class="convocation-particles" id="convocationParticles"></canvas>
+    <div class="convocation-medal-wrap" id="convocationMedalWrap">
+      <!-- Pure CSS/SVG medal (no emoji, no external asset) -->
+      <div class="convocation-medal" id="convocationMedal" aria-hidden="true">
+        <div class="convocation-medal-ribbon">
+          <span class="convocation-medal-ribbon-left"></span>
+          <span class="convocation-medal-ribbon-right"></span>
+        </div>
+        <div class="convocation-medal-disc">
+          <svg viewBox="0 0 100 100" class="convocation-medal-star" aria-hidden="true">
+            <defs>
+              <linearGradient id="convGoldGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#FFE29A"/>
+                <stop offset="45%" stop-color="#FFC247"/>
+                <stop offset="100%" stop-color="#C97F00"/>
+              </linearGradient>
+            </defs>
+            <polygon points="50,14 58,36 82,36 62,52 70,76 50,60 30,76 38,52 18,36 42,36" fill="url(#convGoldGrad)" stroke="#8a5800" stroke-width="1.2" stroke-linejoin="round"/>
+            <circle cx="50" cy="50" r="42" fill="none" stroke="#FFE29A" stroke-width="1.5" opacity="0.55"/>
+          </svg>
+        </div>
+        <div class="convocation-medal-shine" aria-hidden="true"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Persistent badge shown on Option-B opens (stays for whole session) -->
+  <div class="convocation-badge-slot" id="convocationBadgeSlot">
+    <div class="convocation-badge" id="convocationBadge" aria-hidden="true">
+      <div class="convocation-badge-disc"></div>
+      <div class="convocation-badge-shine"></div>
+    </div>
+  </div>
+
+  <!-- Real content (behind the curtain during ceremony) -->
+  <div class="convocation-content" id="convocationContent">
+    <div class="convocation-label">University of Okara · Convocation</div>
+
+    <h2 class="convocation-title glint-overlay">
+      <span class="convocation-cgpa-wrap">CGPA <span id="convocationCgpa">0.00</span></span>
+      &nbsp;·&nbsp; A Moment of Pride, Joy & Academic Excellence.
+    </h2>
+
+    <div class="convocation-philosophy">
+      <strong>Class of Fall 2020–24 · BS Applied Psychology</strong><br>
+      Gold Medal conferred by <strong>H.E. the Provincial Minister for School Education and Higher Education, Punjab</strong>.
+    </div>
+
+    <!-- Video -->
+    <div class="convocation-section">
+      <h4>The Ceremony</h4>
+      <video class="convocation-video" id="convocationVideo" controls playsinline preload="metadata" poster="convocation/convocation-image-1.png" muted>
+        <source src="convocation/convocation-video-1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- Gallery — 3 rows -->
+    <div class="convocation-section">
+      <h4>Moments Captured</h4>
+      <div class="convocation-gallery">
+
+        <!-- Row 1: images 1, 2, 3 -->
+        <div class="conv-gallery-row conv-gallery-row1">
+          <figure class="convocation-figure">
+            <img src="convocation/convocation-image-1.png" alt="Convocation moment 1" loading="lazy" data-full="convocation/convocation-image-1.png">
+          </figure>
+          <figure class="convocation-figure">
+            <img src="convocation/convocation-image-2.png" alt="Convocation moment 2" loading="lazy" data-full="convocation/convocation-image-2.png">
+          </figure>
+          <figure class="convocation-figure">
+            <img src="convocation/convocation-image-3.png" alt="Convocation moment 3" loading="lazy" data-full="convocation/convocation-image-3.png">
+          </figure>
+        </div>
+
+        <!-- Row 2: image 4 + certificate/medal, centered as a pair -->
+        <div class="conv-gallery-row conv-gallery-row2">
+          <figure class="convocation-figure">
+            <img src="convocation/convocation-image-4.png" alt="Convocation moment 4" loading="lazy" data-full="convocation/convocation-image-4.png">
+          </figure>
+          <figure class="convocation-figure convocation-figure-cert">
+            <img src="convocation/convocation-certificate-and-gold_medal.png" alt="Certificate and Gold Medal" loading="lazy" data-full="convocation/convocation-certificate-and-gold_medal.png">
+            <figcaption>The Gold Medal &amp; The Certificate</figcaption>
+          </figure>
+        </div>
+
+        <!-- Row 3: image 5, full width, wide rectangle, no rotation -->
+        <div class="conv-gallery-row conv-gallery-row3">
+          <figure class="convocation-figure convocation-figure-wide">
+            <img src="convocation/convocation-image-5.png" alt="Convocation moment 5" loading="lazy" data-full="convocation/convocation-image-5.png">
+          </figure>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="convocation-ctas">
+      <a href="#academic" class="convocation-cta-primary" id="convocationBackBtn">Back to Education</a>
+      <a href="#contact" class="convocation-cta-secondary">Connect with Me</a>
+    </div>
+  </div>
+</div>
+
+<!-- Lightbox (unchanged) -->
+<div id="convocationLightbox" class="convocation-lightbox">
+  <button class="convocation-lightbox-close" id="convocationLightboxClose" aria-label="Close image">✕</button>
+  <img id="convocationLightboxImg" src="" alt="">
+</div>
+
+
+
   <script>
     (function() {
       window.addEventListener('load', function() {
@@ -7423,6 +8767,383 @@ window.addEventListener('scroll', function() {
     if (d.getAttribute('data-target') === current) d.classList.add('active');
   });
 });
+</script>      
+
+<script>
+(function () {
+  'use strict';
+
+  var STORAGE_KEY = 'rf_convocation_ceremony_round';
+  if (typeof window.__convRound === 'undefined') window.__convRound = 0;
+
+  function getRound() {
+    try {
+      var s = sessionStorage.getItem(STORAGE_KEY);
+      if (s !== null && s !== '') {
+        var sv = parseInt(s, 10);
+        if (!isNaN(sv)) return sv;
+      }
+    } catch (e) {}
+    try {
+      var l = localStorage.getItem(STORAGE_KEY);
+      if (l !== null && l !== '') {
+        var lv = parseInt(l, 10);
+        if (!isNaN(lv)) return lv;
+      }
+    } catch (e) {}
+    return window.__convRound || 0;
+  }
+
+  function bumpRound() {
+    var next = getRound() + 1;
+    window.__convRound = next;
+    try { sessionStorage.setItem(STORAGE_KEY, String(next)); } catch (e) {}
+    try { localStorage.setItem(STORAGE_KEY, String(next)); } catch (e) {}
+    return next;
+  }
+
+  function initConvocation() {
+    console.log('[Convocation] initConvocation called');
+
+    // ---------- DOM references ----------
+    var trigger       = document.getElementById('goldMedalistTrigger');
+    var overlay       = document.getElementById('convocationOverlay');
+    var closeBtn      = document.getElementById('convocationClose');
+    var backBtn       = document.getElementById('convocationBackBtn');
+    var lightbox      = document.getElementById('convocationLightbox');
+    var lightboxImg   = document.getElementById('convocationLightboxImg');
+    var lightboxClose = document.getElementById('convocationLightboxClose');
+    var curtain       = document.getElementById('convocationCurtain');
+    var medalWrap     = document.getElementById('convocationMedalWrap');
+    var particles     = document.getElementById('convocationParticles');
+    var content       = document.getElementById('convocationContent');
+    var video         = document.getElementById('convocationVideo');
+    var cgpaEl        = document.getElementById('convocationCgpa');
+    var badgeSlot     = document.getElementById('convocationBadgeSlot');
+    var badge         = document.getElementById('convocationBadge');
+    var figures       = overlay ? overlay.querySelectorAll('.convocation-figure') : [];
+
+    if (!trigger || !overlay) {
+      console.error('[Convocation] trigger or overlay not found', { trigger: trigger, overlay: overlay });
+      return;
+    }
+
+    var isOpen = false;
+    var particleAnim = null;
+    var ceremonyTimeout = null;
+    var skipCeremony = false;
+
+    // ---------- Particles ----------
+    function startParticles() {
+      if (!particles) return;
+      var ctx = particles.getContext('2d');
+      var w = overlay.offsetWidth * 2, h = overlay.offsetHeight * 2;
+      particles.width = w;
+      particles.height = h;
+      particles.style.width = overlay.offsetWidth + 'px';
+      particles.style.height = overlay.offsetHeight + 'px';
+
+      var dust = [];
+      var count = 80;
+      for (var i = 0; i < count; i++) {
+        dust.push({
+          x: Math.random() * w,
+          y: Math.random() * h,
+          vx: (Math.random() - 0.5) * 0.6,
+          vy: -Math.random() * 0.9 - 0.2,
+          r: Math.random() * 3 + 1,
+          a: Math.random() * 0.5 + 0.25,
+          life: 0,
+          maxLife: 220 + Math.random() * 140
+        });
+      }
+      function draw() {
+        ctx.clearRect(0, 0, w, h);
+        for (var i = 0; i < dust.length; i++) {
+          var p = dust[i];
+          p.x += p.vx * 2;
+          p.y += p.vy * 2;
+          p.life += 1;
+          var fade = Math.max(0, 1 - p.life / p.maxLife);
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r * 2, 0, Math.PI * 2);
+          ctx.fillStyle = 'rgba(255, 200, 90, ' + (p.a * fade) + ')';
+          ctx.fill();
+        }
+        particleAnim = requestAnimationFrame(draw);
+      }
+      draw();
+    }
+
+    function stopParticles() {
+      if (particleAnim) cancelAnimationFrame(particleAnim);
+      particleAnim = null;
+      if (particles) particles.getContext('2d').clearRect(0, 0, particles.width, particles.height);
+    }
+
+    // ---------- CGPA count-up ----------
+    function countUpCgpa() {
+      if (!cgpaEl) return;
+      var t0 = performance.now(), dur = 700, target = 3.76;
+      function step(now) {
+        var p = Math.min(1, (now - t0) / dur);
+        var eased = 1 - Math.pow(1 - p, 3);
+        cgpaEl.textContent = (target * eased).toFixed(2);
+        if (p < 1) requestAnimationFrame(step);
+        else cgpaEl.textContent = target.toFixed(2);
+      }
+      requestAnimationFrame(step);
+    }
+
+    // ---------- Photo cascade ----------
+    function cascadePhotos() {
+      figures.forEach(function (fig, i) {
+        setTimeout(function () { fig.classList.add('settled'); }, i * 70);
+      });
+    }
+
+    // ---------- Finalize ----------
+    function finalizeCeremony() {
+      if (content) content.classList.add('revealed');
+      if (curtain) {
+        curtain.classList.add('done');
+        setTimeout(function () {
+          curtain.style.display = 'none';
+        }, 360);
+      }
+      stopParticles();
+      cascadePhotos();
+      countUpCgpa();
+      if (video) {
+        video.muted = true;
+        video.play().catch(function () {});
+      }
+    }
+
+    // ---------- Ceremony A ----------
+    function playCeremonyA() {
+      if (badgeSlot) badgeSlot.classList.remove('visible');
+
+      gsap.fromTo(medalWrap,
+        { y: -window.innerHeight * 0.7, opacity: 0, rotationY: 0, rotationX: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.55,
+          ease: 'bounce.out',
+          onComplete: function () {
+            if (skipCeremony) { finalizeCeremony(); return; }
+            gsap.to(medalWrap, {
+              rotationY: 540,
+              duration: 0.55,
+              ease: 'power2.inOut',
+              onStart: function () {
+                if (content) content.classList.add('revealed');
+              },
+              onComplete: function () {
+                if (skipCeremony) { finalizeCeremony(); return; }
+                gsap.to(medalWrap, {
+                  opacity: 0,
+                  scale: 0.85,
+                  duration: 0.3,
+                  ease: 'power1.in',
+                  onComplete: finalizeCeremony
+                });
+              }
+            });
+          }
+        }
+      );
+    }
+
+    // ---------- Ceremony B ----------
+    function playCeremonyB() {
+      if (badgeSlot) badgeSlot.classList.add('visible');
+
+      gsap.fromTo(medalWrap,
+        { y: -window.innerHeight * 0.7, opacity: 0, scale: 1 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.5,
+          ease: 'bounce.out',
+          onComplete: function () {
+            if (skipCeremony) { finalizeCeremony(); return; }
+            var rect = medalWrap.getBoundingClientRect();
+            var cx = window.innerWidth / 2;
+            var cy = window.innerHeight / 2;
+            var targetX = 1 + 23 - cx;
+            var targetY = 1 + 23 - cy;
+            var targetScale = 46 / rect.width;
+
+            if (content) content.classList.add('revealed');
+
+            gsap.to(medalWrap, {
+              x: targetX,
+              y: targetY,
+              scale: targetScale,
+              duration: 0.75,
+              ease: 'power3.inOut',
+              onComplete: function () {
+                if (badgeSlot) badgeSlot.classList.add('visible');
+                if (badge) {
+                  gsap.fromTo(badge,
+                    { scale: 0.4, opacity: 0, rotation: -20 },
+                    { scale: 1, opacity: 1, rotation: 0, duration: 0.35, ease: 'back.out(2)' }
+                  );
+                }
+                if (medalWrap) medalWrap.style.opacity = '0';
+                finalizeCeremony();
+              }
+            });
+          }
+        }
+      );
+    }
+
+    // ---------- Skip handler ----------
+    function attachSkip() {
+      if (!curtain) return;
+      overlay.addEventListener('click', onSkipClick, true);
+      document.addEventListener('keydown', onSkipKey, true);
+    }
+    function detachSkip() {
+      overlay.removeEventListener('click', onSkipClick, true);
+      document.removeEventListener('keydown', onSkipKey, true);
+    }
+    function onSkipClick(e) {
+      if (!isOpen) return;
+      if (closeBtn && closeBtn.contains(e.target)) return;
+      if (content && content.contains(e.target)) return;
+      skipCeremony = true;
+      if (curtain && !curtain.classList.contains('done')) {
+        gsap.killTweensOf(medalWrap);
+        finalizeCeremony();
+      }
+    }
+    function onSkipKey(e) {
+      if (!isOpen) return;
+      if (e.key === 'Enter' || e.key === ' ') {
+        if (curtain && !curtain.classList.contains('done')) {
+          skipCeremony = true;
+          gsap.killTweensOf(medalWrap);
+          finalizeCeremony();
+        }
+      }
+    }
+
+    // ---------- Open / close ----------
+    function openOverlay() {
+      if (isOpen) return;
+      isOpen = true;
+      skipCeremony = false;
+
+      overlay.style.display = 'block';
+      requestAnimationFrame(function () {
+        overlay.classList.add('active');
+        overlay.style.opacity = '1';
+      });
+      document.body.style.overflow = 'hidden';
+
+      if (content) content.classList.remove('revealed');
+      figures.forEach(function (f) { f.classList.remove('settled'); });
+      if (cgpaEl) cgpaEl.textContent = '0.00';
+      if (badgeSlot) badgeSlot.classList.remove('visible');
+      if (curtain) {
+        curtain.classList.remove('done');
+        curtain.style.display = 'flex';
+      }
+      if (medalWrap) gsap.set(medalWrap, { clearProps: 'all', opacity: 0, y: -400, scale: 1, x: 0, rotation: 0, rotationY: 0 });
+
+      startParticles();
+      attachSkip();
+
+      var round = getRound();
+      bumpRound();
+      var isOptionB = round % 2 === 1;
+
+      console.log('[Convocation] ceremony round:', round, '→', isOptionB ? 'B' : 'A');
+
+      ceremonyTimeout = setTimeout(function () {
+        if (isOptionB) playCeremonyB();
+        else playCeremonyA();
+      }, 120);
+    }
+
+    function closeOverlay() {
+      if (!isOpen) return;
+      isOpen = false;
+      detachSkip();
+      if (ceremonyTimeout) clearTimeout(ceremonyTimeout);
+      gsap.killTweensOf(medalWrap);
+      if (video) video.pause();
+      stopParticles();
+      if (curtain) {
+        curtain.classList.add('done');
+        setTimeout(function () { curtain.style.display = 'none'; }, 300);
+      }
+      overlay.style.opacity = '0';
+      overlay.classList.remove('active');
+      setTimeout(function () {
+        overlay.style.display = 'none';
+        document.body.style.overflow = '';
+      }, 300);
+    }
+
+    // ---------- Trigger ----------
+    trigger.addEventListener('click', function (e) { e.preventDefault(); e.stopPropagation(); openOverlay(); });
+    trigger.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openOverlay(); }
+    });
+
+    // ---------- Close ----------
+    closeBtn.addEventListener('click', closeOverlay);
+    if (backBtn) backBtn.addEventListener('click', closeOverlay);
+    overlay.addEventListener('click', function (e) {
+      if (e.target === overlay) closeOverlay();
+    });
+
+    // ---------- Escape ----------
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        if (lightbox && lightbox.classList.contains('active')) closeLightbox();
+        else if (overlay.classList.contains('active')) closeOverlay();
+      }
+    });
+
+    // ---------- Lightbox ----------
+    function openLightbox(src, alt) {
+      if (!lightbox || !lightboxImg) return;
+      lightboxImg.src = src;
+      lightboxImg.alt = alt || '';
+      lightbox.classList.add('active');
+    }
+    function closeLightbox() {
+      if (!lightbox) return;
+      lightbox.classList.remove('active');
+      lightboxImg.src = '';
+    }
+    overlay.querySelectorAll('.convocation-figure img').forEach(function (img) {
+      img.addEventListener('click', function () {
+        openLightbox(this.getAttribute('data-full') || this.src, this.alt);
+      });
+    });
+    if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+    if (lightbox) lightbox.addEventListener('click', function (e) {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    console.log('[Convocation] listeners attached successfully');
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initConvocation);
+  } else {
+    initConvocation();
+  }
+})();
 </script>
+
+
 </body>
 </html>
